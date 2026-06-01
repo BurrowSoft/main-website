@@ -83,6 +83,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               >
                 Booking Mole
               </a>
+              <a
+                href="https://insightmole.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-indigo-600 transition-colors"
+              >
+                InsightMole
+              </a>
             </div>
           </nav>
         </header>
@@ -97,7 +105,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </span>
               BurrowSoft
             </div>
-            <div className="flex items-center gap-6 text-sm text-slate-500">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-500">
               <a
                 href="https://flymole.com"
                 target="_blank"
@@ -113,6 +121,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 className="hover:text-indigo-600 transition-colors"
               >
                 Booking Mole
+              </a>
+              <a
+                href="https://insightmole.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-indigo-600 transition-colors"
+              >
+                InsightMole
               </a>
             </div>
             <a
