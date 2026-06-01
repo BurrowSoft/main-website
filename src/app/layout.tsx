@@ -115,6 +115,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 Booking Mole
               </a>
             </div>
+            <a
+              href="mailto:support@burrowsoft.com"
+              className="text-xs text-slate-500 hover:text-indigo-600 transition-colors"
+            >
+              support@burrowsoft.com
+            </a>
             <p className="text-xs text-slate-400">
               © {new Date().getFullYear()} BurrowSoft. All rights reserved.
             </p>
