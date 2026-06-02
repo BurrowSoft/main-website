@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import { MobileNav } from "@/components/MobileNav";
 import "./globals.css";
 
 const SITE_NAME = "BurrowSoft";
@@ -114,6 +115,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </a>
               ))}
             </div>
+            <MobileNav />
           </nav>
         </header>
 
