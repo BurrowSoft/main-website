@@ -6,8 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { MobileNav } from "@/components/MobileNav";
-import { LazadaFloatingAd } from "@/components/LazadaFloatingAd";
-import { LanguageSelector } from "@burrowsoft/shared";
+import { LanguageSelector, RegionalFloatingAd } from "@burrowsoft/shared";
 import "./globals.css";
 
 const sarabun = Sarabun({
@@ -193,7 +192,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             </div>
           </footer>
 
-          <LazadaFloatingAd />
+          <RegionalFloatingAd />
           <Analytics />
         </NextIntlClientProvider>
       </body>
