@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/og-image.svg"],
   },
+  other: { "google-adsense-account": "ca-pub-1009857008755875" },
   robots: {
     index: true,
     follow: true,
