@@ -1,77 +1,9 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "BurrowSoft — Find better deals. No tricks.",
 };
-
-const products = [
-  {
-    name: "FlyMole",
-    href: "https://flymole.com",
-    mascot: "/mascots/flymole.svg",
-    tagline: "Search flights",
-    description: "Compare fares from hundreds of airlines in seconds. Fast results, honest prices, no booking fees.",
-    cta: "Search flights",
-    mascotBg: "bg-sky-50",
-    accent: "border-sky-200 hover:border-sky-400",
-    ctaColor: "bg-sky-600 hover:bg-sky-700",
-  },
-  {
-    name: "BookingMole",
-    href: "https://bookingmole.com",
-    mascot: "/mascots/bookingmole.svg",
-    tagline: "Book hotels",
-    description: "Find the perfect room at the best available rate. Millions of properties, zero hidden charges.",
-    cta: "Browse hotels",
-    mascotBg: "bg-violet-50",
-    accent: "border-violet-200 hover:border-violet-400",
-    ctaColor: "bg-violet-600 hover:bg-violet-700",
-  },
-  {
-    name: "InsightMole",
-    href: "https://insightmole.com",
-    mascot: "/mascots/insightmole.svg",
-    tagline: "Trending news",
-    description: "Stay ahead with top headlines updated around the clock. No fluff, no clickbait — just the stories that matter.",
-    cta: "Read the news",
-    mascotBg: "bg-amber-50",
-    accent: "border-amber-200 hover:border-amber-400",
-    ctaColor: "bg-amber-500 hover:bg-amber-600",
-  },
-  {
-    name: "RentACarMole",
-    href: "https://rentacarmole.com",
-    mascot: "/mascots/rentacarmole.svg",
-    tagline: "Rent a car",
-    description: "Compare car rental rates from top providers worldwide. No surprises, just the best deal for your trip.",
-    cta: "Find a car",
-    mascotBg: "bg-teal-50",
-    accent: "border-teal-200 hover:border-teal-400",
-    ctaColor: "bg-teal-600 hover:bg-teal-700",
-  },
-  {
-    name: "GamesMole",
-    href: "https://gamesmole.com",
-    mascot: "/mascots/gamesmole.svg",
-    tagline: "Games & rankings",
-    description: "Live Twitch rankings, guides, walkthroughs, and gaming news all in one place. Level up your play.",
-    cta: "Explore games",
-    mascotBg: "bg-emerald-50",
-    accent: "border-emerald-200 hover:border-emerald-400",
-    ctaColor: "bg-emerald-600 hover:bg-emerald-700",
-  },
-  {
-    name: "ShoppingMole",
-    href: "https://shoppingmole.com",
-    mascot: "/mascots/shoppingmole.svg",
-    tagline: "Shop smarter",
-    description: "Discover deals across thousands of stores. Compare prices instantly and never overpay again.",
-    cta: "Start shopping",
-    mascotBg: "bg-rose-50",
-    accent: "border-rose-200 hover:border-rose-400",
-    ctaColor: "bg-rose-600 hover:bg-rose-700",
-  },
-];
 
 const values = [
   {
@@ -91,7 +23,85 @@ const values = [
   },
 ];
 
-export default function HomePage() {
+const PRODUCTS_BASE = [
+  {
+    name: "FlyMole",
+    href: "https://flymole.com",
+    mascot: "/mascots/flymole.svg",
+    tKey: "flymole" as const,
+    tagline: "Search flights",
+    cta: "Search flights",
+    mascotBg: "bg-sky-50",
+    accent: "border-sky-200 hover:border-sky-400",
+    ctaColor: "bg-sky-600 hover:bg-sky-700",
+  },
+  {
+    name: "BookingMole",
+    href: "https://bookingmole.com",
+    mascot: "/mascots/bookingmole.svg",
+    tKey: "bookingmole" as const,
+    tagline: "Book hotels",
+    cta: "Browse hotels",
+    mascotBg: "bg-violet-50",
+    accent: "border-violet-200 hover:border-violet-400",
+    ctaColor: "bg-violet-600 hover:bg-violet-700",
+  },
+  {
+    name: "InsightMole",
+    href: "https://insightmole.com",
+    mascot: "/mascots/insightmole.svg",
+    tKey: "insightmole" as const,
+    tagline: "Trending news",
+    cta: "Read the news",
+    mascotBg: "bg-amber-50",
+    accent: "border-amber-200 hover:border-amber-400",
+    ctaColor: "bg-amber-500 hover:bg-amber-600",
+  },
+  {
+    name: "RentACarMole",
+    href: "https://rentacarmole.com",
+    mascot: "/mascots/rentacarmole.svg",
+    tKey: "rentacarmole" as const,
+    tagline: "Rent a car",
+    cta: "Find a car",
+    mascotBg: "bg-teal-50",
+    accent: "border-teal-200 hover:border-teal-400",
+    ctaColor: "bg-teal-600 hover:bg-teal-700",
+  },
+  {
+    name: "GamesMole",
+    href: "https://gamesmole.com",
+    mascot: "/mascots/gamesmole.svg",
+    tKey: "gamesmole" as const,
+    tagline: "Games & rankings",
+    cta: "Explore games",
+    mascotBg: "bg-emerald-50",
+    accent: "border-emerald-200 hover:border-emerald-400",
+    ctaColor: "bg-emerald-600 hover:bg-emerald-700",
+  },
+  {
+    name: "ShoppingMole",
+    href: "https://shoppingmole.com",
+    mascot: "/mascots/shoppingmole.svg",
+    tKey: "shoppingmole" as const,
+    tagline: "Shop smarter",
+    cta: "Start shopping",
+    mascotBg: "bg-rose-50",
+    accent: "border-rose-200 hover:border-rose-400",
+    ctaColor: "bg-rose-600 hover:bg-rose-700",
+  },
+];
+
+export default async function HomePage() {
+  const tHero = await getTranslations("hero");
+  const tProducts = await getTranslations("products");
+  const tCta = await getTranslations("hero.ctaLabels");
+
+  const products = PRODUCTS_BASE.map((p) => ({
+    ...p,
+    description: tProducts(p.tKey),
+  }));
+
   return (
     <>
       {/* Hero */}
@@ -101,11 +111,11 @@ export default function HomePage() {
           6 products · No dark patterns
         </p>
         <h1 className="mx-auto max-w-3xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
-          Find better deals.{" "}
-          <span className="text-indigo-600">No tricks.</span>
+          {tHero("title")}{" "}
+          <span className="text-indigo-600">{tHero("titleAccent")}</span>
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-lg text-slate-500 leading-relaxed">
-          Flights · Hotels · Cars · News · Games · Shopping — six honest tools with no hidden fees and no noise.
+          {tHero("subtitle")}
         </p>
 
         {/* Mascot collage */}
@@ -129,7 +139,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
           >
-            ✈ Search flights
+            ✈ {tCta("flights")}
           </a>
           <a
             href="https://bookingmole.com"
@@ -137,7 +147,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-violet-400 hover:text-violet-600 transition-colors"
           >
-            🏨 Browse hotels
+            🏨 {tCta("hotels")}
           </a>
           <a
             href="https://insightmole.com"
@@ -145,7 +155,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-amber-400 hover:text-amber-600 transition-colors"
           >
-            📰 Read news
+            📰 {tCta("news")}
           </a>
           <a
             href="https://rentacarmole.com"
@@ -153,7 +163,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-teal-400 hover:text-teal-600 transition-colors"
           >
-            🚗 Rent a car
+            🚗 {tCta("cars")}
           </a>
           <a
             href="https://gamesmole.com"
@@ -161,7 +171,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-emerald-400 hover:text-emerald-600 transition-colors"
           >
-            🎮 Play games
+            🎮 {tCta("games")}
           </a>
           <a
             href="https://shoppingmole.com"
@@ -169,7 +179,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-400 hover:text-rose-600 transition-colors"
           >
-            🛍️ Shop deals
+            🛍️ {tCta("shopping")}
           </a>
         </div>
       </section>
@@ -178,7 +188,9 @@ export default function HomePage() {
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">Our products</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+              {tProducts("sectionTitle")}
+            </h2>
             <p className="mt-3 text-slate-500">Six focused tools. One mission.</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -245,7 +257,7 @@ export default function HomePage() {
       <section className="bg-indigo-600 py-16 text-center">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-3xl font-bold text-white">Ready to explore?</h2>
-          <p className="mt-3 text-indigo-200">Pick a product and get started.</p>
+          <p className="mt-3 text-indigo-200">{tHero("cta")}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://flymole.com"

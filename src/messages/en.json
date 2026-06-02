@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Products", "about": "About" },
+  "hero": {
+    "title": "Find better deals.",
+    "titleAccent": "No tricks.",
+    "subtitle": "Honest search tools for flights, hotels, cars, news, games and shopping. No dark patterns, no hidden fees.",
+    "cta": "Explore our products",
+    "ctaLabels": {
+      "flights": "Search flights",
+      "hotels": "Browse hotels",
+      "news": "Read news",
+      "cars": "Rent a car",
+      "games": "Play games",
+      "shopping": "Shop deals"
+    }
+  },
+  "products": {
+    "sectionTitle": "Our Products",
+    "flymole": "Compare flights from top airlines",
+    "bookingmole": "Find & compare hotels worldwide",
+    "insightmole": "Stay informed with top news",
+    "rentacarmole": "Compare car rentals worldwide",
+    "gamesmole": "Top games live right now",
+    "shoppingmole": "Compare product prices"
+  },
+  "footer": {
+    "tagline": "DIGGING DEEP. BUILDING SOLUTIONS.",
+    "products": "Products",
+    "support": "Support",
+    "copyright": "© 2026 BurrowSoft. All rights reserved."
+  }
+}

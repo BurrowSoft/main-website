@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { LanguageSelector } from "@burrowsoft/shared";
 
 const navLinks = [
   { label: "FlyMole", href: "https://flymole.com" },
@@ -58,6 +59,9 @@ export function MobileNav() {
               {link.label}
             </a>
           ))}
+          <div className="mt-2 border-t border-slate-100 px-4 pt-3 pb-1">
+            <LanguageSelector locales={["en", "th"]} className="w-full" />
+          </div>
         </div>
       )}
     </div>
