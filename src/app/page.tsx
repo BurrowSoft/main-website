@@ -1,87 +1,75 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BurrowSoft — Tools built right",
+  title: "BurrowSoft — Find better deals. No tricks.",
 };
 
 const products = [
   {
-    name: "Fly Mole",
+    name: "FlyMole",
     href: "https://flymole.com",
-    icon: "✈",
+    mascot: "/mascots/flymole.svg",
     tagline: "Search flights",
-    description:
-      "Compare fares from hundreds of airlines in seconds. Fast results, honest prices, no booking fees.",
+    description: "Compare fares from hundreds of airlines in seconds. Fast results, honest prices, no booking fees.",
     cta: "Search flights",
-    accent: "bg-sky-50 border-sky-200 hover:border-sky-400",
-    iconBg: "bg-sky-100 text-sky-600",
+    mascotBg: "bg-sky-50",
+    accent: "border-sky-200 hover:border-sky-400",
     ctaColor: "bg-sky-600 hover:bg-sky-700",
-    comingSoon: false,
   },
   {
-    name: "Booking Mole",
+    name: "BookingMole",
     href: "https://bookingmole.com",
-    icon: "🏨",
+    mascot: "/mascots/bookingmole.svg",
     tagline: "Book hotels",
-    description:
-      "Find the perfect room at the best available rate. Millions of properties, zero hidden charges.",
+    description: "Find the perfect room at the best available rate. Millions of properties, zero hidden charges.",
     cta: "Browse hotels",
-    accent: "bg-violet-50 border-violet-200 hover:border-violet-400",
-    iconBg: "bg-violet-100 text-violet-600",
+    mascotBg: "bg-violet-50",
+    accent: "border-violet-200 hover:border-violet-400",
     ctaColor: "bg-violet-600 hover:bg-violet-700",
-    comingSoon: false,
   },
   {
     name: "InsightMole",
     href: "https://insightmole.com",
-    icon: "🔍",
+    mascot: "/mascots/insightmole.svg",
     tagline: "Trending news",
-    description:
-      "Stay ahead with top headlines updated around the clock. No fluff, no clickbait — just the stories that matter.",
+    description: "Stay ahead with top headlines updated around the clock. No fluff, no clickbait — just the stories that matter.",
     cta: "Read the news",
-    accent: "bg-amber-50 border-amber-200 hover:border-amber-400",
-    iconBg: "bg-amber-100 text-amber-600",
+    mascotBg: "bg-amber-50",
+    accent: "border-amber-200 hover:border-amber-400",
     ctaColor: "bg-amber-500 hover:bg-amber-600",
-    comingSoon: false,
   },
   {
-    name: "Shopping Mole",
-    href: "https://shoppingmole.com",
-    icon: "🛍️",
-    tagline: "Shop smarter",
-    description:
-      "Discover deals across thousands of stores. Compare prices instantly and never overpay again.",
-    cta: "Start shopping",
-    accent: "bg-rose-50 border-rose-200 hover:border-rose-400",
-    iconBg: "bg-rose-100 text-rose-600",
-    ctaColor: "bg-rose-600 hover:bg-rose-700",
-    comingSoon: false,
-  },
-  {
-    name: "Rent a Car Mole",
+    name: "RentACarMole",
     href: "https://rentacarmole.com",
-    icon: "🚗",
+    mascot: "/mascots/rentacarmole.svg",
     tagline: "Rent a car",
-    description:
-      "Compare car rental rates from top providers worldwide. No surprises, just the best deal for your trip.",
+    description: "Compare car rental rates from top providers worldwide. No surprises, just the best deal for your trip.",
     cta: "Find a car",
-    accent: "bg-teal-50 border-teal-200 hover:border-teal-400",
-    iconBg: "bg-teal-100 text-teal-600",
+    mascotBg: "bg-teal-50",
+    accent: "border-teal-200 hover:border-teal-400",
     ctaColor: "bg-teal-600 hover:bg-teal-700",
-    comingSoon: false,
   },
   {
-    name: "Games Mole",
+    name: "GamesMole",
     href: "https://gamesmole.com",
-    icon: "🎮",
-    tagline: "Games & walkthroughs",
-    description:
-      "Guides, walkthroughs, and gaming news all in one place. Level up your play — whatever you're into.",
-    cta: "Coming soon",
-    accent: "bg-emerald-50 border-emerald-200 hover:border-emerald-300",
-    iconBg: "bg-emerald-100 text-emerald-600",
+    mascot: "/mascots/gamesmole.svg",
+    tagline: "Games & rankings",
+    description: "Live Twitch rankings, guides, walkthroughs, and gaming news all in one place. Level up your play.",
+    cta: "Explore games",
+    mascotBg: "bg-emerald-50",
+    accent: "border-emerald-200 hover:border-emerald-400",
     ctaColor: "bg-emerald-600 hover:bg-emerald-700",
-    comingSoon: true,
+  },
+  {
+    name: "ShoppingMole",
+    href: "https://shoppingmole.com",
+    mascot: "/mascots/shoppingmole.svg",
+    tagline: "Shop smarter",
+    description: "Discover deals across thousands of stores. Compare prices instantly and never overpay again.",
+    cta: "Start shopping",
+    mascotBg: "bg-rose-50",
+    accent: "border-rose-200 hover:border-rose-400",
+    ctaColor: "bg-rose-600 hover:bg-rose-700",
   },
 ];
 
@@ -107,19 +95,33 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pt-24 pb-20 text-center">
+      <section className="mx-auto max-w-6xl px-6 pt-24 pb-10 text-center">
         <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-indigo-600" />
-          Tools built right
+          6 products · No dark patterns
         </p>
         <h1 className="mx-auto max-w-3xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
-          Simple tools for{" "}
-          <span className="text-indigo-600">real people.</span>
+          Find better deals.{" "}
+          <span className="text-indigo-600">No tricks.</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-lg text-slate-500 leading-relaxed">
-          BurrowSoft builds honest, focused products — no dark patterns, no
-          hidden fees, no noise. Just useful tools that work.
+        <p className="mx-auto mt-5 max-w-xl text-lg text-slate-500 leading-relaxed">
+          Flights · Hotels · Cars · News · Games · Shopping — six honest tools with no hidden fees and no noise.
         </p>
+
+        {/* Mascot collage */}
+        <div className="mx-auto mt-10 mb-2 flex items-end justify-center gap-1 sm:gap-3 overflow-hidden">
+          {products.map((p) => (
+            <img
+              key={p.name}
+              src={p.mascot}
+              alt=""
+              aria-hidden="true"
+              className="h-20 sm:h-28 w-auto opacity-85"
+            />
+          ))}
+        </div>
+
+        {/* CTA buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://flymole.com"
@@ -133,7 +135,7 @@ export default function HomePage() {
             href="https://bookingmole.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-indigo-400 hover:text-indigo-600 transition-colors"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-violet-400 hover:text-violet-600 transition-colors"
           >
             🏨 Browse hotels
           </a>
@@ -143,15 +145,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-amber-400 hover:text-amber-600 transition-colors"
           >
-            🔍 Read news
-          </a>
-          <a
-            href="https://shoppingmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-400 hover:text-rose-600 transition-colors"
-          >
-            🛍️ Shop deals
+            📰 Read news
           </a>
           <a
             href="https://rentacarmole.com"
@@ -161,52 +155,66 @@ export default function HomePage() {
           >
             🚗 Rent a car
           </a>
+          <a
+            href="https://gamesmole.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-emerald-400 hover:text-emerald-600 transition-colors"
+          >
+            🎮 Play games
+          </a>
+          <a
+            href="https://shoppingmole.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-400 hover:text-rose-600 transition-colors"
+          >
+            🛍️ Shop deals
+          </a>
         </div>
       </section>
 
-      {/* Products */}
+      {/* Products showcase */}
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900">Our products</h2>
             <p className="mt-3 text-slate-500">Six focused tools. One mission.</p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
               <a
                 key={p.name}
-                href={p.comingSoon ? undefined : p.href}
-                target={p.comingSoon ? undefined : "_blank"}
-                rel={p.comingSoon ? undefined : "noopener noreferrer"}
-                className={`group flex flex-col rounded-2xl border p-8 transition-all duration-200 ${p.accent} ${p.comingSoon ? "cursor-default opacity-75" : ""}`}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex flex-col rounded-2xl border bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg ${p.accent}`}
               >
-                <div className="mb-5 flex items-center justify-between">
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl text-2xl ${p.iconBg}`}>
-                    {p.icon}
-                  </div>
-                  {p.comingSoon && (
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500">
-                      Coming soon
-                    </span>
-                  )}
+                {/* Mascot */}
+                <div className={`mb-5 flex items-end justify-center rounded-xl py-3 ${p.mascotBg}`}>
+                  <img
+                    src={p.mascot}
+                    alt={`${p.name} mascot`}
+                    className="h-36 w-auto"
+                    loading="lazy"
+                  />
                 </div>
+                {/* Info */}
                 <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-slate-400">
                   {p.tagline}
                 </p>
-                <h3 className="text-2xl font-bold text-slate-900">{p.name}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                <h3 className="text-xl font-bold text-slate-900">{p.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
                   {p.description}
                 </p>
-                {!p.comingSoon && (
-                  <span
-                    className={`mt-6 inline-flex w-fit items-center gap-1.5 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-colors ${p.ctaColor}`}
-                  >
-                    {p.cta}
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                )}
+                <span
+                  className={`mt-5 inline-flex w-fit items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-colors ${p.ctaColor}`}
+                >
+                  {p.cta}
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </a>
             ))}
           </div>
@@ -243,41 +251,49 @@ export default function HomePage() {
               href="https://flymole.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-indigo-50 transition-colors"
             >
-              ✈ Fly Mole
+              ✈ FlyMole
             </a>
             <a
               href="https://bookingmole.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
             >
-              🏨 Booking Mole
+              🏨 BookingMole
             </a>
             <a
               href="https://insightmole.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
             >
-              🔍 InsightMole
-            </a>
-            <a
-              href="https://shoppingmole.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
-            >
-              🛍️ Shopping Mole
+              📰 InsightMole
             </a>
             <a
               href="https://rentacarmole.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
             >
-              🚗 Rent a Car Mole
+              🚗 RentACarMole
+            </a>
+            <a
+              href="https://gamesmole.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            >
+              🎮 GamesMole
+            </a>
+            <a
+              href="https://shoppingmole.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            >
+              🛍️ ShoppingMole
             </a>
           </div>
         </div>

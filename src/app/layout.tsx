@@ -7,30 +7,47 @@ import "./globals.css";
 const SITE_NAME = "BurrowSoft";
 const SITE_URL = "https://burrowsoft.com";
 const SITE_DESCRIPTION =
-  "BurrowSoft builds honest travel tools — fast flight search and hotel booking with no hidden fees.";
+  "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Travel tools built right`,
+    default: `${SITE_NAME} — Find better deals. No tricks.`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: ["travel tools", "flight search", "hotel booking", "BurrowSoft", "Fly Mole", "Booking Mole"],
+  keywords: [
+    "BurrowSoft",
+    "FlyMole",
+    "BookingMole",
+    "InsightMole",
+    "RentACarMole",
+    "GamesMole",
+    "ShoppingMole",
+    "flight search",
+    "hotel booking",
+    "honest tools",
+  ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/apple-touch-icon.svg", sizes: "180x180" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Travel tools built right`,
+    title: `${SITE_NAME} — Find better deals. No tricks.`,
     description: SITE_DESCRIPTION,
+    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "BurrowSoft" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Travel tools built right`,
+    title: `${SITE_NAME} — Find better deals. No tricks.`,
     description: SITE_DESCRIPTION,
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
@@ -51,6 +68,24 @@ export const viewport: Viewport = {
   themeColor: "#4f46e5",
 };
 
+const navLinks = [
+  { label: "FlyMole", href: "https://flymole.com" },
+  { label: "BookingMole", href: "https://bookingmole.com" },
+  { label: "InsightMole", href: "https://insightmole.com" },
+  { label: "RentACarMole", href: "https://rentacarmole.com" },
+  { label: "GamesMole", href: "https://gamesmole.com" },
+  { label: "ShoppingMole", href: "https://shoppingmole.com" },
+];
+
+const footerProducts = [
+  { name: "FlyMole", href: "https://flymole.com", desc: "Compare flights from top airlines" },
+  { name: "BookingMole", href: "https://bookingmole.com", desc: "Find hotels with zero hidden fees" },
+  { name: "InsightMole", href: "https://insightmole.com", desc: "Top headlines, no clickbait" },
+  { name: "RentACarMole", href: "https://rentacarmole.com", desc: "Car rentals from top providers" },
+  { name: "GamesMole", href: "https://gamesmole.com", desc: "Live rankings, guides & gaming news" },
+  { name: "ShoppingMole", href: "https://shoppingmole.com", desc: "Compare prices across thousands of stores" },
+];
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -66,44 +101,80 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </span>
               BurrowSoft
             </Link>
-            <div className="hidden sm:flex items-center gap-5 text-sm font-medium text-slate-600">
-              <a href="https://flymole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Fly Mole</a>
-              <a href="https://bookingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Booking Mole</a>
-              <a href="https://insightmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">InsightMole</a>
-              <a href="https://shoppingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Shopping Mole</a>
-              <a href="https://rentacarmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Rent a Car Mole</a>
+            <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-indigo-600 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </nav>
         </header>
 
         <main>{children}</main>
 
-        <footer className="border-t border-slate-200 bg-slate-50">
-          <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 font-semibold text-slate-700 text-sm">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-indigo-600 text-white text-xs font-black">
-                B
-              </span>
-              BurrowSoft
+        <footer className="border-t border-slate-800 bg-slate-900 text-white">
+          <div className="mx-auto max-w-6xl px-6 py-14">
+            <div className="grid gap-12 sm:grid-cols-2">
+              {/* Brand column */}
+              <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <img
+                    src="/brand/burrowsoft-icon.svg"
+                    alt="BurrowSoft"
+                    className="h-10 w-10"
+                  />
+                  <span className="text-xl font-extrabold tracking-tight">BurrowSoft</span>
+                </div>
+                <p className="mb-6 text-xs font-bold tracking-[0.18em] text-indigo-400">
+                  DIGGING DEEP. BUILDING SOLUTIONS.
+                </p>
+                <a
+                  href="mailto:support@burrowsoft.com"
+                  className="text-sm text-slate-400 hover:text-indigo-400 transition-colors"
+                >
+                  support@burrowsoft.com
+                </a>
+                <p className="mt-6 text-xs text-slate-500">
+                  © {new Date().getFullYear()} BurrowSoft. All rights reserved.
+                </p>
+              </div>
+
+              {/* Products column */}
+              <div>
+                <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-400">
+                  Products
+                </h3>
+                <ul className="space-y-3">
+                  {footerProducts.map((p) => (
+                    <li key={p.name}>
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex flex-wrap items-baseline gap-x-2"
+                      >
+                        <span className="text-sm font-semibold text-white group-hover:text-indigo-400 transition-colors">
+                          {p.name}
+                        </span>
+                        <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">
+                          — {p.desc}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-              <a href="https://flymole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Fly Mole</a>
-              <a href="https://bookingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Booking Mole</a>
-              <a href="https://insightmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">InsightMole</a>
-              <a href="https://shoppingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Shopping Mole</a>
-              <a href="https://rentacarmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Rent a Car Mole</a>
-            </div>
-            <a
-              href="mailto:support@burrowsoft.com"
-              className="text-xs text-slate-500 hover:text-indigo-600 transition-colors"
-            >
-              support@burrowsoft.com
-            </a>
-            <p className="text-xs text-slate-400">
-              © {new Date().getFullYear()} BurrowSoft. All rights reserved.
-            </p>
           </div>
         </footer>
+
         <Analytics />
       </body>
     </html>

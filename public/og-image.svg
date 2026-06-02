@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="BurrowSoft — Honest search tools, zero dark patterns">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative indigo bar top -->
+  <rect width="1200" height="8" fill="url(#accent)"/>
+
+  <!-- Mole icon (large, centred above text) -->
+  <g transform="translate(480,80) scale(1.2)" fill="white" stroke="#c7d2fe" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Icon background -->
+    <rect x="0" y="0" width="200" height="200" rx="40" fill="#4f46e5"/>
+    <!-- Mole face centred in icon -->
+    <g transform="translate(0,22)" fill="white" stroke="#c7d2fe">
+      <circle cx="91" cy="28" r="5" stroke-width="2.5"/>
+      <circle cx="100" cy="22" r="6" stroke-width="2.5"/>
+      <circle cx="109" cy="28" r="5" stroke-width="2.5"/>
+      <circle cx="100" cy="83" r="57" stroke-width="3"/>
+      <circle cx="81" cy="89" r="19" stroke-width="3.5"/>
+      <circle cx="119" cy="89" r="19" stroke-width="3.5"/>
+      <line x1="100" y1="87" x2="100" y2="92" stroke-width="2.5"/>
+      <line x1="62" y1="89" x2="52" y2="89" stroke-width="2.5"/>
+      <line x1="138" y1="89" x2="148" y2="89" stroke-width="2.5"/>
+      <circle cx="81" cy="89" r="9" fill="#312e81" stroke="none"/>
+      <circle cx="84" cy="86" r="3.5" fill="white" stroke="none"/>
+      <circle cx="119" cy="89" r="9" fill="#312e81" stroke="none"/>
+      <circle cx="122" cy="86" r="3.5" fill="white" stroke="none"/>
+      <ellipse cx="100" cy="113" rx="6" ry="4.5" fill="#312e81" stroke="none"/>
+    </g>
+  </g>
+
+  <!-- BurrowSoft wordmark -->
+  <text x="600" y="395" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="80" font-weight="800" fill="#1e2d3d" letter-spacing="-2">BurrowSoft</text>
+
+  <!-- Tagline -->
+  <text x="600" y="460" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="400" fill="#64748b">Honest search tools, zero dark patterns</text>
+
+  <!-- Product pills row -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600">
+    <!-- FlyMole -->
+    <rect x="110" y="520" width="130" height="36" rx="18" fill="#e0f2fe"/>
+    <text x="175" y="544" text-anchor="middle" fill="#0369a1">FlyMole</text>
+    <!-- BookingMole -->
+    <rect x="258" y="520" width="160" height="36" rx="18" fill="#ede9fe"/>
+    <text x="338" y="544" text-anchor="middle" fill="#6d28d9">BookingMole</text>
+    <!-- InsightMole -->
+    <rect x="436" y="520" width="160" height="36" rx="18" fill="#fef3c7"/>
+    <text x="516" y="544" text-anchor="middle" fill="#92400e">InsightMole</text>
+    <!-- RentACarMole -->
+    <rect x="614" y="520" width="190" height="36" rx="18" fill="#ccfbf1"/>
+    <text x="709" y="544" text-anchor="middle" fill="#0f766e">RentACarMole</text>
+    <!-- GamesMole -->
+    <rect x="822" y="520" width="148" height="36" rx="18" fill="#d1fae5"/>
+    <text x="896" y="544" text-anchor="middle" fill="#065f46">GamesMole</text>
+    <!-- ShoppingMole -->
+    <rect x="988" y="520" width="180" height="36" rx="18" fill="#ffe4e6"/>
+    <text x="1078" y="544" text-anchor="middle" fill="#9f1239">ShoppingMole</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect y="622" width="1200" height="8" fill="url(#accent)"/>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/flight-booking/public/**)",
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/hotel-booking/public/**)",
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/shopping/public/**)",
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/news-feed/public/**)",
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/rent-a-car/public/**)",
+      "Read(//c/Users/VICTUS/Desktop/burrowsoft-web-apps/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\VICTUS\\Desktop\\burrowsoft-web-apps"
+    ]
+  }
+}
