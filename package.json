@@ -1,28 +1,25 @@
 {
-  "name": "@burrowsoft/main-website",
+  "name": "burrowsoft-web",
   "version": "0.0.1",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1",
-    "next": "^15.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@burrowsoft/tsconfig": "*",
     "@tailwindcss/postcss": "^4.0.0",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0",
+    "turbo": "^2.3.3",
     "typescript": "^5.7.2"
+  },
+  "packageManager": "npm@9.8.0",
+  "engines": {
+    "node": ">=20"
   }
 }

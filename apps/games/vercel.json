@@ -1,0 +1,5 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npx turbo run build --filter=@burrowsoft/games...",
+  "outputDirectory": "apps/games/.next"
+}
