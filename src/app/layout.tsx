@@ -66,31 +66,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </span>
               BurrowSoft
             </Link>
-            <div className="flex items-center gap-6 text-sm font-medium text-slate-600">
-              <a
-                href="https://flymole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                Fly Mole
-              </a>
-              <a
-                href="https://bookingmole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                Booking Mole
-              </a>
-              <a
-                href="https://insightmole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                InsightMole
-              </a>
+            <div className="hidden sm:flex items-center gap-5 text-sm font-medium text-slate-600">
+              <a href="https://flymole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Fly Mole</a>
+              <a href="https://bookingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Booking Mole</a>
+              <a href="https://insightmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">InsightMole</a>
+              <a href="https://shoppingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Shopping Mole</a>
+              <a href="https://rentacarmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Rent a Car Mole</a>
             </div>
           </nav>
         </header>
@@ -105,31 +86,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </span>
               BurrowSoft
             </div>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-500">
-              <a
-                href="https://flymole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                Fly Mole
-              </a>
-              <a
-                href="https://bookingmole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                Booking Mole
-              </a>
-              <a
-                href="https://insightmole.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-indigo-600 transition-colors"
-              >
-                InsightMole
-              </a>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+              <a href="https://flymole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Fly Mole</a>
+              <a href="https://bookingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Booking Mole</a>
+              <a href="https://insightmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">InsightMole</a>
+              <a href="https://shoppingmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Shopping Mole</a>
+              <a href="https://rentacarmole.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Rent a Car Mole</a>
             </div>
             <a
               href="mailto:support@burrowsoft.com"

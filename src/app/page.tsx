@@ -45,6 +45,32 @@ const products = [
     comingSoon: false,
   },
   {
+    name: "Shopping Mole",
+    href: "https://shoppingmole.com",
+    icon: "🛍️",
+    tagline: "Shop smarter",
+    description:
+      "Discover deals across thousands of stores. Compare prices instantly and never overpay again.",
+    cta: "Start shopping",
+    accent: "bg-rose-50 border-rose-200 hover:border-rose-400",
+    iconBg: "bg-rose-100 text-rose-600",
+    ctaColor: "bg-rose-600 hover:bg-rose-700",
+    comingSoon: false,
+  },
+  {
+    name: "Rent a Car Mole",
+    href: "https://rentacarmole.com",
+    icon: "🚗",
+    tagline: "Rent a car",
+    description:
+      "Compare car rental rates from top providers worldwide. No surprises, just the best deal for your trip.",
+    cta: "Find a car",
+    accent: "bg-teal-50 border-teal-200 hover:border-teal-400",
+    iconBg: "bg-teal-100 text-teal-600",
+    ctaColor: "bg-teal-600 hover:bg-teal-700",
+    comingSoon: false,
+  },
+  {
     name: "Games Mole",
     href: "https://gamesmole.com",
     icon: "🎮",
@@ -119,6 +145,22 @@ export default function HomePage() {
           >
             🔍 Read news
           </a>
+          <a
+            href="https://shoppingmole.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-400 hover:text-rose-600 transition-colors"
+          >
+            🛍️ Shop deals
+          </a>
+          <a
+            href="https://rentacarmole.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-teal-400 hover:text-teal-600 transition-colors"
+          >
+            🚗 Rent a car
+          </a>
         </div>
       </section>
 
@@ -127,7 +169,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900">Our products</h2>
-            <p className="mt-3 text-slate-500">Four focused tools. One mission.</p>
+            <p className="mt-3 text-slate-500">Six focused tools. One mission.</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {products.map((p) => (
@@ -220,6 +262,22 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
             >
               🔍 InsightMole
+            </a>
+            <a
+              href="https://shoppingmole.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            >
+              🛍️ Shopping Mole
+            </a>
+            <a
+              href="https://rentacarmole.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-400 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            >
+              🚗 Rent a Car Mole
             </a>
           </div>
         </div>
