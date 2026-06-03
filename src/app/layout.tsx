@@ -34,6 +34,35 @@ const LOCALE_FONT: Record<string, string> = {
 
 const ALL_LOCALES = ["en","th","es","ru","pt-BR","fr","ja","zh","zh-TW","ar","de","id","ko","it","vi"];
 
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.burrowsoft.com/#organization",
+      "name": "BurrowSoft",
+      "url": "https://www.burrowsoft.com",
+      "description": "BurrowSoft builds focused, honest search and aggregation tools. No dark patterns, no hidden fees.",
+      "email": "support@burrowsoft.com",
+      "sameAs": [
+        "https://www.flymole.com",
+        "https://www.bookingmole.com",
+        "https://www.insightmole.com",
+        "https://www.rentacarmole.com",
+        "https://www.gamesmole.com",
+        "https://www.shoppingmole.com",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.burrowsoft.com/#website",
+      "url": "https://www.burrowsoft.com",
+      "name": "BurrowSoft",
+      "publisher": { "@id": "https://www.burrowsoft.com/#organization" },
+    },
+  ],
+};
+
 const SITE_NAME = "BurrowSoft";
 const SITE_URL = "https://burrowsoft.com";
 const SITE_DESCRIPTION =
@@ -71,6 +100,26 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — Find better deals. No tricks.`,
     description: SITE_DESCRIPTION,
     images: ["/og-image.svg"],
+  },
+  alternates: {
+    languages: {
+      "en":      "https://www.burrowsoft.com",
+      "th":      "https://www.burrowsoft.com",
+      "es":      "https://www.burrowsoft.com",
+      "ru":      "https://www.burrowsoft.com",
+      "pt-BR":   "https://www.burrowsoft.com",
+      "fr":      "https://www.burrowsoft.com",
+      "ja":      "https://www.burrowsoft.com",
+      "zh":      "https://www.burrowsoft.com",
+      "zh-TW":   "https://www.burrowsoft.com",
+      "ar":      "https://www.burrowsoft.com",
+      "de":      "https://www.burrowsoft.com",
+      "id":      "https://www.burrowsoft.com",
+      "ko":      "https://www.burrowsoft.com",
+      "it":      "https://www.burrowsoft.com",
+      "vi":      "https://www.burrowsoft.com",
+      "x-default": "https://www.burrowsoft.com",
+    },
   },
   other: { "google-adsense-account": "ca-pub-1009857008755875" },
   robots: {
@@ -120,6 +169,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={fontClass}>
       <body className="font-sans min-h-screen bg-white text-slate-900 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
             <nav
