@@ -2,21 +2,27 @@
   <!-- Mole mascot -->
   <svg x="0" y="0" width="72" height="80" viewBox="18 14 164 140" preserveAspectRatio="xMidYMid meet">
     <g fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M91,30 C88,22 90,8 100,5 C110,8 112,22 109,30 C107,34 93,34 91,30 Z" stroke-width="2.5"/>
-      <circle cx="100" cy="83" r="57" stroke-width="3.5"/>
-      <circle cx="81" cy="89" r="19" stroke-width="5"/>
-      <circle cx="119" cy="89" r="19" stroke-width="5"/>
-      <line x1="100" y1="87" x2="100" y2="92" stroke-width="3.5"/>
-      <line x1="62" y1="89" x2="54" y2="89" stroke-width="3"/>
-      <line x1="138" y1="89" x2="146" y2="89" stroke-width="3"/>
-      <circle cx="81" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-      <circle cx="84" cy="86" r="4" fill="white" stroke="none"/>
-      <circle cx="119" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-      <circle cx="122" cy="86" r="4" fill="white" stroke="none"/>
-      <path d="M96,109 Q100,106 104,109 Q103,115 100,116 Q97,115 96,109 Z" fill="#1e2d3d" stroke="none"/>
-      <rect x="20" y="130" width="160" height="18" rx="7" stroke-width="3.5"/>
-      <path d="M47,130 L47,124 Q52,113 57,124 Q61,111 67,124 Q71,114 77,124 L77,130 Z" stroke-width="2.5"/>
-      <path d="M123,130 L123,124 Q128,114 133,124 Q137,111 143,124 Q147,113 153,124 L153,130 Z" stroke-width="2.5"/>
+      <path d="M35,155 A65,65 0 0 1 165,155" fill="white" stroke-width="3.5"/>
+      <path d="M94,93 C91,81 87,74 84,62" fill="none" stroke-width="2.5"/>
+      <path d="M100,91 C100,79 101,70 102,58" fill="none" stroke-width="2.5"/>
+      <path d="M106,93 C109,81 113,74 116,62" fill="none" stroke-width="2.5"/>
+      <circle cx="80" cy="123" r="13" stroke-width="4"/>
+      <circle cx="120" cy="123" r="13" stroke-width="4"/>
+      <path d="M93,123 Q100,127 107,123" fill="none" stroke-width="2.5"/>
+      <line x1="67" y1="123" x2="45" y2="119" stroke-width="2.5"/>
+      <line x1="133" y1="123" x2="155" y2="119" stroke-width="2.5"/>
+      <circle cx="80" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
+      <circle cx="120" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
+      <path d="M96,141 Q100,138 104,141 Q103,148 100,149 Q97,148 96,141 Z" fill="#1e2d3d" stroke="none"/>
+      <line x1="5" y1="155" x2="195" y2="155" stroke-width="3.5"/>
+      <path d="M10,155 C8,146 6,140 5,131" fill="none" stroke-width="2"/>
+      <path d="M15,155 C14,146 13,139 14,130" fill="none" stroke-width="2"/>
+      <path d="M21,155 C22,146 24,140 26,131" fill="none" stroke-width="2"/>
+      <path d="M179,155 C181,146 183,140 184,131" fill="none" stroke-width="2"/>
+      <path d="M185,155 C186,147 188,140 190,133" fill="none" stroke-width="2"/>
+      <path d="M191,155 C192,146 193,141 195,133" fill="none" stroke-width="2"/>
+      <path d="M43,155 L43,147 Q48,136 54,147 Q58,134 64,147 Q68,137 74,147 L74,155 Z" stroke-width="2.5"/>
+      <path d="M126,155 L126,147 Q131,137 137,147 Q141,134 147,147 Q151,136 157,147 L157,155 Z" stroke-width="2.5"/>
     </g>
   </svg>
   <!-- Wordmark -->

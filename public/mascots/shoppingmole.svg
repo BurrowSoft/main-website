@@ -1,46 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="ShoppingMole mascot">
   <g id="mole-base" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Topknot: single onion/bulb shape -->
-    <path d="M91,30 C88,22 90,8 100,5 C110,8 112,22 109,30 C107,34 93,34 91,30 Z" stroke-width="2.5"/>
-    <!-- Head -->
-    <circle cx="100" cy="83" r="57" stroke-width="3.5"/>
-    <!-- Left lens -->
-    <circle cx="81" cy="89" r="19" stroke-width="5"/>
-    <!-- Right lens -->
-    <circle cx="119" cy="89" r="19" stroke-width="5"/>
-    <!-- Bridge -->
-    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3.5"/>
-    <!-- Temple arms -->
-    <line x1="62" y1="89" x2="54" y2="89" stroke-width="3"/>
-    <line x1="138" y1="89" x2="146" y2="89" stroke-width="3"/>
-    <!-- Left pupil -->
-    <circle cx="81" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-    <circle cx="84" cy="86" r="4" fill="white" stroke="none"/>
-    <!-- Right pupil -->
-    <circle cx="119" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-    <circle cx="122" cy="86" r="4" fill="white" stroke="none"/>
+    <!-- Head: half-circle -->
+    <path d="M35,155 A65,65 0 0 1 165,155" fill="white" stroke-width="3.5"/>
+    <!-- Grass hair -->
+    <path d="M94,93 C91,81 87,74 84,62" fill="none" stroke-width="2.5"/>
+    <path d="M100,91 C100,79 101,70 102,58" fill="none" stroke-width="2.5"/>
+    <path d="M106,93 C109,81 113,74 116,62" fill="none" stroke-width="2.5"/>
+    <!-- Glasses -->
+    <circle cx="80" cy="123" r="13" stroke-width="4"/>
+    <circle cx="120" cy="123" r="13" stroke-width="4"/>
+    <path d="M93,123 Q100,127 107,123" fill="none" stroke-width="2.5"/>
+    <line x1="67" y1="123" x2="45" y2="119" stroke-width="2.5"/>
+    <line x1="133" y1="123" x2="155" y2="119" stroke-width="2.5"/>
+    <!-- Eyes: smaller, full black -->
+    <circle cx="80" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
+    <circle cx="120" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
     <!-- Nose -->
-    <path d="M96,109 Q100,106 104,109 Q103,115 100,116 Q97,115 96,109 Z" fill="#1e2d3d" stroke="none"/>
-    <!-- Ledge -->
-    <rect x="20" y="130" width="160" height="18" rx="7" stroke-width="3.5"/>
-    <!-- Left hand — cx=50 -->
-    <path d="M37,130 L37,124 Q41,114 47,124 Q51,111 57,124 Q61,115 63,124 L63,130 Z" stroke-width="2.5"/>
-    <!-- Right hand — cx=150 -->
-    <path d="M137,130 L137,124 Q141,115 147,124 Q151,111 157,124 Q161,114 163,124 L163,130 Z" stroke-width="2.5"/>
+    <path d="M96,141 Q100,138 104,141 Q103,148 100,149 Q97,148 96,141 Z" fill="#1e2d3d" stroke="none"/>
+    <!-- Grassy soil line -->
+    <line x1="5" y1="155" x2="195" y2="155" stroke-width="3.5"/>
+    <path d="M10,155 C8,146 6,140 5,131" fill="none" stroke-width="2"/>
+    <path d="M15,155 C14,146 13,139 14,130" fill="none" stroke-width="2"/>
+    <path d="M21,155 C22,146 24,140 26,131" fill="none" stroke-width="2"/>
+    <path d="M179,155 C181,146 183,140 184,131" fill="none" stroke-width="2"/>
+    <path d="M185,155 C186,147 188,140 190,133" fill="none" stroke-width="2"/>
+    <path d="M191,155 C192,146 193,141 195,133" fill="none" stroke-width="2"/>
+    <!-- Left hand -->
+    <path d="M37,155 L37,147 Q42,137 48,147 Q52,134 58,147 Q62,137 65,147 L65,155 Z" stroke-width="2.5"/>
+    <!-- Right hand -->
+    <path d="M135,155 L135,147 Q140,137 146,147 Q150,134 156,147 Q160,137 163,147 L163,155 Z" stroke-width="2.5"/>
   </g>
 
   <g id="prop" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
     <!-- Left shopping bag -->
-    <path d="M23,140 C23,128 47,128 47,140" fill="none" stroke-width="2.5"/>
-    <path d="M18,140 L52,140 L57,186 L13,186 Z" stroke-width="2.5"/>
-    <rect x="22" y="153" width="26" height="18" rx="2" fill="none" stroke-width="1.5"/>
-    <line x1="25" y1="159" x2="45" y2="159" stroke-width="1.5" opacity="0.5"/>
-    <line x1="25" y1="164" x2="45" y2="164" stroke-width="1.5" opacity="0.5"/>
+    <path d="M20,145 C20,138 32,135 45,135" fill="none" stroke-width="2.5"/>
+    <path d="M15,145 L55,145 L60,190 L10,190 Z" stroke-width="2.5"/>
+    <!-- Bag content/wrinkles -->
+    <line x1="20" y1="150" x2="50" y2="150" stroke-width="1.5" opacity="0.5"/>
+    <line x1="18" y1="165" x2="52" y2="165" stroke-width="1.5" opacity="0.5"/>
+
     <!-- Right shopping bag -->
-    <path d="M153,140 C153,128 177,128 177,140" fill="none" stroke-width="2.5"/>
-    <path d="M148,140 L182,140 L187,186 L143,186 Z" stroke-width="2.5"/>
-    <rect x="152" y="153" width="26" height="18" rx="2" fill="none" stroke-width="1.5"/>
-    <line x1="155" y1="159" x2="175" y2="159" stroke-width="1.5" opacity="0.5"/>
-    <line x1="155" y1="164" x2="175" y2="164" stroke-width="1.5" opacity="0.5"/>
+    <path d="M155,145 C155,138 167,135 180,135" fill="none" stroke-width="2.5"/>
+    <path d="M145,145 L185,145 L190,190 L140,190 Z" stroke-width="2.5"/>
+    <!-- Bag content/wrinkles -->
+    <line x1="150" y1="150" x2="180" y2="150" stroke-width="1.5" opacity="0.5"/>
+    <line x1="148" y1="165" x2="182" y2="165" stroke-width="1.5" opacity="0.5"/>
   </g>
 </svg>

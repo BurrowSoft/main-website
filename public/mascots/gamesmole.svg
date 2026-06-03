@@ -1,48 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="GamesMole mascot">
   <g id="mole-base" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Topknot: single onion/bulb shape -->
-    <path d="M91,30 C88,22 90,8 100,5 C110,8 112,22 109,30 C107,34 93,34 91,30 Z" stroke-width="2.5"/>
-    <!-- Head -->
-    <circle cx="100" cy="83" r="57" stroke-width="3.5"/>
-    <!-- Left lens -->
-    <circle cx="81" cy="89" r="19" stroke-width="5"/>
-    <!-- Right lens -->
-    <circle cx="119" cy="89" r="19" stroke-width="5"/>
-    <!-- Bridge -->
-    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3.5"/>
-    <!-- Temple arms -->
-    <line x1="62" y1="89" x2="54" y2="89" stroke-width="3"/>
-    <line x1="138" y1="89" x2="146" y2="89" stroke-width="3"/>
-    <!-- Left pupil -->
-    <circle cx="81" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-    <circle cx="84" cy="86" r="4" fill="white" stroke="none"/>
-    <!-- Right pupil -->
-    <circle cx="119" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
-    <circle cx="122" cy="86" r="4" fill="white" stroke="none"/>
+    <!-- Head: half-circle -->
+    <path d="M35,155 A65,65 0 0 1 165,155" fill="white" stroke-width="3.5"/>
+    <!-- Grass hair -->
+    <path d="M94,93 C91,81 87,74 84,62" fill="none" stroke-width="2.5"/>
+    <path d="M100,91 C100,79 101,70 102,58" fill="none" stroke-width="2.5"/>
+    <path d="M106,93 C109,81 113,74 116,62" fill="none" stroke-width="2.5"/>
+    <!-- Glasses -->
+    <circle cx="80" cy="123" r="13" stroke-width="4"/>
+    <circle cx="120" cy="123" r="13" stroke-width="4"/>
+    <path d="M93,123 Q100,127 107,123" fill="none" stroke-width="2.5"/>
+    <line x1="67" y1="123" x2="45" y2="119" stroke-width="2.5"/>
+    <line x1="133" y1="123" x2="155" y2="119" stroke-width="2.5"/>
+    <!-- Eyes: smaller, full black -->
+    <circle cx="80" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
+    <circle cx="120" cy="123" r="7" fill="#1e2d3d" stroke="none"/>
     <!-- Nose -->
-    <path d="M96,109 Q100,106 104,109 Q103,115 100,116 Q97,115 96,109 Z" fill="#1e2d3d" stroke="none"/>
-    <!-- Ledge -->
-    <rect x="20" y="130" width="160" height="18" rx="7" stroke-width="3.5"/>
-    <!-- Left hand — cx=55 (slightly inward to grip controller) -->
-    <path d="M41,130 L41,124 Q46,113 51,124 Q55,111 61,124 Q65,114 69,124 L69,130 Z" stroke-width="2.5"/>
-    <!-- Right hand — cx=145 -->
-    <path d="M131,130 L131,124 Q135,114 141,124 Q145,111 151,124 Q155,113 159,124 L159,130 Z" stroke-width="2.5"/>
+    <path d="M96,141 Q100,138 104,141 Q103,148 100,149 Q97,148 96,141 Z" fill="#1e2d3d" stroke="none"/>
+    <!-- Grassy soil line -->
+    <line x1="5" y1="155" x2="195" y2="155" stroke-width="3.5"/>
+    <path d="M10,155 C8,146 6,140 5,131" fill="none" stroke-width="2"/>
+    <path d="M15,155 C14,146 13,139 14,130" fill="none" stroke-width="2"/>
+    <path d="M21,155 C22,146 24,140 26,131" fill="none" stroke-width="2"/>
+    <path d="M179,155 C181,146 183,140 184,131" fill="none" stroke-width="2"/>
+    <path d="M185,155 C186,147 188,140 190,133" fill="none" stroke-width="2"/>
+    <path d="M191,155 C192,146 193,141 195,133" fill="none" stroke-width="2"/>
+    <!-- Left hand -->
+    <path d="M41,155 L41,147 Q46,136 52,147 Q56,134 62,147 Q66,137 71,147 L71,155 Z" stroke-width="2.5"/>
+    <!-- Right hand -->
+    <path d="M129,155 L129,147 Q134,137 140,147 Q144,134 150,147 Q154,136 159,147 L159,155 Z" stroke-width="2.5"/>
   </g>
 
   <g id="prop" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Game controller body -->
-    <rect x="38" y="152" width="124" height="46" rx="16" stroke-width="2.5"/>
-    <ellipse cx="55" cy="198" rx="18" ry="14" stroke-width="2.5"/>
-    <ellipse cx="145" cy="198" rx="18" ry="14" stroke-width="2.5"/>
-    <rect x="63" y="163" width="6" height="18" rx="2" fill="#1e2d3d" stroke="none"/>
-    <rect x="57" y="169" width="18" height="6" rx="2" fill="#1e2d3d" stroke="none"/>
-    <circle cx="128" cy="167" r="5" stroke-width="2"/>
-    <circle cx="138" cy="174" r="5" stroke-width="2"/>
-    <circle cx="118" cy="174" r="5" stroke-width="2"/>
-    <circle cx="128" cy="181" r="5" stroke-width="2"/>
-    <rect x="91" y="170" width="8" height="5" rx="2.5" fill="#1e2d3d" stroke="none"/>
-    <rect x="101" y="170" width="8" height="5" rx="2.5" fill="#1e2d3d" stroke="none"/>
-    <circle cx="70" cy="192" r="7" stroke-width="2"/>
-    <circle cx="130" cy="192" r="7" stroke-width="2"/>
+    <!-- Game controller — cleaner design, no footer elements -->
+    <!-- Controller body -->
+    <rect x="40" y="160" width="120" height="30" rx="12" stroke-width="2.5"/>
+    <!-- Left stick area -->
+    <circle cx="60" cy="175" r="7" stroke-width="2.5"/>
+    <circle cx="60" cy="175" r="4" fill="#1e2d3d" stroke="none"/>
+    <!-- Right buttons -->
+    <circle cx="125" cy="170" r="5" stroke-width="2"/>
+    <circle cx="140" cy="175" r="5" stroke-width="2"/>
+    <circle cx="125" cy="180" r="5" stroke-width="2"/>
+    <circle cx="110" cy="175" r="5" stroke-width="2"/>
+    <!-- D-pad left -->
+    <rect x="75" y="173" width="4" height="4" fill="#1e2d3d" stroke="none"/>
+    <rect x="71" y="175" width="4" height="4" fill="#1e2d3d" stroke="none"/>
+    <rect x="75" y="177" width="4" height="4" fill="#1e2d3d" stroke="none"/>
+    <rect x="79" y="175" width="4" height="4" fill="#1e2d3d" stroke="none"/>
   </g>
 </svg>
