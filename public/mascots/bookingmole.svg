@@ -1,46 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="BookingMole mascot">
   <g id="mole-base" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Crown puffs -->
-    <circle cx="91" cy="28" r="5" stroke-width="2.5"/>
-    <circle cx="100" cy="22" r="6" stroke-width="2.5"/>
-    <circle cx="109" cy="28" r="5" stroke-width="2.5"/>
+    <!-- Topknot: single onion/bulb shape -->
+    <path d="M91,30 C88,22 90,8 100,5 C110,8 112,22 109,30 C107,34 93,34 91,30 Z" stroke-width="2.5"/>
     <!-- Head -->
     <circle cx="100" cy="83" r="57" stroke-width="3.5"/>
     <!-- Left lens -->
-    <circle cx="81" cy="89" r="19" stroke-width="4"/>
+    <circle cx="81" cy="89" r="19" stroke-width="5"/>
     <!-- Right lens -->
-    <circle cx="119" cy="89" r="19" stroke-width="4"/>
+    <circle cx="119" cy="89" r="19" stroke-width="5"/>
     <!-- Bridge -->
-    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3"/>
+    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3.5"/>
     <!-- Temple arms -->
-    <line x1="62" y1="89" x2="55" y2="89" stroke-width="3"/>
-    <line x1="138" y1="89" x2="145" y2="89" stroke-width="3"/>
+    <line x1="62" y1="89" x2="54" y2="89" stroke-width="3"/>
+    <line x1="138" y1="89" x2="146" y2="89" stroke-width="3"/>
     <!-- Left pupil -->
-    <circle cx="81" cy="89" r="9" fill="#1e2d3d" stroke="none"/>
-    <circle cx="84" cy="86" r="3.5" fill="white" stroke="none"/>
+    <circle cx="81" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
+    <circle cx="84" cy="86" r="4" fill="white" stroke="none"/>
     <!-- Right pupil -->
-    <circle cx="119" cy="89" r="9" fill="#1e2d3d" stroke="none"/>
-    <circle cx="122" cy="86" r="3.5" fill="white" stroke="none"/>
+    <circle cx="119" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
+    <circle cx="122" cy="86" r="4" fill="white" stroke="none"/>
     <!-- Nose -->
-    <ellipse cx="100" cy="113" rx="6" ry="4.5" fill="#1e2d3d" stroke="none"/>
+    <path d="M96,109 Q100,106 104,109 Q103,115 100,116 Q97,115 96,109 Z" fill="#1e2d3d" stroke="none"/>
     <!-- Ledge -->
     <rect x="20" y="130" width="160" height="18" rx="7" stroke-width="3.5"/>
-    <!-- Left paw -->
-    <ellipse cx="55" cy="130" rx="20" ry="11" stroke-width="3"/>
-    <path d="M42,126 Q48,119 55,122 Q62,119 68,126" fill="none" stroke-width="2"/>
-    <!-- Right paw -->
-    <ellipse cx="145" cy="130" rx="20" ry="11" stroke-width="3"/>
-    <path d="M132,126 Q138,119 145,122 Q152,119 158,126" fill="none" stroke-width="2"/>
+    <!-- Left hand — 3 fingers, centered cx=55 -->
+    <path d="M41,130 L41,124 Q46,113 51,124 Q55,111 61,124 Q65,114 69,124 L69,130 Z" stroke-width="2.5"/>
+    <!-- Right hand — 3 fingers, centered cx=145 -->
+    <path d="M131,130 L131,124 Q135,114 141,124 Q145,111 151,124 Q155,113 159,124 L159,130 Z" stroke-width="2.5"/>
   </g>
 
   <g id="prop" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Cocktail glass (left, held by left paw) -->
+    <!-- Cocktail glass (left) -->
     <path d="M22,148 L42,148 L34,168 L30,168 Z" stroke-width="2.5"/>
     <line x1="32" y1="168" x2="32" y2="180" stroke-width="2.5"/>
     <line x1="24" y1="180" x2="40" y2="180" stroke-width="2.5"/>
     <line x1="26" y1="148" x2="38" y2="148" stroke-width="1.5"/>
     <circle cx="32" cy="148" r="3.5" fill="#a3c464" stroke-width="1.5"/>
-    <!-- Beach parasol (right, held by right paw) -->
+    <!-- Beach parasol (right) -->
     <line x1="168" y1="185" x2="158" y2="110" stroke-width="2.5"/>
     <path d="M140,115 Q158,95 176,115" stroke-width="2.5" fill="none"/>
     <path d="M140,115 Q149,105 158,110 Q167,105 176,115 Q167,120 158,118 Q149,120 140,115 Z" stroke-width="2"/>

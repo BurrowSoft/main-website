@@ -1,51 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="FlyMole mascot">
   <g id="mole-base" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Crown puffs -->
-    <circle cx="91" cy="28" r="5" stroke-width="2.5"/>
-    <circle cx="100" cy="22" r="6" stroke-width="2.5"/>
-    <circle cx="109" cy="28" r="5" stroke-width="2.5"/>
+    <!-- Topknot: single onion/bulb shape -->
+    <path d="M91,30 C88,22 90,8 100,5 C110,8 112,22 109,30 C107,34 93,34 91,30 Z" stroke-width="2.5"/>
     <!-- Head -->
     <circle cx="100" cy="83" r="57" stroke-width="3.5"/>
     <!-- Left lens -->
-    <circle cx="81" cy="89" r="19" stroke-width="4"/>
+    <circle cx="81" cy="89" r="19" stroke-width="5"/>
     <!-- Right lens -->
-    <circle cx="119" cy="89" r="19" stroke-width="4"/>
+    <circle cx="119" cy="89" r="19" stroke-width="5"/>
     <!-- Bridge -->
-    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3"/>
+    <line x1="100" y1="87" x2="100" y2="92" stroke-width="3.5"/>
     <!-- Temple arms -->
-    <line x1="62" y1="89" x2="55" y2="89" stroke-width="3"/>
-    <line x1="138" y1="89" x2="145" y2="89" stroke-width="3"/>
+    <line x1="62" y1="89" x2="54" y2="89" stroke-width="3"/>
+    <line x1="138" y1="89" x2="146" y2="89" stroke-width="3"/>
     <!-- Left pupil -->
-    <circle cx="81" cy="89" r="9" fill="#1e2d3d" stroke="none"/>
-    <circle cx="84" cy="86" r="3.5" fill="white" stroke="none"/>
+    <circle cx="81" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
+    <circle cx="84" cy="86" r="4" fill="white" stroke="none"/>
     <!-- Right pupil -->
-    <circle cx="119" cy="89" r="9" fill="#1e2d3d" stroke="none"/>
-    <circle cx="122" cy="86" r="3.5" fill="white" stroke="none"/>
-    <!-- Nose -->
-    <ellipse cx="100" cy="113" rx="6" ry="4.5" fill="#1e2d3d" stroke="none"/>
+    <circle cx="119" cy="89" r="11" fill="#1e2d3d" stroke="none"/>
+    <circle cx="122" cy="86" r="4" fill="white" stroke="none"/>
+    <!-- Nose: small rounded triangle pointing down -->
+    <path d="M96,109 Q100,106 104,109 Q103,115 100,116 Q97,115 96,109 Z" fill="#1e2d3d" stroke="none"/>
     <!-- Ledge -->
     <rect x="20" y="130" width="160" height="18" rx="7" stroke-width="3.5"/>
-    <!-- Left paw -->
-    <ellipse cx="62" cy="130" rx="20" ry="11" stroke-width="3"/>
-    <path d="M49,126 Q55,119 62,122 Q69,119 75,126" fill="none" stroke-width="2"/>
-    <!-- Right paw -->
-    <ellipse cx="138" cy="130" rx="20" ry="11" stroke-width="3"/>
-    <path d="M125,126 Q131,119 138,122 Q145,119 151,126" fill="none" stroke-width="2"/>
+    <!-- Left hand — 3 finger bumps -->
+    <path d="M47,130 L47,124 Q52,113 57,124 Q61,111 67,124 Q71,114 77,124 L77,130 Z" stroke-width="2.5"/>
+    <!-- Right hand — 3 finger bumps -->
+    <path d="M123,130 L123,124 Q128,114 133,124 Q137,111 143,124 Q147,113 153,124 L153,130 Z" stroke-width="2.5"/>
   </g>
 
   <g id="prop" fill="white" stroke="#1e2d3d" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Airplane — top-down view, pointing upward -->
-    <!-- Fuselage -->
+    <!-- Airplane — top-down view -->
     <ellipse cx="100" cy="183" rx="11" ry="26" stroke-width="2.5"/>
-    <!-- Cockpit dome -->
     <ellipse cx="100" cy="160" rx="7" ry="8" fill="#cce8ff" stroke-width="2"/>
-    <!-- Left main wing -->
     <polygon points="95,178 55,192 60,198 100,185" stroke-width="2"/>
-    <!-- Right main wing -->
     <polygon points="105,178 145,192 140,198 100,185" stroke-width="2"/>
-    <!-- Left tail stabiliser -->
     <polygon points="95,205 80,214 84,207 95,207" stroke-width="1.5"/>
-    <!-- Right tail stabiliser -->
     <polygon points="105,205 120,214 116,207 105,207" stroke-width="1.5"/>
   </g>
 </svg>
