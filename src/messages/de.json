@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Produkte", "about": "Über uns" },
+  "hero": {
+    "title": "Finde bessere Angebote.",
+    "titleAccent": "Keine Tricks.",
+    "subtitle": "Ehrliche Suchwerkzeuge für Flüge, Hotels, Autos, Nachrichten, Spiele und Shopping. Keine Dark Patterns, keine versteckten Gebühren.",
+    "cta": "Unsere Produkte entdecken",
+    "ctaLabels": {
+      "flights": "Flüge suchen",
+      "hotels": "Hotels ansehen",
+      "news": "Nachrichten lesen",
+      "cars": "Auto mieten",
+      "games": "Jetzt spielen",
+      "shopping": "Angebote shoppen"
+    }
+  },
+  "products": {
+    "sectionTitle": "Unsere Produkte",
+    "flymole": "Flüge der besten Airlines vergleichen",
+    "bookingmole": "Hotels weltweit finden und vergleichen",
+    "insightmole": "Mit Top-Nachrichten immer informiert",
+    "rentacarmole": "Mietwagen weltweit vergleichen",
+    "gamesmole": "Die besten Spiele live jetzt",
+    "shoppingmole": "Produktpreise vergleichen"
+  },
+  "footer": {
+    "tagline": "TIEF GRABEN. LÖSUNGEN BAUEN.",
+    "products": "Produkte",
+    "support": "Support",
+    "copyright": "© 2026 BurrowSoft. Alle Rechte vorbehalten."
+  }
+}

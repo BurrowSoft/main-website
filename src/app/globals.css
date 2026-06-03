@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-sarabun), ui-sans-serif, system-ui, sans-serif;
+  /*
+   * Locale-specific font variables are injected on <html> by layout.tsx.
+   * Only one variable is defined at a time; the nested var() fallback chain
+   * picks whichever is set, degrading to system fonts for Latin locales.
+   */
+  --font-sans:
+    var(--font-sarabun,
+    var(--font-noto-jp,
+    var(--font-noto-sc,
+    var(--font-noto-tc,
+    var(--font-noto-kr,
+    var(--font-noto-ar,
+    ui-sans-serif)))))),
+    system-ui, sans-serif;
 }

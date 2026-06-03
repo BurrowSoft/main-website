@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Prodotti", "about": "Chi siamo" },
+  "hero": {
+    "title": "Trova offerte migliori.",
+    "titleAccent": "Senza trucchi.",
+    "subtitle": "Strumenti di ricerca onesti per voli, hotel, auto, notizie, giochi e shopping. Nessun dark pattern, nessuna tariffa nascosta.",
+    "cta": "Esplora i nostri prodotti",
+    "ctaLabels": {
+      "flights": "Cerca voli",
+      "hotels": "Vedi hotel",
+      "news": "Leggi notizie",
+      "cars": "Noleggia un'auto",
+      "games": "Gioca ora",
+      "shopping": "Vedi offerte"
+    }
+  },
+  "products": {
+    "sectionTitle": "I Nostri Prodotti",
+    "flymole": "Confronta voli delle migliori compagnie aeree",
+    "bookingmole": "Trova e confronta hotel in tutto il mondo",
+    "insightmole": "Rimani aggiornato con le notizie più importanti",
+    "rentacarmole": "Confronta noleggi auto in tutto il mondo",
+    "gamesmole": "I migliori giochi live adesso",
+    "shoppingmole": "Confronta prezzi dei prodotti"
+  },
+  "footer": {
+    "tagline": "SCAVARE IN PROFONDITÀ. COSTRUIRE SOLUZIONI.",
+    "products": "Prodotti",
+    "support": "Supporto",
+    "copyright": "© 2026 BurrowSoft. Tutti i diritti riservati."
+  }
+}

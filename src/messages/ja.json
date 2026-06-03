@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "製品", "about": "会社概要" },
+  "hero": {
+    "title": "よりよいお得情報を見つけよう。",
+    "titleAccent": "騙しなし。",
+    "subtitle": "フライト、ホテル、レンタカー、ニュース、ゲーム、ショッピングのための正直な検索ツール。ダークパターンなし、隠れた手数料なし。",
+    "cta": "製品を探す",
+    "ctaLabels": {
+      "flights": "フライトを検索",
+      "hotels": "ホテルを見る",
+      "news": "ニュースを読む",
+      "cars": "レンタカーを探す",
+      "games": "ゲームを楽しむ",
+      "shopping": "お得情報を見る"
+    }
+  },
+  "products": {
+    "sectionTitle": "製品一覧",
+    "flymole": "主要航空会社のフライトを比較",
+    "bookingmole": "世界中のホテルを検索・比較",
+    "insightmole": "最新ニュースで常に情報収集",
+    "rentacarmole": "世界中のレンタカーを比較",
+    "gamesmole": "今すぐライブのトップゲーム",
+    "shoppingmole": "商品価格を比較"
+  },
+  "footer": {
+    "tagline": "深く掘り下げ、ソリューションを構築する。",
+    "products": "製品",
+    "support": "サポート",
+    "copyright": "© 2026 BurrowSoft. 全著作権所有。"
+  }
+}

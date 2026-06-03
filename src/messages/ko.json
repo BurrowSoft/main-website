@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "제품", "about": "회사 소개" },
+  "hero": {
+    "title": "더 좋은 거래를 찾아보세요.",
+    "titleAccent": "속임수 없이.",
+    "subtitle": "항공편, 호텔, 자동차, 뉴스, 게임, 쇼핑을 위한 정직한 검색 도구. 다크 패턴 없음, 숨겨진 수수료 없음.",
+    "cta": "제품 살펴보기",
+    "ctaLabels": {
+      "flights": "항공편 검색",
+      "hotels": "호텔 보기",
+      "news": "뉴스 읽기",
+      "cars": "렌터카",
+      "games": "지금 게임하기",
+      "shopping": "쇼핑 특가"
+    }
+  },
+  "products": {
+    "sectionTitle": "우리 제품",
+    "flymole": "주요 항공사 항공편 비교",
+    "bookingmole": "전 세계 호텔 검색 및 비교",
+    "insightmole": "최신 뉴스로 항상 정보 파악",
+    "rentacarmole": "전 세계 렌터카 비교",
+    "gamesmole": "지금 바로 인기 게임 라이브",
+    "shoppingmole": "상품 가격 비교"
+  },
+  "footer": {
+    "tagline": "깊이 파고들어 솔루션을 만듭니다.",
+    "products": "제품",
+    "support": "고객 지원",
+    "copyright": "© 2026 BurrowSoft. 모든 권리 보유."
+  }
+}

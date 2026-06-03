@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Produk", "about": "Tentang Kami" },
+  "hero": {
+    "title": "Temukan penawaran terbaik.",
+    "titleAccent": "Tanpa tipuan.",
+    "subtitle": "Alat pencarian jujur untuk penerbangan, hotel, mobil, berita, game, dan belanja. Tanpa dark pattern, tanpa biaya tersembunyi.",
+    "cta": "Jelajahi produk kami",
+    "ctaLabels": {
+      "flights": "Cari penerbangan",
+      "hotels": "Lihat hotel",
+      "news": "Baca berita",
+      "cars": "Sewa mobil",
+      "games": "Main sekarang",
+      "shopping": "Belanja sekarang"
+    }
+  },
+  "products": {
+    "sectionTitle": "Produk Kami",
+    "flymole": "Bandingkan penerbangan dari maskapai terbaik",
+    "bookingmole": "Temukan dan bandingkan hotel di seluruh dunia",
+    "insightmole": "Tetap terinformasi dengan berita terkini",
+    "rentacarmole": "Bandingkan sewa mobil di seluruh dunia",
+    "gamesmole": "Game terpopuler yang sedang live sekarang",
+    "shoppingmole": "Bandingkan harga produk"
+  },
+  "footer": {
+    "tagline": "MENGGALI LEBIH DALAM. MEMBANGUN SOLUSI.",
+    "products": "Produk",
+    "support": "Dukungan",
+    "copyright": "© 2026 BurrowSoft. Semua hak dilindungi."
+  }
+}

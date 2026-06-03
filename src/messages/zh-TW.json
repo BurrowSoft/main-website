@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "產品", "about": "關於我們" },
+  "hero": {
+    "title": "找到更好的優惠。",
+    "titleAccent": "沒有套路。",
+    "subtitle": "誠信的航班、飯店、租車、新聞、遊戲和購物搜尋工具。無暗黑模式，無隱藏費用。",
+    "cta": "探索我們的產品",
+    "ctaLabels": {
+      "flights": "搜尋航班",
+      "hotels": "瀏覽飯店",
+      "news": "閱讀新聞",
+      "cars": "租車",
+      "games": "立即遊戲",
+      "shopping": "購物優惠"
+    }
+  },
+  "products": {
+    "sectionTitle": "我們的產品",
+    "flymole": "比較頂級航空公司的航班",
+    "bookingmole": "在全球範圍內搜尋和比較飯店",
+    "insightmole": "隨時掌握最新頭條新聞",
+    "rentacarmole": "在全球範圍內比較租車價格",
+    "gamesmole": "當前熱門遊戲直播",
+    "shoppingmole": "比較商品價格"
+  },
+  "footer": {
+    "tagline": "深入挖掘，打造解決方案。",
+    "products": "產品",
+    "support": "客服支援",
+    "copyright": "© 2026 BurrowSoft. 保留所有權利。"
+  }
+}

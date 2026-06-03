@@ -60,7 +60,7 @@ export function MobileNav() {
             </a>
           ))}
           <div className="mt-2 border-t border-slate-100 px-4 pt-3 pb-1">
-            <LanguageSelector locales={["en", "th"]} className="w-full" />
+            <LanguageSelector locales={["en","th","es","ru","pt-BR","fr","ja","zh","zh-TW","ar","de","id","ko","it","vi"]} className="w-full" />
           </div>
         </div>
       )}

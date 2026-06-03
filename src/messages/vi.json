@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Sản phẩm", "about": "Giới thiệu" },
+  "hero": {
+    "title": "Tìm ưu đãi tốt hơn.",
+    "titleAccent": "Không gian lận.",
+    "subtitle": "Công cụ tìm kiếm trung thực cho chuyến bay, khách sạn, xe hơi, tin tức, game và mua sắm. Không dark pattern, không phí ẩn.",
+    "cta": "Khám phá sản phẩm của chúng tôi",
+    "ctaLabels": {
+      "flights": "Tìm chuyến bay",
+      "hotels": "Xem khách sạn",
+      "news": "Đọc tin tức",
+      "cars": "Thuê xe",
+      "games": "Chơi game ngay",
+      "shopping": "Xem ưu đãi"
+    }
+  },
+  "products": {
+    "sectionTitle": "Sản Phẩm Của Chúng Tôi",
+    "flymole": "So sánh chuyến bay từ các hãng hàng không hàng đầu",
+    "bookingmole": "Tìm và so sánh khách sạn toàn thế giới",
+    "insightmole": "Cập nhật tin tức nóng nhất",
+    "rentacarmole": "So sánh giá thuê xe toàn thế giới",
+    "gamesmole": "Game hot đang phát sóng trực tiếp",
+    "shoppingmole": "So sánh giá sản phẩm"
+  },
+  "footer": {
+    "tagline": "ĐÀO SÂU. XÂY DỰNG GIẢI PHÁP.",
+    "products": "Sản phẩm",
+    "support": "Hỗ trợ",
+    "copyright": "© 2026 BurrowSoft. Bảo lưu mọi quyền."
+  }
+}

@@ -1,7 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Sarabun } from "next/font/google";
+import {
+  Sarabun,
+  Noto_Sans_JP,
+  Noto_Sans_SC,
+  Noto_Sans_TC,
+  Noto_Sans_KR,
+  Noto_Sans_Arabic,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
@@ -9,11 +16,23 @@ import { MobileNav } from "@/components/MobileNav";
 import { LanguageSelector, RegionalFloatingAd } from "@burrowsoft/shared";
 import "./globals.css";
 
-const sarabun = Sarabun({
-  subsets: ["thai", "latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-sarabun",
-});
+const sarabun   = Sarabun({ subsets: ["thai", "latin"], weight: ["400", "600", "700"], variable: "--font-sarabun", display: "swap" });
+const notoJP    = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-noto-jp", display: "swap" });
+const notoSC    = Noto_Sans_SC({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-noto-sc", display: "swap" });
+const notoTC    = Noto_Sans_TC({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-noto-tc", display: "swap" });
+const notoKR    = Noto_Sans_KR({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-noto-kr", display: "swap" });
+const notoAR    = Noto_Sans_Arabic({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-noto-ar", display: "swap" });
+
+const LOCALE_FONT: Record<string, string> = {
+  th: sarabun.variable,
+  ja: notoJP.variable,
+  zh: notoSC.variable,
+  "zh-TW": notoTC.variable,
+  ko: notoKR.variable,
+  ar: notoAR.variable,
+};
+
+const ALL_LOCALES = ["en","th","es","ru","pt-BR","fr","ja","zh","zh-TW","ar","de","id","ko","it","vi"];
 
 const SITE_NAME = "BurrowSoft";
 const SITE_URL = "https://burrowsoft.com";
@@ -28,16 +47,9 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "BurrowSoft",
-    "FlyMole",
-    "BookingMole",
-    "InsightMole",
-    "RentACarMole",
-    "GamesMole",
-    "ShoppingMole",
-    "flight search",
-    "hotel booking",
-    "honest tools",
+    "BurrowSoft", "FlyMole", "BookingMole", "InsightMole",
+    "RentACarMole", "GamesMole", "ShoppingMole",
+    "flight search", "hotel booking", "honest tools",
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
@@ -103,9 +115,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   const messages = await getMessages();
   const tFooter = await getTranslations("footer");
 
+  const fontClass = LOCALE_FONT[locale] ?? "";
+
   return (
-    <html lang={locale}>
-      <body className={`${sarabun.variable} font-sans min-h-screen bg-white text-slate-900 antialiased`}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={fontClass}>
+      <body className="font-sans min-h-screen bg-white text-slate-900 antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
             <nav
@@ -130,7 +144,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                     {link.label}
                   </a>
                 ))}
-                <LanguageSelector locales={["en", "th"]} />
+                <LanguageSelector locales={ALL_LOCALES} />
               </div>
               <MobileNav />
             </nav>
@@ -144,11 +158,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                 {/* Brand column */}
                 <div>
                   <div className="mb-4 flex items-center gap-3">
-                    <img
-                      src="/brand/burrowsoft-icon.svg"
-                      alt="BurrowSoft"
-                      className="h-10 w-10"
-                    />
+                    <img src="/brand/burrowsoft-icon.svg" alt="BurrowSoft" className="h-10 w-10" />
                     <span className="text-xl font-extrabold tracking-tight">BurrowSoft</span>
                   </div>
                   <p className="mb-6 text-xs font-bold tracking-[0.18em] text-indigo-400">

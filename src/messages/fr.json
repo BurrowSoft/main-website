@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Produits", "about": "À propos" },
+  "hero": {
+    "title": "Trouvez de meilleures offres.",
+    "titleAccent": "Sans arnaque.",
+    "subtitle": "Des outils de recherche honnêtes pour les vols, hôtels, voitures, actualités, jeux et achats. Sans dark patterns, sans frais cachés.",
+    "cta": "Explorer nos produits",
+    "ctaLabels": {
+      "flights": "Chercher des vols",
+      "hotels": "Voir les hôtels",
+      "news": "Lire les actualités",
+      "cars": "Louer une voiture",
+      "games": "Jouer maintenant",
+      "shopping": "Voir les offres"
+    }
+  },
+  "products": {
+    "sectionTitle": "Nos Produits",
+    "flymole": "Comparez les vols des meilleures compagnies",
+    "bookingmole": "Trouvez et comparez des hôtels dans le monde entier",
+    "insightmole": "Restez informé avec les principales actualités",
+    "rentacarmole": "Comparez les locations de voiture dans le monde entier",
+    "gamesmole": "Les meilleurs jeux en direct maintenant",
+    "shoppingmole": "Comparez les prix des produits"
+  },
+  "footer": {
+    "tagline": "CREUSER PROFOND. CONSTRUIRE DES SOLUTIONS.",
+    "products": "Produits",
+    "support": "Support",
+    "copyright": "© 2026 BurrowSoft. Tous droits réservés."
+  }
+}

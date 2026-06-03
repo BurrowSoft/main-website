@@ -1,0 +1,32 @@
+{
+  "nav": { "products": "Productos", "about": "Acerca de" },
+  "hero": {
+    "title": "Encuentra mejores ofertas.",
+    "titleAccent": "Sin trucos.",
+    "subtitle": "Herramientas de búsqueda honestas para vuelos, hoteles, autos, noticias, juegos y compras. Sin patrones oscuros, sin cargos ocultos.",
+    "cta": "Explorar nuestros productos",
+    "ctaLabels": {
+      "flights": "Buscar vuelos",
+      "hotels": "Ver hoteles",
+      "news": "Leer noticias",
+      "cars": "Alquilar un auto",
+      "games": "Jugar ahora",
+      "shopping": "Ver ofertas"
+    }
+  },
+  "products": {
+    "sectionTitle": "Nuestros Productos",
+    "flymole": "Compara vuelos de las mejores aerolíneas",
+    "bookingmole": "Encuentra y compara hoteles en todo el mundo",
+    "insightmole": "Mantente informado con las principales noticias",
+    "rentacarmole": "Compara alquileres de autos en todo el mundo",
+    "gamesmole": "Los mejores juegos en vivo ahora mismo",
+    "shoppingmole": "Compara precios de productos"
+  },
+  "footer": {
+    "tagline": "CAVANDO PROFUNDO. CONSTRUYENDO SOLUCIONES.",
+    "products": "Productos",
+    "support": "Soporte",
+    "copyright": "© 2026 BurrowSoft. Todos los derechos reservados."
+  }
+}
