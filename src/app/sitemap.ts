@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
+
+const BASE = "https://www.burrowsoft.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://burrowsoft.com",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
+  return routing.locales.map((locale) => ({
+    url: locale === "en" ? `${BASE}/` : `${BASE}/${locale}/`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 1,
+  }));
 }
