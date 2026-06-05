@@ -131,10 +131,6 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-24 pb-10 text-center">
-        <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-indigo-600" />
-          6 products · No dark patterns
-        </p>
         <h1 className="mx-auto max-w-3xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
           {tHero("title")}{" "}
           <span className="text-indigo-600">{tHero("titleAccent")}</span>
@@ -148,7 +144,7 @@ export default async function HomePage() {
 
         {/* Mascots + aligned CTA buttons */}
         <div className="mt-10 grid grid-cols-3 sm:grid-cols-6 gap-x-3 gap-y-6">
-          {products.map((p, i) => (
+          {products.map((p) => (
             <div key={p.name} className="flex flex-col items-center gap-3">
               <div className="flex h-24 sm:h-28 items-end justify-center">
                 <img
@@ -162,11 +158,7 @@ export default async function HomePage() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-full inline-flex items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-xs sm:text-sm font-semibold transition-colors shadow-sm ${
-                  i === 0
-                    ? "bg-indigo-600 text-white hover:bg-indigo-700"
-                    : "border border-slate-300 bg-white text-slate-700 hover:border-indigo-400 hover:text-indigo-600"
-                }`}
+                className="w-full inline-flex items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-xs sm:text-sm font-semibold transition-colors shadow-sm border border-slate-300 bg-white text-slate-700 hover:border-indigo-400 hover:text-indigo-600"
               >
                 <span aria-hidden="true">{p.ctaEmoji}</span>
                 {tCta(p.ctaKey)}
