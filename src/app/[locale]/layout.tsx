@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import {
   Sarabun,
   Noto_Sans_JP,
@@ -187,11 +188,16 @@ export default async function LocaleLayout({
               className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
               aria-label="Main navigation"
             >
-              <Link href="/" className="flex items-center gap-2 font-bold text-slate-900 text-lg tracking-tight">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-indigo-600 text-white text-xs font-black">
-                  B
-                </span>
-                BurrowSoft
+              <Link href="/" className="flex items-center gap-2.5">
+                <Image
+                  src="/brand/burrowsoft-icon.svg"
+                  alt="BurrowSoft"
+                  width={32}
+                  height={32}
+                  className="shrink-0"
+                  priority
+                />
+                <span className="text-lg font-bold tracking-tight text-slate-900">BurrowSoft</span>
               </Link>
               <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
                 {navLinks.map((link) => (
