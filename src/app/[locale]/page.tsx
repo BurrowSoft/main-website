@@ -39,7 +39,7 @@ const PRODUCTS_BASE = [
   {
     name: "FlyMole",
     href: "https://flymole.com",
-    mascot: "/mascots/flymole.svg",
+    mascot: "/mascots/flymole.png",
     tKey: "flymole" as const,
     tagline: "Search flights",
     cta: "Search flights",
@@ -50,7 +50,7 @@ const PRODUCTS_BASE = [
   {
     name: "BookingMole",
     href: "https://bookingmole.com",
-    mascot: "/mascots/bookingmole.svg",
+    mascot: "/mascots/bookingmole.png",
     tKey: "bookingmole" as const,
     tagline: "Book hotels",
     cta: "Browse hotels",
@@ -61,7 +61,7 @@ const PRODUCTS_BASE = [
   {
     name: "InsightMole",
     href: "https://insightmole.com",
-    mascot: "/mascots/insightmole.svg",
+    mascot: "/mascots/insightmole.png",
     tKey: "insightmole" as const,
     tagline: "Trending news",
     cta: "Read the news",
@@ -72,7 +72,7 @@ const PRODUCTS_BASE = [
   {
     name: "RentACarMole",
     href: "https://rentacarmole.com",
-    mascot: "/mascots/rentacarmole.svg",
+    mascot: "/mascots/rentacarmole.png",
     tKey: "rentacarmole" as const,
     tagline: "Rent a car",
     cta: "Find a car",
@@ -83,7 +83,7 @@ const PRODUCTS_BASE = [
   {
     name: "GamesMole",
     href: "https://gamesmole.com",
-    mascot: "/mascots/gamesmole.svg",
+    mascot: "/mascots/gamesmole.png",
     tKey: "gamesmole" as const,
     tagline: "Games & rankings",
     cta: "Explore games",
@@ -94,7 +94,7 @@ const PRODUCTS_BASE = [
   {
     name: "ShoppingMole",
     href: "https://shoppingmole.com",
-    mascot: "/mascots/shoppingmole.svg",
+    mascot: "/mascots/shoppingmole.png",
     tKey: "shoppingmole" as const,
     tagline: "Shop smarter",
     cta: "Start shopping",
