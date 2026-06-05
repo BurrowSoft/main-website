@@ -28,5 +28,8 @@
     "products": "제품",
     "support": "고객 지원",
     "copyright": "© 2026 BurrowSoft. 모든 권리 보유."
+  },
+  "noAds": {
+    "tagline": "깔끔한 검색 · 광고 없음 · 가입 불필요"
   }
 }

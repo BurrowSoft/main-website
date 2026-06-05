@@ -28,5 +28,8 @@
     "products": "Produtos",
     "support": "Suporte",
     "copyright": "© 2026 BurrowSoft. Todos os direitos reservados."
+  },
+  "noAds": {
+    "tagline": "Busca limpa. Sem anúncios. Sem cadastro."
   }
 }

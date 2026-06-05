@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "BurrowSoft — Find better deals. No tricks.",
-};
+const SITE_DESCRIPTION =
+  "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees.";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  await params;
+  const tNoAds = await getTranslations("noAds");
+  return {
+    title: "BurrowSoft — Find better deals. No tricks.",
+    description: `${tNoAds("tagline")} — ${SITE_DESCRIPTION}`,
+  };
+}
 
 const values = [
   {
@@ -96,6 +108,7 @@ export default async function HomePage() {
   const tHero = await getTranslations("hero");
   const tProducts = await getTranslations("products");
   const tCta = await getTranslations("hero.ctaLabels");
+  const tNoAds = await getTranslations("noAds");
 
   const products = PRODUCTS_BASE.map((p) => ({
     ...p,
@@ -114,7 +127,10 @@ export default async function HomePage() {
           {tHero("title")}{" "}
           <span className="text-indigo-600">{tHero("titleAccent")}</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-lg text-slate-500 leading-relaxed">
+        <p className="mt-3 text-base font-semibold tracking-wide text-amber-600">
+          {tNoAds("tagline")}
+        </p>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-slate-500 leading-relaxed">
           {tHero("subtitle")}
         </p>
 
