@@ -41,6 +41,8 @@ const PRODUCTS_BASE = [
     href: "https://flymole.com",
     mascot: "/mascots/flymole.png",
     tKey: "flymole" as const,
+    ctaKey: "flights" as const,
+    ctaEmoji: "✈",
     tagline: "Search flights",
     cta: "Search flights",
     mascotBg: "bg-sky-50",
@@ -52,6 +54,8 @@ const PRODUCTS_BASE = [
     href: "https://bookingmole.com",
     mascot: "/mascots/bookingmole.png",
     tKey: "bookingmole" as const,
+    ctaKey: "hotels" as const,
+    ctaEmoji: "🏨",
     tagline: "Book hotels",
     cta: "Browse hotels",
     mascotBg: "bg-violet-50",
@@ -63,6 +67,8 @@ const PRODUCTS_BASE = [
     href: "https://insightmole.com",
     mascot: "/mascots/insightmole.png",
     tKey: "insightmole" as const,
+    ctaKey: "news" as const,
+    ctaEmoji: "📰",
     tagline: "Trending news",
     cta: "Read the news",
     mascotBg: "bg-amber-50",
@@ -74,6 +80,8 @@ const PRODUCTS_BASE = [
     href: "https://rentacarmole.com",
     mascot: "/mascots/rentacarmole.png",
     tKey: "rentacarmole" as const,
+    ctaKey: "cars" as const,
+    ctaEmoji: "🚗",
     tagline: "Rent a car",
     cta: "Find a car",
     mascotBg: "bg-teal-50",
@@ -85,6 +93,8 @@ const PRODUCTS_BASE = [
     href: "https://gamesmole.com",
     mascot: "/mascots/gamesmole.png",
     tKey: "gamesmole" as const,
+    ctaKey: "games" as const,
+    ctaEmoji: "🎮",
     tagline: "Games & rankings",
     cta: "Explore games",
     mascotBg: "bg-emerald-50",
@@ -96,6 +106,8 @@ const PRODUCTS_BASE = [
     href: "https://shoppingmole.com",
     mascot: "/mascots/shoppingmole.png",
     tKey: "shoppingmole" as const,
+    ctaKey: "shopping" as const,
+    ctaEmoji: "🛍️",
     tagline: "Shop smarter",
     cta: "Start shopping",
     mascotBg: "bg-rose-50",
@@ -134,69 +146,33 @@ export default async function HomePage() {
           {tHero("subtitle")}
         </p>
 
-        {/* Mascot collage */}
-        <div className="mx-auto mt-10 mb-2 flex items-end justify-center gap-1 sm:gap-3 overflow-hidden">
-          {products.map((p) => (
-            <img
-              key={p.name}
-              src={p.mascot}
-              alt=""
-              aria-hidden="true"
-              className="h-20 sm:h-28 w-auto opacity-85"
-            />
+        {/* Mascots + aligned CTA buttons */}
+        <div className="mt-10 grid grid-cols-3 sm:grid-cols-6 gap-x-3 gap-y-6">
+          {products.map((p, i) => (
+            <div key={p.name} className="flex flex-col items-center gap-3">
+              <div className="flex h-24 sm:h-28 items-end justify-center">
+                <img
+                  src={p.mascot}
+                  alt=""
+                  aria-hidden="true"
+                  className="max-h-full w-auto"
+                />
+              </div>
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full inline-flex items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-xs sm:text-sm font-semibold transition-colors shadow-sm ${
+                  i === 0
+                    ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                    : "border border-slate-300 bg-white text-slate-700 hover:border-indigo-400 hover:text-indigo-600"
+                }`}
+              >
+                <span aria-hidden="true">{p.ctaEmoji}</span>
+                {tCta(p.ctaKey)}
+              </a>
+            </div>
           ))}
-        </div>
-
-        {/* CTA buttons */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="https://flymole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
-          >
-            ✈ {tCta("flights")}
-          </a>
-          <a
-            href="https://bookingmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-violet-400 hover:text-violet-600 transition-colors"
-          >
-            🏨 {tCta("hotels")}
-          </a>
-          <a
-            href="https://insightmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-amber-400 hover:text-amber-600 transition-colors"
-          >
-            📰 {tCta("news")}
-          </a>
-          <a
-            href="https://rentacarmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-teal-400 hover:text-teal-600 transition-colors"
-          >
-            🚗 {tCta("cars")}
-          </a>
-          <a
-            href="https://gamesmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-emerald-400 hover:text-emerald-600 transition-colors"
-          >
-            🎮 {tCta("games")}
-          </a>
-          <a
-            href="https://shoppingmole.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-rose-400 hover:text-rose-600 transition-colors"
-          >
-            🛍️ {tCta("shopping")}
-          </a>
         </div>
       </section>
 
