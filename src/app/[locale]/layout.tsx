@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import {
   Sarabun,
   Noto_Sans_JP,
@@ -12,7 +13,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { MobileNav } from "@/components/MobileNav";
-import { LanguageSelector, RegionalFloatingAd } from "@burrowsoft/shared";
+import { LanguageSelector, AppHeader, AppFooter } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -69,6 +70,15 @@ const BASE = "https://www.burrowsoft.com";
 const SITE_DESCRIPTION =
   "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees.";
 
+const footerProducts = [
+  { name: "FlyMole", href: "https://flymole.com", desc: "Compare flights from top airlines" },
+  { name: "BookingMole", href: "https://bookingmole.com", desc: "Find hotels with zero hidden fees" },
+  { name: "InsightMole", href: "https://insightmole.com", desc: "Top headlines, no clickbait" },
+  { name: "RentACarMole", href: "https://rentacarmole.com", desc: "Car rentals from top providers" },
+  { name: "GamesMole", href: "https://gamesmole.com", desc: "Live rankings, guides & gaming news" },
+  { name: "ShoppingMole", href: "https://shoppingmole.com", desc: "Compare prices across thousands of stores" },
+];
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -80,9 +90,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonicalUrl = locale === "en" ? `${BASE}/` : `${BASE}/${locale}/`;
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, l === "en" ? `${BASE}/` : `${BASE}/${l}/`])
-  );
+  const languages = Object.fromEntries(routing.locales.map((l) => [l, l === "en" ? `${BASE}/` : `${BASE}/${l}/`]));
   languages["x-default"] = `${BASE}/`;
 
   return {
@@ -92,17 +100,9 @@ export async function generateMetadata({
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
-    keywords: [
-      "BurrowSoft", "FlyMole", "BookingMole", "InsightMole",
-      "RentACarMole", "GamesMole", "ShoppingMole",
-      "flight search", "hotel booking", "honest tools",
-    ],
+    keywords: ["BurrowSoft","FlyMole","BookingMole","InsightMole","RentACarMole","GamesMole","ShoppingMole","flight search","hotel booking","honest tools"],
     authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
-    icons: {
-      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-      apple: [{ url: "/apple-touch-icon.svg", sizes: "180x180" }],
-    },
     openGraph: {
       type: "website",
       locale: locale.replace("-", "_"),
@@ -110,30 +110,15 @@ export async function generateMetadata({
       siteName: SITE_NAME,
       title: `${SITE_NAME} — Find better deals. No tricks.`,
       description: SITE_DESCRIPTION,
-      images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "BurrowSoft" }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${SITE_NAME} — Find better deals. No tricks.`,
       description: SITE_DESCRIPTION,
-      images: ["/og-image.svg"],
     },
-    alternates: {
-      canonical: canonicalUrl,
-      languages,
-    },
+    alternates: { canonical: canonicalUrl, languages },
     other: { "google-adsense-account": "ca-pub-1009857008755875" },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
   };
 }
 
@@ -152,15 +137,6 @@ const navLinks = [
   { label: "ShoppingMole", href: "https://shoppingmole.com" },
 ];
 
-const footerProducts = [
-  { name: "FlyMole", href: "https://flymole.com", desc: "Compare flights from top airlines" },
-  { name: "BookingMole", href: "https://bookingmole.com", desc: "Find hotels with zero hidden fees" },
-  { name: "InsightMole", href: "https://insightmole.com", desc: "Top headlines, no clickbait" },
-  { name: "RentACarMole", href: "https://rentacarmole.com", desc: "Car rentals from top providers" },
-  { name: "GamesMole", href: "https://gamesmole.com", desc: "Live rankings, guides & gaming news" },
-  { name: "ShoppingMole", href: "https://shoppingmole.com", desc: "Compare prices across thousands of stores" },
-];
-
 export default async function LocaleLayout({
   children,
   params,
@@ -171,7 +147,6 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
   const tFooter = await getTranslations("footer");
-
   const fontClass = LOCALE_FONT[locale] ?? "";
 
   return (
@@ -182,61 +157,46 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-            <nav
-              className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
-              aria-label="Main navigation"
-            >
+          <AppHeader
+            logo={
               <Link href="/" className="flex items-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/brand/logo-header.png"
-                  alt="BurrowSoft"
-                  className="h-9 w-auto shrink-0"
-                />
+                <Image src="/brand/logo-header.png" alt="BurrowSoft" height={36} width={160} className="h-9 w-auto shrink-0" priority />
               </Link>
-              <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-indigo-600 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <LanguageSelector locales={ALL_LOCALES} />
+            }
+            right={
+              <div className="flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
+                  {navLinks.map((link) => (
+                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">
+                      {link.label}
+                    </a>
+                  ))}
+                  <LanguageSelector locales={ALL_LOCALES} />
+                </div>
+                <MobileNav />
               </div>
-              <MobileNav />
-            </nav>
-          </header>
+            }
+          />
 
           <main>{children}</main>
 
+          {/* Main-website uses a detailed dark footer with product descriptions */}
           <footer className="border-t border-slate-800 bg-slate-900 text-white">
             <div className="mx-auto max-w-6xl px-6 py-14">
               <div className="grid gap-12 sm:grid-cols-2">
-                {/* Brand column */}
                 <div>
                   <div className="mb-4 flex items-center gap-3">
-                    <img src="/brand/logo-no-text-dark.png" alt="BurrowSoft" className="h-10 w-10 rounded-xl" />
+                    <Image src="/brand/logo-no-text-dark.png" alt="BurrowSoft" width={40} height={40} className="h-10 w-10 rounded-xl" />
                     <span className="text-xl font-extrabold tracking-tight">BurrowSoft</span>
                   </div>
                   <p className="mb-6 text-xs font-bold tracking-[0.18em] text-indigo-400">
                     {tFooter("tagline")}
                   </p>
-                  <a
-                    href="mailto:support@burrowsoft.com"
-                    className="text-sm text-slate-400 hover:text-indigo-400 transition-colors"
-                  >
+                  <a href="mailto:support@burrowsoft.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors">
                     support@burrowsoft.com
                   </a>
                   <p className="mt-6 text-xs text-slate-500">{tFooter("copyright")}</p>
                 </div>
-
-                {/* Products column */}
                 <div>
                   <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-400">
                     {tFooter("products")}
@@ -244,18 +204,9 @@ export default async function LocaleLayout({
                   <ul className="space-y-3">
                     {footerProducts.map((p) => (
                       <li key={p.name}>
-                        <a
-                          href={p.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group flex flex-wrap items-baseline gap-x-2"
-                        >
-                          <span className="text-sm font-semibold text-white group-hover:text-indigo-400 transition-colors">
-                            {p.name}
-                          </span>
-                          <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">
-                            — {p.desc}
-                          </span>
+                        <a href={p.href} target="_blank" rel="noopener noreferrer" className="group flex flex-wrap items-baseline gap-x-2">
+                          <span className="text-sm font-semibold text-white group-hover:text-indigo-400 transition-colors">{p.name}</span>
+                          <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">— {p.desc}</span>
                         </a>
                       </li>
                     ))}
