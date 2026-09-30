@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "제품", "about": "회사 소개" },
+  "nav": {
+    "products": "제품",
+    "about": "회사 소개",
+    "systems": "시스템",
+    "websites": "웹사이트",
+    "contact": "문의",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기"
+  },
   "hero": {
     "title": "더 좋은 거래를 찾아보세요.",
     "titleAccent": "속임수 없이.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "우리 제품",
+    "sectionTitle": "우리의 웹사이트",
     "flymole": "주요 항공사 항공편 비교",
     "bookingmole": "전 세계 호텔 검색 및 비교",
     "insightmole": "최신 뉴스로 항상 정보 파악",
@@ -27,9 +35,189 @@
     "tagline": "깊이 파고들어 솔루션을 만듭니다.",
     "products": "제품",
     "support": "고객 지원",
-    "copyright": "© 2026 BurrowSoft. 모든 권리 보유."
+    "copyright": "© 2026 BurrowSoft. 모든 권리 보유.",
+    "systems": "시스템",
+    "websites": "웹사이트",
+    "sites": {
+      "flymole": "주요 항공사의 항공편 비교",
+      "bookingmole": "숨은 수수료 없는 호텔 찾기",
+      "insightmole": "주요 헤드라인, 낚시성 기사 없이",
+      "rentacarmole": "주요 업체의 렌터카 비교",
+      "gamesmole": "실시간 순위, 가이드 & 게임 뉴스",
+      "shoppingmole": "수천 개 매장의 가격 비교"
+    }
   },
   "noAds": {
     "tagline": "깔끔한 검색 · 광고 없음 · 가입 불필요"
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — 깊이 있게 만든 소프트웨어 시스템",
+    "homeDescription": "BurrowSoft는 병원 관리 소프트웨어 SolvyMed와 개인 AI 저널 Moodbow, 그리고 6개의 무료 소비자 웹사이트를 만듭니다.",
+    "websitesTitle": "BurrowSoft 웹사이트 — 더 좋은 딜을 찾으세요. 꼼수 없이.",
+    "websitesDescription": "BurrowSoft는 항공권, 호텔, 렌터카, 뉴스, 게임, 쇼핑을 위한 정직하고 집중된 검색 도구를 만듭니다. 다크 패턴도, 숨은 수수료도 없습니다."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "깊이 파고들어",
+      "titleLine2": "솔루션을 만듭니다.",
+      "subtitle": "BurrowSoft는 병원 운영부터 나 자신을 이해하는 일까지, 중요한 일을 위한 소프트웨어 시스템을 만듭니다.",
+      "primaryCta": "시스템 보기",
+      "secondaryCta": "웹사이트 둘러보기",
+      "panelTitle": "우리가 만드는 것"
+    },
+    "logoAlt": "{name} 로고",
+    "systems": {
+      "title": "우리의 시스템",
+      "subtitle": "병원과 일상을 위한 집중된 소프트웨어.",
+      "live": "지금 이용 가능",
+      "comingSoon": "출시 예정"
+    },
+    "solvymed": {
+      "tagline": "병원 관리를 더 간단하게.",
+      "description": "SolvyMed는 개원의와 소규모 병원을 위한 병원 앱입니다. 예약, 환자, 진료 기록, 처방전, 결제를 한곳에서 관리하고, 비서 계정과 환자용 앱을 제공하며, 곧 원하는 것을 말하기만 하면 되는 어시스턴트 SolvyAI도 출시됩니다.",
+      "cta": "SolvyMed 방문하기",
+      "features": {
+        "scheduling": "예약",
+        "records": "환자 기록",
+        "prescriptions": "처방전",
+        "payments": "결제",
+        "secretary": "비서 계정",
+        "patientApp": "환자용 앱",
+        "solvyai": "SolvyAI 어시스턴트"
+      }
+    },
+    "moodbow": {
+      "tagline": "당신의 이야기를 배우는 저널.",
+      "description": "Moodbow는 당신의 이야기를 배우고, 시간이 지나며 기분, 수면, 습관의 패턴을 볼 수 있도록 돕는 개인 AI 저널입니다.",
+      "cta": "출시 알림 받기",
+      "visit": "Moodbow 방문하기",
+      "features": {
+        "mood": "기분",
+        "sleep": "수면",
+        "habits": "습관"
+      },
+      "highlights": {
+        "charts": "진행 상황 차트",
+        "reports": "주간 리포트",
+        "timeline": "변화를 담은 개인 타임라인",
+        "private": "비공개로 안전하게"
+      }
+    },
+    "teaser": {
+      "text": "항공권, 호텔, 렌터카, 뉴스, 게임, 쇼핑을 위한 6개의 무료 소비자 웹사이트도 운영하고 있습니다.",
+      "link": "웹사이트 둘러보기"
+    },
+    "contact": {
+      "title": "문의하기",
+      "text": "프로젝트가 있거나 Moodbow를 먼저 써보고 싶으신가요?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "여섯 가지 집중된 도구. 하나의 미션.",
+    "mascotAlt": "{name} 마스코트",
+    "taglines": {
+      "flymole": "항공권 검색",
+      "bookingmole": "호텔 예약",
+      "insightmole": "인기 뉴스",
+      "rentacarmole": "렌터카",
+      "gamesmole": "게임 & 순위",
+      "shoppingmole": "똑똑한 쇼핑"
+    },
+    "ctas": {
+      "flymole": "항공권 검색",
+      "bookingmole": "호텔 보기",
+      "insightmole": "뉴스 읽기",
+      "rentacarmole": "차량 찾기",
+      "gamesmole": "게임 둘러보기",
+      "shoppingmole": "쇼핑 시작"
+    },
+    "valuesTitle": "우리가 만드는 방식",
+    "values": {
+      "fastTitle": "빠르게",
+      "fastBody": "1초 이내 결과. 기다림 없이.",
+      "transparentTitle": "투명하게",
+      "transparentBody": "보이는 가격이 곧 지불하는 가격입니다. 언제나.",
+      "focusedTitle": "집중해서",
+      "focusedBody": "제품마다 하나의 일, 그것을 완벽하게."
+    },
+    "ctaTitle": "둘러볼 준비가 되셨나요?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.visit",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
+  ]
 }

@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "المنتجات", "about": "من نحن" },
+  "nav": {
+    "products": "المنتجات",
+    "about": "من نحن",
+    "systems": "الأنظمة",
+    "websites": "المواقع",
+    "contact": "تواصل معنا",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
+  },
   "hero": {
     "title": "اعثر على صفقات أفضل.",
     "titleAccent": "بلا خداع.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "منتجاتنا",
+    "sectionTitle": "مواقعنا",
     "flymole": "قارن رحلات كبرى شركات الطيران",
     "bookingmole": "ابحث وقارن الفنادق حول العالم",
     "insightmole": "ابقَ على اطلاع بأهم الأخبار",
@@ -27,9 +35,189 @@
     "tagline": "نحفر عميقاً. نبني الحلول.",
     "products": "المنتجات",
     "support": "الدعم",
-    "copyright": "© 2026 BurrowSoft. جميع الحقوق محفوظة."
+    "copyright": "© 2026 BurrowSoft. جميع الحقوق محفوظة.",
+    "systems": "الأنظمة",
+    "websites": "المواقع",
+    "sites": {
+      "flymole": "قارن رحلات كبرى شركات الطيران",
+      "bookingmole": "فنادق بلا رسوم خفية",
+      "insightmole": "أهم العناوين، بلا إثارة مضللة",
+      "rentacarmole": "تأجير سيارات من أفضل المزودين",
+      "gamesmole": "تصنيفات مباشرة وأدلة وأخبار الألعاب",
+      "shoppingmole": "قارن الأسعار في آلاف المتاجر"
+    }
   },
   "noAds": {
     "tagline": "بحث نظيف. بلا إعلانات. بلا تسجيل."
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — أنظمة برمجية مبنية بعمق.",
+    "homeDescription": "تطوّر BurrowSoft ‏SolvyMed، برنامج إدارة العيادات، و‏Moodbow، مذكرات شخصية بالذكاء الاصطناعي، إضافة إلى ستة مواقع مجانية للمستخدمين.",
+    "websitesTitle": "مواقع BurrowSoft — اعثر على صفقات أفضل. بلا خداع.",
+    "websitesDescription": "تبني BurrowSoft أدوات بحث أمينة ومركّزة للرحلات الجوية والفنادق والسيارات والأخبار والألعاب والتسوق، بلا أنماط مظلمة ولا رسوم خفية."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "نحفر عميقاً.",
+      "titleLine2": "نبني الحلول.",
+      "subtitle": "تبني BurrowSoft أنظمة برمجية للعمل المهم، من إدارة عيادة إلى فهم نفسك.",
+      "primaryCta": "اكتشف أنظمتنا",
+      "secondaryCta": "تصفح مواقعنا",
+      "panelTitle": "ما نبنيه"
+    },
+    "logoAlt": "شعار {name}",
+    "systems": {
+      "title": "أنظمتنا",
+      "subtitle": "برمجيات مركّزة للعيادات وللحياة اليومية.",
+      "live": "متاح الآن",
+      "comingSoon": "قريباً"
+    },
+    "solvymed": {
+      "tagline": "إدارة العيادات، ببساطة.",
+      "description": "SolvyMed هو تطبيق العيادات للأطباء المستقلين والعيادات الصغيرة: المواعيد والمرضى والسجلات والوصفات الطبية والمدفوعات في مكان واحد، مع حساب للسكرتارية وتطبيق لمرضاك، وقريباً SolvyAI، مساعد يكفي أن تخبره بما تحتاج إليه.",
+      "cta": "زيارة SolvyMed",
+      "features": {
+        "scheduling": "المواعيد",
+        "records": "سجلات المرضى",
+        "prescriptions": "الوصفات الطبية",
+        "payments": "المدفوعات",
+        "secretary": "حساب السكرتارية",
+        "patientApp": "تطبيق لمرضاك",
+        "solvyai": "مساعد SolvyAI"
+      }
+    },
+    "moodbow": {
+      "tagline": "مذكرات تتعلّم قصتك.",
+      "description": "Moodbow مذكرات خاصة بالذكاء الاصطناعي تتعلّم قصتك وتساعدك على رؤية الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
+      "cta": "أبلغني عند الإطلاق",
+      "visit": "زيارة Moodbow",
+      "features": {
+        "mood": "المزاج",
+        "sleep": "النوم",
+        "habits": "العادات"
+      },
+      "highlights": {
+        "charts": "رسوم بيانية لتقدّمك",
+        "reports": "تقارير أسبوعية",
+        "timeline": "خط زمني شخصي لما تغيّر",
+        "private": "خاص وآمن"
+      }
+    },
+    "teaser": {
+      "text": "ندير أيضاً ستة مواقع مجانية للمستخدمين للرحلات الجوية والفنادق وتأجير السيارات والأخبار والألعاب والتسوق.",
+      "link": "استكشف مواقعنا"
+    },
+    "contact": {
+      "title": "تواصل معنا",
+      "text": "لديك مشروع أو تريد وصولاً مبكراً إلى Moodbow؟"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "ست أدوات مركّزة. مهمة واحدة.",
+    "mascotAlt": "تميمة {name}",
+    "taglines": {
+      "flymole": "ابحث عن رحلات",
+      "bookingmole": "احجز فنادق",
+      "insightmole": "الأخبار الرائجة",
+      "rentacarmole": "استأجر سيارة",
+      "gamesmole": "الألعاب والتصنيفات",
+      "shoppingmole": "تسوّق بذكاء"
+    },
+    "ctas": {
+      "flymole": "ابحث عن رحلات",
+      "bookingmole": "تصفح الفنادق",
+      "insightmole": "اقرأ الأخبار",
+      "rentacarmole": "ابحث عن سيارة",
+      "gamesmole": "استكشف الألعاب",
+      "shoppingmole": "ابدأ التسوق"
+    },
+    "valuesTitle": "كيف نبني",
+    "values": {
+      "fastTitle": "سريع",
+      "fastBody": "نتائج في أقل من ثانية. بلا انتظار.",
+      "transparentTitle": "شفاف",
+      "transparentBody": "السعر الذي تراه هو السعر الذي تدفعه. دائماً.",
+      "focusedTitle": "مركّز",
+      "focusedBody": "مهمة واحدة لكل منتج، منفّذة بإتقان."
+    },
+    "ctaTitle": "مستعد للاستكشاف؟"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.visit",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
+  ]
 }

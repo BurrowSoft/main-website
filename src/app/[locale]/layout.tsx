@@ -13,9 +13,10 @@ import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { MobileNav } from "@/components/MobileNav";
-import { LanguageSelector, AppHeader, AppFooter } from "@burrowsoft/shared";
+import { LanguageSelector, AppHeader } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { BASE, SITE_NAME, SUPPORT_EMAIL, SOLVYMED_URL, MOODBOW_URL, MOLE_SITES } from "@/lib/site";
 import "../globals.css";
 
 const sarabun = Sarabun({ subsets: ["thai", "latin"], weight: ["400", "600", "700"], variable: "--font-sarabun", display: "swap" });
@@ -44,16 +45,9 @@ const WEBSITE_SCHEMA = {
       "@id": "https://www.burrowsoft.com/#organization",
       "name": "BurrowSoft",
       "url": "https://www.burrowsoft.com",
-      "description": "BurrowSoft builds focused, honest search and aggregation tools. No dark patterns, no hidden fees.",
-      "email": "support@burrowsoft.com",
-      "sameAs": [
-        "https://www.flymole.com",
-        "https://www.bookingmole.com",
-        "https://www.insightmole.com",
-        "https://www.rentacarmole.com",
-        "https://www.gamesmole.com",
-        "https://www.shoppingmole.com",
-      ],
+      "description": "BurrowSoft builds software systems: SolvyMed, clinic management software, and Moodbow, a personal journal, plus six free consumer websites.",
+      "email": SUPPORT_EMAIL,
+      "sameAs": [SOLVYMED_URL, MOODBOW_URL, ...MOLE_SITES.map((s) => s.href.replace("https://", "https://www."))],
     },
     {
       "@type": "WebSite",
@@ -65,58 +59,29 @@ const WEBSITE_SCHEMA = {
   ],
 };
 
-const SITE_NAME = "BurrowSoft";
-const BASE = "https://www.burrowsoft.com";
-const SITE_DESCRIPTION =
-  "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees.";
-
-const footerProducts = [
-  { name: "FlyMole", href: "https://flymole.com", desc: "Compare flights from top airlines" },
-  { name: "BookingMole", href: "https://bookingmole.com", desc: "Find hotels with zero hidden fees" },
-  { name: "InsightMole", href: "https://insightmole.com", desc: "Top headlines, no clickbait" },
-  { name: "RentACarMole", href: "https://rentacarmole.com", desc: "Car rentals from top providers" },
-  { name: "GamesMole", href: "https://gamesmole.com", desc: "Live rankings, guides & gaming news" },
-  { name: "ShoppingMole", href: "https://shoppingmole.com", desc: "Compare prices across thousands of stores" },
-];
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Site-wide defaults only; each page sets its own title, description, canonical and hreflang.
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const canonicalUrl = locale === "en" ? `${BASE}/` : `${BASE}/${locale}/`;
-  const languages = Object.fromEntries(routing.locales.map((l) => [l, l === "en" ? `${BASE}/` : `${BASE}/${l}/`]));
-  languages["x-default"] = `${BASE}/`;
+  const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
     metadataBase: new URL(BASE),
     title: {
-      default: `${SITE_NAME} — Find better deals. No tricks.`,
+      default: t("homeTitle"),
       template: `%s | ${SITE_NAME}`,
     },
-    description: SITE_DESCRIPTION,
-    keywords: ["BurrowSoft","FlyMole","BookingMole","InsightMole","RentACarMole","GamesMole","ShoppingMole","flight search","hotel booking","honest tools"],
+    description: t("homeDescription"),
+    keywords: ["BurrowSoft","SolvyMed","Moodbow","clinic management software","FlyMole","BookingMole","InsightMole","RentACarMole","GamesMole","ShoppingMole"],
     authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
-    openGraph: {
-      type: "website",
-      locale: locale.replace("-", "_"),
-      url: canonicalUrl,
-      siteName: SITE_NAME,
-      title: `${SITE_NAME} — Find better deals. No tricks.`,
-      description: SITE_DESCRIPTION,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${SITE_NAME} — Find better deals. No tricks.`,
-      description: SITE_DESCRIPTION,
-    },
-    alternates: { canonical: canonicalUrl, languages },
     other: { "google-adsense-account": "ca-pub-1009857008755875" },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
   };
@@ -128,14 +93,8 @@ export const viewport: Viewport = {
   themeColor: "#4f46e5",
 };
 
-const navLinks = [
-  { label: "FlyMole", href: "https://flymole.com" },
-  { label: "BookingMole", href: "https://bookingmole.com" },
-  { label: "InsightMole", href: "https://insightmole.com" },
-  { label: "RentACarMole", href: "https://rentacarmole.com" },
-  { label: "GamesMole", href: "https://gamesmole.com" },
-  { label: "ShoppingMole", href: "https://shoppingmole.com" },
-];
+const navLinkClass =
+  "rounded-md px-1 py-1 hover:text-indigo-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500";
 
 export default async function LocaleLayout({
   children,
@@ -147,6 +106,8 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
   const tFooter = await getTranslations("footer");
+  const tNav = await getTranslations("nav");
+  const tHome = await getTranslations("home");
   const fontClass = LOCALE_FONT[locale] ?? "";
 
   return (
@@ -165,12 +126,10 @@ export default async function LocaleLayout({
             }
             right={
               <div className="flex items-center gap-4">
-                <div className="hidden md:flex items-center gap-4 text-sm font-medium text-slate-600">
-                  {navLinks.map((link) => (
-                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">
-                      {link.label}
-                    </a>
-                  ))}
+                <div className="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600">
+                  <Link href={{ pathname: "/", hash: "systems" }} className={navLinkClass}>{tNav("systems")}</Link>
+                  <Link href="/websites" className={navLinkClass}>{tNav("websites")}</Link>
+                  <Link href={{ pathname: "/", hash: "contact" }} className={navLinkClass}>{tNav("contact")}</Link>
                   <LanguageSelector locales={ALL_LOCALES} />
                 </div>
                 <MobileNav />
@@ -183,30 +142,54 @@ export default async function LocaleLayout({
           {/* Main-website uses a detailed dark footer with product descriptions */}
           <footer className="border-t border-slate-800 bg-slate-900 text-white">
             <div className="mx-auto max-w-6xl px-6 py-14">
-              <div className="grid gap-12 sm:grid-cols-2">
+              <div className="grid gap-12 md:grid-cols-[1.1fr_1fr_1.4fr]">
                 <div>
                   <div className="mb-4 flex items-center gap-3">
-                    <Image src="/brand/logo-no-text-dark.png" alt="BurrowSoft" width={40} height={40} className="h-10 w-10 rounded-xl" />
+                    <Image src="/brand/logo-no-text-dark.png" alt="" width={40} height={40} className="h-10 w-10 rounded-xl" />
                     <span className="text-xl font-extrabold tracking-tight">BurrowSoft</span>
                   </div>
-                  <p className="mb-6 text-xs font-bold tracking-[0.18em] text-indigo-400">
+                  <p className="mb-6 text-xs font-bold tracking-[0.18em] text-indigo-300">
                     {tFooter("tagline")}
                   </p>
-                  <a href="mailto:support@burrowsoft.com" className="text-sm text-slate-400 hover:text-indigo-400 transition-colors">
-                    support@burrowsoft.com
+                  <a href={`mailto:${SUPPORT_EMAIL}`} className="text-sm text-slate-300 hover:text-indigo-300 transition-colors">
+                    {SUPPORT_EMAIL}
                   </a>
-                  <p className="mt-6 text-xs text-slate-500">{tFooter("copyright")}</p>
+                  <p className="mt-6 text-xs text-slate-400">{tFooter("copyright")}</p>
                 </div>
+
                 <div>
                   <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-400">
-                    {tFooter("products")}
+                    {tFooter("systems")}
+                  </h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <a href={SOLVYMED_URL} target="_blank" rel="noopener noreferrer" className="group block">
+                        <span className="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors">SolvyMed</span>
+                        <span className="block text-xs text-slate-400 group-hover:text-slate-300 transition-colors">{tHome("solvymed.tagline")}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href={MOODBOW_URL} target="_blank" rel="noopener noreferrer" className="group block">
+                        <span className="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors">Moodbow</span>
+                        <span className="ms-2 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#F7C3D3]">
+                          {tHome("systems.comingSoon")}
+                        </span>
+                        <span className="block text-xs text-slate-400 group-hover:text-slate-300 transition-colors">{tHome("moodbow.tagline")}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-400">
+                    <Link href="/websites" className="hover:text-white transition-colors">{tFooter("websites")}</Link>
                   </h3>
                   <ul className="space-y-3">
-                    {footerProducts.map((p) => (
+                    {MOLE_SITES.map((p) => (
                       <li key={p.name}>
                         <a href={p.href} target="_blank" rel="noopener noreferrer" className="group flex flex-wrap items-baseline gap-x-2">
-                          <span className="text-sm font-semibold text-white group-hover:text-indigo-400 transition-colors">{p.name}</span>
-                          <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">— {p.desc}</span>
+                          <span className="text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors">{p.name}</span>
+                          <span className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">— {tFooter(`sites.${p.key}`)}</span>
                         </a>
                       </li>
                     ))}

@@ -16,3 +16,16 @@
     ui-sans-serif)))))),
     system-ui, sans-serif;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Faint dotted "soil" texture behind the home hero, fading out toward the bottom. */
+.burrow-dots {
+  background-image: radial-gradient(rgb(79 70 229 / 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black 30%, transparent 90%);
+}

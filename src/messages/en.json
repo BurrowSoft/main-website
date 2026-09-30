@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "Products", "about": "About" },
+  "nav": {
+    "products": "Products",
+    "about": "About",
+    "systems": "Systems",
+    "websites": "Websites",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
   "hero": {
     "title": "Find better deals.",
     "titleAccent": "No tricks.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "Our Products",
+    "sectionTitle": "Our websites",
     "flymole": "Compare flights from top airlines",
     "bookingmole": "Find & compare hotels worldwide",
     "insightmole": "Stay informed with top news",
@@ -27,9 +35,111 @@
     "tagline": "DIGGING DEEP. BUILDING SOLUTIONS.",
     "products": "Products",
     "support": "Support",
-    "copyright": "© 2026 BurrowSoft. All rights reserved."
+    "copyright": "© 2026 BurrowSoft. All rights reserved.",
+    "systems": "Systems",
+    "websites": "Websites",
+    "sites": {
+      "flymole": "Compare flights from top airlines",
+      "bookingmole": "Find hotels with zero hidden fees",
+      "insightmole": "Top headlines, no clickbait",
+      "rentacarmole": "Car rentals from top providers",
+      "gamesmole": "Live rankings, guides & gaming news",
+      "shoppingmole": "Compare prices across thousands of stores"
+    }
   },
   "noAds": {
     "tagline": "Clean Search. No Ads. No Sign-Up."
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — Software systems, built deep.",
+    "homeDescription": "BurrowSoft builds SolvyMed, clinic management software, and Moodbow, a personal AI journal, plus six free consumer websites.",
+    "websitesTitle": "BurrowSoft Websites — Find better deals. No tricks.",
+    "websitesDescription": "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Digging deep.",
+      "titleLine2": "Building solutions.",
+      "subtitle": "BurrowSoft builds software systems for the work that matters, from running a clinic to understanding yourself.",
+      "primaryCta": "See our systems",
+      "secondaryCta": "Browse our websites",
+      "panelTitle": "What we build"
+    },
+    "logoAlt": "{name} logo",
+    "systems": {
+      "title": "Our systems",
+      "subtitle": "Focused software for clinics and for everyday life.",
+      "live": "Available now",
+      "comingSoon": "Coming soon"
+    },
+    "solvymed": {
+      "tagline": "Clinic management, simplified.",
+      "description": "SolvyMed is the clinic app for independent doctors and small practices: schedule, patients, records, prescriptions and payments in one place, with a secretary account, an app for your patients and, coming soon, SolvyAI, an assistant you can simply tell what you need.",
+      "cta": "Visit SolvyMed",
+      "features": {
+        "scheduling": "Scheduling",
+        "records": "Patient records",
+        "prescriptions": "Prescriptions",
+        "payments": "Payments",
+        "secretary": "Secretary account",
+        "patientApp": "App for your patients",
+        "solvyai": "SolvyAI assistant"
+      }
+    },
+    "moodbow": {
+      "tagline": "A journal that learns your story.",
+      "description": "Moodbow is a private AI journal that learns your story and helps you see patterns in your mood, sleep and habits over time.",
+      "cta": "Get notified",
+      "visit": "Visit Moodbow",
+      "features": {
+        "mood": "Mood",
+        "sleep": "Sleep",
+        "habits": "Habits"
+      },
+      "highlights": {
+        "charts": "Charts of your progress",
+        "reports": "Weekly reports",
+        "timeline": "A personal timeline of what’s changed",
+        "private": "Private and secure"
+      }
+    },
+    "teaser": {
+      "text": "We also run six free consumer websites for flights, hotels, car rentals, news, games and shopping.",
+      "link": "Explore our websites"
+    },
+    "contact": {
+      "title": "Get in touch",
+      "text": "Have a project or want early access to Moodbow?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "Six focused tools. One mission.",
+    "mascotAlt": "{name} mascot",
+    "taglines": {
+      "flymole": "Search flights",
+      "bookingmole": "Book hotels",
+      "insightmole": "Trending news",
+      "rentacarmole": "Rent a car",
+      "gamesmole": "Games & rankings",
+      "shoppingmole": "Shop smarter"
+    },
+    "ctas": {
+      "flymole": "Search flights",
+      "bookingmole": "Browse hotels",
+      "insightmole": "Read the news",
+      "rentacarmole": "Find a car",
+      "gamesmole": "Explore games",
+      "shoppingmole": "Start shopping"
+    },
+    "valuesTitle": "How we build",
+    "values": {
+      "fastTitle": "Fast",
+      "fastBody": "Results in under a second. No spinners, no waiting.",
+      "transparentTitle": "Transparent",
+      "transparentBody": "The price you see is the price you pay. Always.",
+      "focusedTitle": "Focused",
+      "focusedBody": "One job per product, done extremely well."
+    },
+    "ctaTitle": "Ready to explore?"
   }
 }

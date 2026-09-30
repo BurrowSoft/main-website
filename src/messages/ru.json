@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "Продукты", "about": "О нас" },
+  "nav": {
+    "products": "Продукты",
+    "about": "О нас",
+    "systems": "Системы",
+    "websites": "Сайты",
+    "contact": "Контакты",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню"
+  },
   "hero": {
     "title": "Находи лучшие предложения.",
     "titleAccent": "Без уловок.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "Наши Продукты",
+    "sectionTitle": "Наши сайты",
     "flymole": "Сравни рейсы ведущих авиакомпаний",
     "bookingmole": "Найди и сравни отели по всему миру",
     "insightmole": "Будь в курсе главных новостей",
@@ -27,9 +35,189 @@
     "tagline": "КОПАЕМ ГЛУБОКО. СТРОИМ РЕШЕНИЯ.",
     "products": "Продукты",
     "support": "Поддержка",
-    "copyright": "© 2026 BurrowSoft. Все права защищены."
+    "copyright": "© 2026 BurrowSoft. Все права защищены.",
+    "systems": "Системы",
+    "websites": "Сайты",
+    "sites": {
+      "flymole": "Сравнение рейсов ведущих авиакомпаний",
+      "bookingmole": "Отели без скрытых комиссий",
+      "insightmole": "Главные новости без кликбейта",
+      "rentacarmole": "Аренда авто у ведущих компаний",
+      "gamesmole": "Рейтинги в реальном времени, гайды и игровые новости",
+      "shoppingmole": "Сравнение цен в тысячах магазинов"
+    }
   },
   "noAds": {
     "tagline": "Чистый поиск. Без рекламы. Без регистрации."
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — Программные системы, продуманные до глубины.",
+    "homeDescription": "BurrowSoft создаёт SolvyMed — программу для управления клиникой — и Moodbow — личный дневник с ИИ, а также шесть бесплатных сайтов для пользователей.",
+    "websitesTitle": "Сайты BurrowSoft — Находите лучшие предложения. Без уловок.",
+    "websitesDescription": "BurrowSoft создаёт честные и простые инструменты поиска — авиабилеты, отели, автомобили, новости, игры и покупки без тёмных паттернов и скрытых комиссий."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Копаем глубоко.",
+      "titleLine2": "Строим решения.",
+      "subtitle": "BurrowSoft создаёт программные системы для важной работы — от управления клиникой до понимания себя.",
+      "primaryCta": "Наши системы",
+      "secondaryCta": "Смотреть наши сайты",
+      "panelTitle": "Что мы создаём"
+    },
+    "logoAlt": "Логотип {name}",
+    "systems": {
+      "title": "Наши системы",
+      "subtitle": "Продуманное ПО для клиник и повседневной жизни.",
+      "live": "Уже доступно",
+      "comingSoon": "Скоро"
+    },
+    "solvymed": {
+      "tagline": "Управление клиникой — просто.",
+      "description": "SolvyMed — приложение для частнопрактикующих врачей и небольших клиник: расписание, пациенты, медкарты, рецепты и платежи в одном месте, а также аккаунт для секретаря, приложение для ваших пациентов и скоро — SolvyAI, помощник, которому можно просто сказать, что вам нужно.",
+      "cta": "Перейти в SolvyMed",
+      "features": {
+        "scheduling": "Расписание",
+        "records": "Карты пациентов",
+        "prescriptions": "Рецепты",
+        "payments": "Платежи",
+        "secretary": "Аккаунт секретаря",
+        "patientApp": "Приложение для пациентов",
+        "solvyai": "Помощник SolvyAI"
+      }
+    },
+    "moodbow": {
+      "tagline": "Дневник, который узнаёт вашу историю.",
+      "description": "Moodbow — личный дневник с ИИ, который узнаёт вашу историю и помогает со временем замечать закономерности в настроении, сне и привычках.",
+      "cta": "Сообщить о запуске",
+      "visit": "Перейти на Moodbow",
+      "features": {
+        "mood": "Настроение",
+        "sleep": "Сон",
+        "habits": "Привычки"
+      },
+      "highlights": {
+        "charts": "Графики вашего прогресса",
+        "reports": "Еженедельные отчёты",
+        "timeline": "Личная хроника изменений",
+        "private": "Конфиденциально и безопасно"
+      }
+    },
+    "teaser": {
+      "text": "Мы также поддерживаем шесть бесплатных сайтов: авиабилеты, отели, аренда авто, новости, игры и покупки.",
+      "link": "Смотреть наши сайты"
+    },
+    "contact": {
+      "title": "Свяжитесь с нами",
+      "text": "Есть проект или хотите получить ранний доступ к Moodbow?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "Шесть продуманных инструментов. Одна миссия.",
+    "mascotAlt": "Талисман {name}",
+    "taglines": {
+      "flymole": "Поиск авиабилетов",
+      "bookingmole": "Бронирование отелей",
+      "insightmole": "Главные новости",
+      "rentacarmole": "Аренда авто",
+      "gamesmole": "Игры и рейтинги",
+      "shoppingmole": "Умные покупки"
+    },
+    "ctas": {
+      "flymole": "Найти билеты",
+      "bookingmole": "Смотреть отели",
+      "insightmole": "Читать новости",
+      "rentacarmole": "Найти авто",
+      "gamesmole": "Смотреть игры",
+      "shoppingmole": "Начать покупки"
+    },
+    "valuesTitle": "Как мы работаем",
+    "values": {
+      "fastTitle": "Быстро",
+      "fastBody": "Результаты меньше чем за секунду. Без ожидания.",
+      "transparentTitle": "Прозрачно",
+      "transparentBody": "Цена, которую вы видите, — это цена, которую вы платите. Всегда.",
+      "focusedTitle": "Сфокусированно",
+      "focusedBody": "Одна задача на продукт — и она сделана отлично."
+    },
+    "ctaTitle": "Готовы начать?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.visit",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
+  ]
 }

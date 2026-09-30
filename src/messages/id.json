@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "Produk", "about": "Tentang Kami" },
+  "nav": {
+    "products": "Produk",
+    "about": "Tentang Kami",
+    "systems": "Sistem",
+    "websites": "Situs web",
+    "contact": "Kontak",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
+  },
   "hero": {
     "title": "Temukan penawaran terbaik.",
     "titleAccent": "Tanpa tipuan.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "Produk Kami",
+    "sectionTitle": "Situs web kami",
     "flymole": "Bandingkan penerbangan dari maskapai terbaik",
     "bookingmole": "Temukan dan bandingkan hotel di seluruh dunia",
     "insightmole": "Tetap terinformasi dengan berita terkini",
@@ -27,9 +35,189 @@
     "tagline": "MENGGALI LEBIH DALAM. MEMBANGUN SOLUSI.",
     "products": "Produk",
     "support": "Dukungan",
-    "copyright": "© 2026 BurrowSoft. Semua hak dilindungi."
+    "copyright": "© 2026 BurrowSoft. Semua hak dilindungi.",
+    "systems": "Sistem",
+    "websites": "Situs web",
+    "sites": {
+      "flymole": "Bandingkan penerbangan dari maskapai terkemuka",
+      "bookingmole": "Temukan hotel tanpa biaya tersembunyi",
+      "insightmole": "Berita utama, tanpa clickbait",
+      "rentacarmole": "Sewa mobil dari penyedia terbaik",
+      "gamesmole": "Peringkat langsung, panduan & berita game",
+      "shoppingmole": "Bandingkan harga di ribuan toko"
+    }
   },
   "noAds": {
     "tagline": "Pencarian bersih. Tanpa iklan. Tanpa daftar."
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — Sistem perangkat lunak, dibangun secara mendalam.",
+    "homeDescription": "BurrowSoft membangun SolvyMed, perangkat lunak manajemen klinik, dan Moodbow, jurnal pribadi berbasis AI, serta enam situs web gratis untuk konsumen.",
+    "websitesTitle": "Situs Web BurrowSoft — Temukan penawaran lebih baik. Tanpa trik.",
+    "websitesDescription": "BurrowSoft membangun alat pencarian yang jujur dan fokus — penerbangan, hotel, mobil, berita, game, dan belanja tanpa dark pattern dan tanpa biaya tersembunyi."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Menggali lebih dalam.",
+      "titleLine2": "Membangun solusi.",
+      "subtitle": "BurrowSoft membangun sistem perangkat lunak untuk pekerjaan yang penting, dari mengelola klinik hingga memahami diri sendiri.",
+      "primaryCta": "Lihat sistem kami",
+      "secondaryCta": "Jelajahi situs web kami",
+      "panelTitle": "Yang kami bangun"
+    },
+    "logoAlt": "Logo {name}",
+    "systems": {
+      "title": "Sistem kami",
+      "subtitle": "Perangkat lunak yang fokus untuk klinik dan kehidupan sehari-hari.",
+      "live": "Tersedia sekarang",
+      "comingSoon": "Segera hadir"
+    },
+    "solvymed": {
+      "tagline": "Manajemen klinik, jadi sederhana.",
+      "description": "SolvyMed adalah aplikasi klinik untuk dokter praktik mandiri dan klinik kecil: jadwal, pasien, rekam medis, resep, dan pembayaran dalam satu tempat, dengan akun sekretaris, aplikasi untuk pasien Anda, dan segera hadir SolvyAI, asisten yang cukup Anda beri tahu apa yang Anda butuhkan.",
+      "cta": "Kunjungi SolvyMed",
+      "features": {
+        "scheduling": "Jadwal",
+        "records": "Rekam medis",
+        "prescriptions": "Resep",
+        "payments": "Pembayaran",
+        "secretary": "Akun sekretaris",
+        "patientApp": "Aplikasi untuk pasien Anda",
+        "solvyai": "Asisten SolvyAI"
+      }
+    },
+    "moodbow": {
+      "tagline": "Jurnal yang mempelajari kisahmu.",
+      "description": "Moodbow adalah jurnal AI pribadi yang mempelajari kisahmu dan membantumu melihat pola suasana hati, tidur, dan kebiasaanmu dari waktu ke waktu.",
+      "cta": "Beri tahu saya",
+      "visit": "Kunjungi Moodbow",
+      "features": {
+        "mood": "Suasana hati",
+        "sleep": "Tidur",
+        "habits": "Kebiasaan"
+      },
+      "highlights": {
+        "charts": "Grafik perkembanganmu",
+        "reports": "Laporan mingguan",
+        "timeline": "Linimasa pribadi tentang apa yang berubah",
+        "private": "Pribadi dan aman"
+      }
+    },
+    "teaser": {
+      "text": "Kami juga mengelola enam situs web gratis untuk konsumen: penerbangan, hotel, sewa mobil, berita, game, dan belanja.",
+      "link": "Jelajahi situs web kami"
+    },
+    "contact": {
+      "title": "Hubungi kami",
+      "text": "Punya proyek atau ingin akses awal ke Moodbow?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "Enam alat yang fokus. Satu misi.",
+    "mascotAlt": "Maskot {name}",
+    "taglines": {
+      "flymole": "Cari penerbangan",
+      "bookingmole": "Pesan hotel",
+      "insightmole": "Berita terkini",
+      "rentacarmole": "Sewa mobil",
+      "gamesmole": "Game & peringkat",
+      "shoppingmole": "Belanja lebih cerdas"
+    },
+    "ctas": {
+      "flymole": "Cari penerbangan",
+      "bookingmole": "Lihat hotel",
+      "insightmole": "Baca berita",
+      "rentacarmole": "Cari mobil",
+      "gamesmole": "Jelajahi game",
+      "shoppingmole": "Mulai belanja"
+    },
+    "valuesTitle": "Cara kami membangun",
+    "values": {
+      "fastTitle": "Cepat",
+      "fastBody": "Hasil dalam waktu kurang dari satu detik. Tanpa menunggu.",
+      "transparentTitle": "Transparan",
+      "transparentBody": "Harga yang kamu lihat adalah harga yang kamu bayar. Selalu.",
+      "focusedTitle": "Fokus",
+      "focusedBody": "Satu tugas per produk, dikerjakan dengan sangat baik."
+    },
+    "ctaTitle": "Siap menjelajah?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.visit",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
+  ]
 }
