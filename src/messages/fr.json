@@ -87,6 +87,7 @@
       "tagline": "Un journal qui apprend votre histoire.",
       "description": "Un journal privé qui vous aide à repérer des tendances dans votre humeur, votre sommeil et vos habitudes au fil du temps.",
       "cta": "Être prévenu",
+      "visit": "Visiter Moodbow",
       "features": {
         "mood": "Humeur",
         "sleep": "Sommeil",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

@@ -87,6 +87,7 @@
       "tagline": "Дневник, который узнаёт вашу историю.",
       "description": "Личный дневник, который помогает замечать закономерности в настроении, сне и привычках со временем.",
       "cta": "Сообщить о запуске",
+      "visit": "Перейти на Moodbow",
       "features": {
         "mood": "Настроение",
         "sleep": "Сон",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

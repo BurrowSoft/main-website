@@ -87,6 +87,7 @@
       "tagline": "ไดอารี่ที่เรียนรู้เรื่องราวของคุณ",
       "description": "ไดอารี่ส่วนตัวที่ช่วยให้คุณสังเกตรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
       "cta": "รับการแจ้งเตือน",
+      "visit": "ไปที่ Moodbow",
       "features": {
         "mood": "อารมณ์",
         "sleep": "การนอน",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

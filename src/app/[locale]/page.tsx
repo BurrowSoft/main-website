@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import {
   MOLE_SITES,
   MOODBOW_NOTIFY_MAILTO,
+  MOODBOW_URL,
   SITE_NAME,
   SOLVYMED_URL,
   SUPPORT_EMAIL,
@@ -259,7 +260,7 @@ export default async function HomePage() {
                 ))}
               </ul>
 
-              <div className="relative mt-auto pt-9">
+              <div className="relative mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 pt-9">
                 <a
                   href={MOODBOW_NOTIFY_MAILTO}
                   className="inline-flex items-center gap-2 rounded-xl bg-[#2B2438] px-5 py-3 text-sm font-semibold text-[#FBF6F1] transition-colors hover:bg-[#3D344D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF6F1]"
@@ -268,6 +269,15 @@ export default async function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2a2 2 0 01-.6 1.4L4 17h5m6 0a3 3 0 11-6 0" />
                   </svg>
                   {t("moodbow.cta")}
+                </a>
+                <a
+                  href={MOODBOW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-[#A8456A] transition-colors hover:text-[#2B2438] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
+                >
+                  {t("moodbow.visit")}
+                  <ExternalIcon />
                 </a>
               </div>
             </article>

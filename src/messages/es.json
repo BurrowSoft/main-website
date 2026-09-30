@@ -87,6 +87,7 @@
       "tagline": "Un diario que aprende tu historia.",
       "description": "Un diario privado que te ayuda a notar patrones en tu estado de ánimo, tu sueño y tus hábitos con el tiempo.",
       "cta": "Avísame",
+      "visit": "Visitar Moodbow",
       "features": {
         "mood": "Ánimo",
         "sleep": "Sueño",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

@@ -87,6 +87,7 @@
       "tagline": "مذكرات تتعلّم قصتك.",
       "description": "مذكرات خاصة تساعدك على ملاحظة الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
       "cta": "أبلغني عند الإطلاق",
+      "visit": "زيارة Moodbow",
       "features": {
         "mood": "المزاج",
         "sleep": "النوم",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

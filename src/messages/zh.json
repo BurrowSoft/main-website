@@ -87,6 +87,7 @@
       "tagline": "一本懂你故事的日记。",
       "description": "一本私密日记，帮助你随着时间发现情绪、睡眠和习惯中的规律。",
       "cta": "上线时通知我",
+      "visit": "访问 Moodbow",
       "features": {
         "mood": "情绪",
         "sleep": "睡眠",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

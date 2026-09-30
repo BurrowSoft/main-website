@@ -87,6 +87,7 @@
       "tagline": "Cuốn nhật ký hiểu câu chuyện của bạn.",
       "description": "Một cuốn nhật ký riêng tư giúp bạn nhận ra các khuôn mẫu trong tâm trạng, giấc ngủ và thói quen theo thời gian.",
       "cta": "Nhận thông báo",
+      "visit": "Truy cập Moodbow",
       "features": {
         "mood": "Tâm trạng",
         "sleep": "Giấc ngủ",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

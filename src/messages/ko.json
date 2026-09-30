@@ -87,6 +87,7 @@
       "tagline": "당신의 이야기를 배우는 저널.",
       "description": "시간이 지나며 기분, 수면, 습관의 패턴을 알아차리도록 돕는 개인 저널입니다.",
       "cta": "출시 알림 받기",
+      "visit": "Moodbow 방문하기",
       "features": {
         "mood": "기분",
         "sleep": "수면",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

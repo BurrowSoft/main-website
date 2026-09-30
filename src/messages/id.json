@@ -87,6 +87,7 @@
       "tagline": "Jurnal yang mempelajari kisahmu.",
       "description": "Jurnal pribadi yang membantumu melihat pola suasana hati, tidur, dan kebiasaanmu dari waktu ke waktu.",
       "cta": "Beri tahu saya",
+      "visit": "Kunjungi Moodbow",
       "features": {
         "mood": "Suasana hati",
         "sleep": "Tidur",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

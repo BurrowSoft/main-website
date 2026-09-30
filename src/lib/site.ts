@@ -4,8 +4,8 @@ export const BASE = "https://www.burrowsoft.com";
 export const SITE_NAME = "BurrowSoft";
 export const SUPPORT_EMAIL = "support@burrowsoft.com";
 
-// TODO(owner): confirm — taken from the SolvyMed codebase (its metadataBase).
 export const SOLVYMED_URL = "https://www.solvymed.com";
+export const MOODBOW_URL = "https://www.moodbow.com";
 export const MOODBOW_NOTIFY_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=Notify%20me%20about%20Moodbow`;
 
 /** Absolute URL for a path in a given locale, matching the `as-needed` prefix scheme. */

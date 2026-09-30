@@ -87,6 +87,7 @@
       "tagline": "Ein Tagebuch, das deine Geschichte lernt.",
       "description": "Ein privates Tagebuch, das dir hilft, mit der Zeit Muster in Stimmung, Schlaf und Gewohnheiten zu erkennen.",
       "cta": "Benachrichtige mich",
+      "visit": "Moodbow besuchen",
       "features": {
         "mood": "Stimmung",
         "sleep": "Schlaf",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",

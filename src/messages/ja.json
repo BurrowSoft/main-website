@@ -87,6 +87,7 @@
       "tagline": "あなたのストーリーを学ぶジャーナル。",
       "description": "気分・睡眠・習慣のパターンに、時間をかけて気づけるプライベートなジャーナル。",
       "cta": "公開時に通知を受け取る",
+      "visit": "Moodbowへ",
       "features": {
         "mood": "気分",
         "sleep": "睡眠",
@@ -162,6 +163,7 @@
     "home.moodbow.tagline",
     "home.moodbow.description",
     "home.moodbow.cta",
+    "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
     "home.moodbow.features.habits",
