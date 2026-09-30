@@ -82,13 +82,9 @@ export default async function HomePage() {
         <div aria-hidden="true" className="burrow-dots pointer-events-none absolute inset-0" />
         <div aria-hidden="true" className="pointer-events-none absolute -top-40 start-1/2 h-[480px] w-[720px] -translate-x-1/2 rtl:translate-x-1/2 rounded-full bg-indigo-200/40 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 pt-16 pb-20 sm:pt-24 lg:grid-cols-[1.3fr_1fr] lg:pb-28">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 pt-14 pb-14 sm:pt-20 lg:grid-cols-[1.3fr_1fr] lg:pb-16">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm font-semibold text-slate-700 shadow-sm">
-              <BurrowSoftIcon className="h-5 w-5 text-indigo-600" />
-              BurrowSoft
-            </p>
-            <h1 className="mt-6 text-[2.75rem] font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-6xl">
+            <h1 className="text-[2.75rem] font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-6xl">
               <span className="block">{t("hero.titleLine1")}</span>
               <span className="block text-indigo-600">{t("hero.titleLine2")}</span>
             </h1>
@@ -122,62 +118,84 @@ export default async function HomePage() {
             <div aria-hidden="true" className="pointer-events-none absolute bottom-10 end-10 h-32 w-32 rounded-full bg-[#9B84D6]/25 blur-3xl" />
 
             <div className="relative rounded-3xl border border-slate-200 bg-white/90 p-5 shadow-xl shadow-slate-900/5 backdrop-blur sm:p-6">
-              <div className="mb-4 flex items-center justify-between px-1">
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-500">{t("hero.panelTitle")}</p>
-                <BurrowSoftIcon className="h-6 w-6 text-slate-400" />
-              </div>
+              <p className="mb-4 px-1 text-xs font-bold uppercase tracking-widest text-slate-500">{t("hero.panelTitle")}</p>
 
               <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{tNav("systems")}</p>
               <ul className="space-y-2">
-                <li className="flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3">
+                <li>
+                  <a
+                    href={SOLVYMED_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#116E99]"
+                  >
                   <Image src="/brand/solvymed/solvymed-app-icon-blue-192.png" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
                   <div className="min-w-0 flex-1">
                     <p className="font-bold text-slate-900">SolvyMed</p>
-                    <p className="truncate text-sm text-slate-600">{t("solvymed.tagline")}</p>
+                    <p className="text-sm text-slate-600">{t("solvymed.tagline")}</p>
                   </div>
                   <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
                     {t("systems.live")}
                   </span>
+                  </a>
                 </li>
-                <li className="flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3">
+                <li>
+                  <a
+                    href={MOODBOW_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
+                  >
                   <Image src="/brand/moodbow/moodbow-app-icon-light.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#EADFD6]" />
                   <div className="min-w-0 flex-1">
                     <p className="font-bold text-[#2B2438]">Moodbow</p>
-                    <p className="truncate text-sm text-[#5B5068]">{t("moodbow.tagline")}</p>
+                    <p className="text-sm text-[#5B5068]">{t("moodbow.tagline")}</p>
                   </div>
                   <span className="shrink-0 rounded-full bg-[#A8456A]/10 px-2.5 py-1 text-xs font-semibold text-[#A8456A]">
                     {t("systems.comingSoon")}
                   </span>
+                  </a>
                 </li>
               </ul>
 
               <div className="my-4 border-t border-dashed border-slate-200" />
 
               <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{tNav("websites")}</p>
-              <Link
-                href="/websites"
-                className="group flex items-center justify-between gap-3 rounded-2xl p-2 transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
-              >
-                <span className="flex flex-wrap gap-1.5">
+              <div className="flex items-center justify-between gap-3 px-1">
+                <ul className="flex flex-wrap gap-1.5">
                   {MOLE_SITES.map((s) => (
-                    <Image key={s.key} src={s.mascot} alt="" width={40} height={40} className="h-10 w-10 rounded-full bg-white ring-1 ring-slate-200" />
+                    <li key={s.key}>
+                      <a
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={s.name}
+                        className="block rounded-full transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                      >
+                        <Image src={s.mascot} alt={s.name} width={40} height={40} className="h-10 w-10 rounded-full bg-white ring-1 ring-slate-200 transition-shadow hover:ring-indigo-300" />
+                      </a>
+                    </li>
                   ))}
-                </span>
-                <span className="sr-only">{t("teaser.link")}</span>
-                <ArrowIcon className="h-5 w-5 shrink-0 text-slate-400 transition-colors group-hover:text-indigo-600" />
-              </Link>
+                </ul>
+                <Link
+                  href="/websites"
+                  className="shrink-0 rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-50 hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                >
+                  <span className="sr-only">{t("teaser.link")}</span>
+                  <ArrowIcon className="h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Systems ──────────────────────────────────────────── */}
-      <section id="systems" className="scroll-mt-20 border-t border-slate-100 bg-slate-50/60 py-20 sm:py-24">
+      <section id="systems" className="scroll-mt-20 border-t border-slate-100 bg-slate-50/60 pt-14 pb-16 sm:pt-16 sm:pb-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-12 max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-indigo-600">{tNav("systems")}</p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{t("systems.title")}</h2>
+          <div className="mb-10 max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{t("systems.title")}</h2>
             <p className="mt-3 text-lg text-slate-600">{t("systems.subtitle")}</p>
           </div>
 
@@ -313,10 +331,18 @@ export default async function HomePage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-start gap-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:flex-row lg:items-center">
-            <ul className="flex shrink-0 flex-wrap gap-2" aria-hidden="true">
+            <ul className="flex shrink-0 flex-wrap gap-2">
               {MOLE_SITES.map((s) => (
                 <li key={s.key}>
-                  <Image src={s.mascot} alt="" width={48} height={48} className="h-12 w-12 rounded-full bg-white ring-1 ring-slate-200" />
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={s.name}
+                    className="block rounded-full transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                  >
+                    <Image src={s.mascot} alt={s.name} width={48} height={48} className="h-12 w-12 rounded-full bg-white ring-1 ring-slate-200 transition-shadow hover:ring-indigo-300" />
+                  </a>
                 </li>
               ))}
             </ul>
