@@ -39,12 +39,13 @@ export async function generateMetadata({
   };
 }
 
-const SOLVYMED_FEATURES = ["scheduling", "records", "prescriptions", "payments"] as const;
+const SOLVYMED_FEATURES = ["scheduling", "records", "prescriptions", "payments", "secretary", "patientApp"] as const;
 const MOODBOW_FEATURES = [
   { key: "mood", color: "#F2A07B" },
   { key: "sleep", color: "#9B84D6" },
   { key: "habits", color: "#E27D9A" },
 ] as const;
+const MOODBOW_HIGHLIGHTS = ["charts", "reports", "timeline", "private"] as const;
 
 function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -216,6 +217,18 @@ export default async function HomePage() {
                 ))}
               </ul>
 
+              <div className="relative mt-5 flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3">
+                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#A9D6EC] to-[#116E99] text-white" aria-hidden="true">
+                  <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9L12 2zm7 12l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9L19 14z" />
+                  </svg>
+                </span>
+                <span className="text-sm font-semibold text-white">{t("solvymed.features.solvyai")}</span>
+                <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-semibold text-[#A9D6EC]">
+                  {t("systems.comingSoon")}
+                </span>
+              </div>
+
               <div className="relative mt-auto pt-9">
                 <a
                   href={SOLVYMED_URL}
@@ -256,6 +269,17 @@ export default async function HomePage() {
                   <li key={f.key} className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-[#2B2438] ring-1 ring-[#EADFD6]">
                     <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: f.color }} aria-hidden="true" />
                     {t(`moodbow.features.${f.key}`)}
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="relative mt-6 space-y-2.5">
+                {MOODBOW_HIGHLIGHTS.map((h) => (
+                  <li key={h} className="flex items-start gap-3 text-sm text-[#2B2438]">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#A8456A]/10 text-[#A8456A]">
+                      <CheckIcon className="h-3 w-3" />
+                    </span>
+                    {t(`moodbow.highlights.${h}`)}
                   </li>
                 ))}
               </ul>

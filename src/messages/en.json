@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "Clinic management, simplified.",
-      "description": "SolvyMed brings scheduling, patient records, prescriptions, and payments together in one clean, fast app built for healthcare professionals.",
+      "description": "SolvyMed is the clinic app for independent doctors and small practices: schedule, patients, records, prescriptions and payments in one place, with a secretary account, an app for your patients and, coming soon, SolvyAI, an assistant you can simply tell what you need.",
       "cta": "Visit SolvyMed",
       "features": {
         "scheduling": "Scheduling",
         "records": "Patient records",
         "prescriptions": "Prescriptions",
-        "payments": "Payments"
+        "payments": "Payments",
+        "secretary": "Secretary account",
+        "patientApp": "App for your patients",
+        "solvyai": "SolvyAI assistant"
       }
     },
     "moodbow": {
       "tagline": "A journal that learns your story.",
-      "description": "A private journal that helps you notice patterns in your mood, sleep and habits over time.",
+      "description": "Moodbow is a private AI journal that learns your story and helps you see patterns in your mood, sleep and habits over time.",
       "cta": "Get notified",
       "visit": "Visit Moodbow",
       "features": {
         "mood": "Mood",
         "sleep": "Sleep",
         "habits": "Habits"
+      },
+      "highlights": {
+        "charts": "Charts of your progress",
+        "reports": "Weekly reports",
+        "timeline": "A personal timeline of what’s changed",
+        "private": "Private and secure"
       }
     },
     "teaser": {

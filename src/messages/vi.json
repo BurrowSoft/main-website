@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "Quản lý phòng khám, thật đơn giản.",
-      "description": "SolvyMed kết hợp lịch hẹn, hồ sơ bệnh nhân, đơn thuốc và thanh toán vào một ứng dụng nhanh và gọn, được xây dựng cho các chuyên gia y tế.",
+      "description": "SolvyMed là ứng dụng phòng khám dành cho bác sĩ hành nghề độc lập và phòng khám nhỏ: lịch hẹn, bệnh nhân, hồ sơ, đơn thuốc và thanh toán ở cùng một nơi, kèm tài khoản cho thư ký, ứng dụng cho bệnh nhân của bạn và sắp ra mắt SolvyAI, trợ lý mà bạn chỉ cần nói điều mình cần.",
       "cta": "Truy cập SolvyMed",
       "features": {
         "scheduling": "Lịch hẹn",
         "records": "Hồ sơ bệnh nhân",
         "prescriptions": "Đơn thuốc",
-        "payments": "Thanh toán"
+        "payments": "Thanh toán",
+        "secretary": "Tài khoản cho thư ký",
+        "patientApp": "Ứng dụng cho bệnh nhân",
+        "solvyai": "Trợ lý SolvyAI"
       }
     },
     "moodbow": {
       "tagline": "Cuốn nhật ký hiểu câu chuyện của bạn.",
-      "description": "Một cuốn nhật ký riêng tư giúp bạn nhận ra các khuôn mẫu trong tâm trạng, giấc ngủ và thói quen theo thời gian.",
+      "description": "Moodbow là cuốn nhật ký AI riêng tư hiểu câu chuyện của bạn và giúp bạn nhận ra các khuôn mẫu trong tâm trạng, giấc ngủ và thói quen theo thời gian.",
       "cta": "Nhận thông báo",
       "visit": "Truy cập Moodbow",
       "features": {
         "mood": "Tâm trạng",
         "sleep": "Giấc ngủ",
         "habits": "Thói quen"
+      },
+      "highlights": {
+        "charts": "Biểu đồ tiến triển của bạn",
+        "reports": "Báo cáo hằng tuần",
+        "timeline": "Dòng thời gian cá nhân về những gì đã thay đổi",
+        "private": "Riêng tư và bảo mật"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

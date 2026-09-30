@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "การบริหารคลินิกที่เรียบง่าย",
-      "description": "SolvyMed รวมการนัดหมาย บันทึกผู้ป่วย ใบสั่งยา และการชำระเงินไว้ในแอปเดียว รวดเร็วและเป็นระเบียบ สำหรับผู้เชี่ยวชาญด้านสุขภาพ",
+      "description": "SolvyMed คือแอปคลินิกสำหรับแพทย์อิสระและคลินิกขนาดเล็ก รวมตารางนัด ผู้ป่วย เวชระเบียน ใบสั่งยา และการชำระเงินไว้ในที่เดียว พร้อมบัญชีสำหรับเลขานุการ แอปสำหรับผู้ป่วยของคุณ และเร็ว ๆ นี้ SolvyAI ผู้ช่วยที่คุณแค่บอกสิ่งที่ต้องการ",
       "cta": "ไปที่ SolvyMed",
       "features": {
         "scheduling": "การนัดหมาย",
         "records": "บันทึกผู้ป่วย",
         "prescriptions": "ใบสั่งยา",
-        "payments": "การชำระเงิน"
+        "payments": "การชำระเงิน",
+        "secretary": "บัญชีเลขานุการ",
+        "patientApp": "แอปสำหรับผู้ป่วย",
+        "solvyai": "ผู้ช่วย SolvyAI"
       }
     },
     "moodbow": {
       "tagline": "ไดอารี่ที่เรียนรู้เรื่องราวของคุณ",
-      "description": "ไดอารี่ส่วนตัวที่ช่วยให้คุณสังเกตรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
+      "description": "Moodbow คือไดอารี่ AI ส่วนตัวที่เรียนรู้เรื่องราวของคุณ และช่วยให้คุณเห็นรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
       "cta": "รับการแจ้งเตือน",
       "visit": "ไปที่ Moodbow",
       "features": {
         "mood": "อารมณ์",
         "sleep": "การนอน",
         "habits": "นิสัย"
+      },
+      "highlights": {
+        "charts": "กราฟแสดงความก้าวหน้า",
+        "reports": "รายงานประจำสัปดาห์",
+        "timeline": "ไทม์ไลน์ส่วนตัวของสิ่งที่เปลี่ยนไป",
+        "private": "เป็นส่วนตัวและปลอดภัย"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

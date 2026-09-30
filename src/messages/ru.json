@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "Управление клиникой — просто.",
-      "description": "SolvyMed объединяет расписание, карты пациентов, рецепты и платежи в одном быстром и удобном приложении для медицинских специалистов.",
+      "description": "SolvyMed — приложение для частнопрактикующих врачей и небольших клиник: расписание, пациенты, медкарты, рецепты и платежи в одном месте, а также аккаунт для секретаря, приложение для ваших пациентов и скоро — SolvyAI, помощник, которому можно просто сказать, что вам нужно.",
       "cta": "Перейти в SolvyMed",
       "features": {
         "scheduling": "Расписание",
         "records": "Карты пациентов",
         "prescriptions": "Рецепты",
-        "payments": "Платежи"
+        "payments": "Платежи",
+        "secretary": "Аккаунт секретаря",
+        "patientApp": "Приложение для пациентов",
+        "solvyai": "Помощник SolvyAI"
       }
     },
     "moodbow": {
       "tagline": "Дневник, который узнаёт вашу историю.",
-      "description": "Личный дневник, который помогает замечать закономерности в настроении, сне и привычках со временем.",
+      "description": "Moodbow — личный дневник с ИИ, который узнаёт вашу историю и помогает со временем замечать закономерности в настроении, сне и привычках.",
       "cta": "Сообщить о запуске",
       "visit": "Перейти на Moodbow",
       "features": {
         "mood": "Настроение",
         "sleep": "Сон",
         "habits": "Привычки"
+      },
+      "highlights": {
+        "charts": "Графики вашего прогресса",
+        "reports": "Еженедельные отчёты",
+        "timeline": "Личная хроника изменений",
+        "private": "Конфиденциально и безопасно"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

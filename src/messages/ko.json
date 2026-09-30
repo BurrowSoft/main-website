@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "병원 관리를 더 간단하게.",
-      "description": "SolvyMed는 예약, 환자 기록, 처방전, 결제를 하나의 빠르고 깔끔한 앱으로 통합했습니다. 의료 전문가를 위해 설계되었습니다.",
+      "description": "SolvyMed는 개원의와 소규모 병원을 위한 병원 앱입니다. 예약, 환자, 진료 기록, 처방전, 결제를 한곳에서 관리하고, 비서 계정과 환자용 앱을 제공하며, 곧 원하는 것을 말하기만 하면 되는 어시스턴트 SolvyAI도 출시됩니다.",
       "cta": "SolvyMed 방문하기",
       "features": {
         "scheduling": "예약",
         "records": "환자 기록",
         "prescriptions": "처방전",
-        "payments": "결제"
+        "payments": "결제",
+        "secretary": "비서 계정",
+        "patientApp": "환자용 앱",
+        "solvyai": "SolvyAI 어시스턴트"
       }
     },
     "moodbow": {
       "tagline": "당신의 이야기를 배우는 저널.",
-      "description": "시간이 지나며 기분, 수면, 습관의 패턴을 알아차리도록 돕는 개인 저널입니다.",
+      "description": "Moodbow는 당신의 이야기를 배우고, 시간이 지나며 기분, 수면, 습관의 패턴을 볼 수 있도록 돕는 개인 AI 저널입니다.",
       "cta": "출시 알림 받기",
       "visit": "Moodbow 방문하기",
       "features": {
         "mood": "기분",
         "sleep": "수면",
         "habits": "습관"
+      },
+      "highlights": {
+        "charts": "진행 상황 차트",
+        "reports": "주간 리포트",
+        "timeline": "변화를 담은 개인 타임라인",
+        "private": "비공개로 안전하게"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

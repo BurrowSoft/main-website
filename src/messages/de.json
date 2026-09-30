@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "Praxisverwaltung, ganz einfach.",
-      "description": "SolvyMed vereint Terminplanung, Patientenakten, Rezepte und Zahlungen in einer schnellen, übersichtlichen App – entwickelt für Gesundheitsfachleute.",
+      "description": "SolvyMed ist die Praxis-App für niedergelassene Ärztinnen und Ärzte und kleine Praxen: Termine, Patienten, Akten, Rezepte und Zahlungen an einem Ort – mit einem Konto für die Praxisassistenz, einer App für deine Patienten und bald SolvyAI, einem Assistenten, dem du einfach sagst, was du brauchst.",
       "cta": "SolvyMed besuchen",
       "features": {
         "scheduling": "Terminplanung",
         "records": "Patientenakten",
         "prescriptions": "Rezepte",
-        "payments": "Zahlungen"
+        "payments": "Zahlungen",
+        "secretary": "Konto für die Praxisassistenz",
+        "patientApp": "App für deine Patienten",
+        "solvyai": "SolvyAI-Assistent"
       }
     },
     "moodbow": {
       "tagline": "Ein Tagebuch, das deine Geschichte lernt.",
-      "description": "Ein privates Tagebuch, das dir hilft, mit der Zeit Muster in Stimmung, Schlaf und Gewohnheiten zu erkennen.",
+      "description": "Moodbow ist ein privates KI-Tagebuch, das deine Geschichte lernt und dir hilft, mit der Zeit Muster in Stimmung, Schlaf und Gewohnheiten zu erkennen.",
       "cta": "Benachrichtige mich",
       "visit": "Moodbow besuchen",
       "features": {
         "mood": "Stimmung",
         "sleep": "Schlaf",
         "habits": "Gewohnheiten"
+      },
+      "highlights": {
+        "charts": "Diagramme zu deinem Fortschritt",
+        "reports": "Wöchentliche Berichte",
+        "timeline": "Eine persönliche Zeitleiste deiner Veränderungen",
+        "private": "Privat und sicher"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

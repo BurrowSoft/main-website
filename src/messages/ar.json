@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "إدارة العيادات، ببساطة.",
-      "description": "يجمع SolvyMed المواعيد وسجلات المرضى والوصفات الطبية والمدفوعات في تطبيق واحد سريع ومنظم، مصمم للمتخصصين في الرعاية الصحية.",
+      "description": "SolvyMed هو تطبيق العيادات للأطباء المستقلين والعيادات الصغيرة: المواعيد والمرضى والسجلات والوصفات الطبية والمدفوعات في مكان واحد، مع حساب للسكرتارية وتطبيق لمرضاك، وقريباً SolvyAI، مساعد يكفي أن تخبره بما تحتاج إليه.",
       "cta": "زيارة SolvyMed",
       "features": {
         "scheduling": "المواعيد",
         "records": "سجلات المرضى",
         "prescriptions": "الوصفات الطبية",
-        "payments": "المدفوعات"
+        "payments": "المدفوعات",
+        "secretary": "حساب السكرتارية",
+        "patientApp": "تطبيق لمرضاك",
+        "solvyai": "مساعد SolvyAI"
       }
     },
     "moodbow": {
       "tagline": "مذكرات تتعلّم قصتك.",
-      "description": "مذكرات خاصة تساعدك على ملاحظة الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
+      "description": "Moodbow مذكرات خاصة بالذكاء الاصطناعي تتعلّم قصتك وتساعدك على رؤية الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
       "cta": "أبلغني عند الإطلاق",
       "visit": "زيارة Moodbow",
       "features": {
         "mood": "المزاج",
         "sleep": "النوم",
         "habits": "العادات"
+      },
+      "highlights": {
+        "charts": "رسوم بيانية لتقدّمك",
+        "reports": "تقارير أسبوعية",
+        "timeline": "خط زمني شخصي لما تغيّر",
+        "private": "خاص وآمن"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }

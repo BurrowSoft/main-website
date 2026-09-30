@@ -74,24 +74,33 @@
     },
     "solvymed": {
       "tagline": "診所管理，化繁為簡。",
-      "description": "SolvyMed 將預約管理、患者病歷、處方和付款整合在一款快速整潔的應用程式中，專為醫療專業人員設計。",
+      "description": "SolvyMed 是為獨立醫師與小型診所打造的診所應用程式：預約、患者、病歷、處方與付款集中在一處，還提供秘書帳號、患者端應用程式，以及即將推出的 SolvyAI——只要告訴它你需要什麼的助理。",
       "cta": "前往 SolvyMed",
       "features": {
         "scheduling": "預約管理",
         "records": "患者病歷",
         "prescriptions": "處方",
-        "payments": "付款"
+        "payments": "付款",
+        "secretary": "秘書帳號",
+        "patientApp": "患者端應用程式",
+        "solvyai": "SolvyAI 助理"
       }
     },
     "moodbow": {
       "tagline": "一本懂你故事的日記。",
-      "description": "一本私密日記，幫助你隨著時間發現情緒、睡眠與習慣中的規律。",
+      "description": "Moodbow 是一本私密的 AI 日記，它會了解你的故事，幫助你隨著時間看清情緒、睡眠與習慣中的規律。",
       "cta": "上線時通知我",
       "visit": "前往 Moodbow",
       "features": {
         "mood": "情緒",
         "sleep": "睡眠",
         "habits": "習慣"
+      },
+      "highlights": {
+        "charts": "進展圖表",
+        "reports": "每週報告",
+        "timeline": "記錄變化的個人時間軸",
+        "private": "私密且安全"
       }
     },
     "teaser": {
@@ -201,6 +210,14 @@
     "footer.sites.insightmole",
     "footer.sites.rentacarmole",
     "footer.sites.gamesmole",
-    "footer.sites.shoppingmole"
+    "footer.sites.shoppingmole",
+    "home.solvymed.description",
+    "home.solvymed.features.secretary",
+    "home.solvymed.features.patientApp",
+    "home.solvymed.features.solvyai",
+    "home.moodbow.highlights.charts",
+    "home.moodbow.highlights.reports",
+    "home.moodbow.highlights.timeline",
+    "home.moodbow.highlights.private"
   ]
 }
