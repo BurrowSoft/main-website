@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "Sản phẩm", "about": "Giới thiệu" },
+  "nav": {
+    "products": "Sản phẩm",
+    "about": "Giới thiệu",
+    "systems": "Hệ thống",
+    "websites": "Trang web",
+    "contact": "Liên hệ",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
   "hero": {
     "title": "Tìm ưu đãi tốt hơn.",
     "titleAccent": "Không gian lận.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "Sản Phẩm Của Chúng Tôi",
+    "sectionTitle": "Các trang web của chúng tôi",
     "flymole": "So sánh chuyến bay từ các hãng hàng không hàng đầu",
     "bookingmole": "Tìm và so sánh khách sạn toàn thế giới",
     "insightmole": "Cập nhật tin tức nóng nhất",
@@ -27,9 +35,170 @@
     "tagline": "ĐÀO SÂU. XÂY DỰNG GIẢI PHÁP.",
     "products": "Sản phẩm",
     "support": "Hỗ trợ",
-    "copyright": "© 2026 BurrowSoft. Bảo lưu mọi quyền."
+    "copyright": "© 2026 BurrowSoft. Bảo lưu mọi quyền.",
+    "systems": "Hệ thống",
+    "websites": "Trang web",
+    "sites": {
+      "flymole": "So sánh chuyến bay từ các hãng hàng đầu",
+      "bookingmole": "Tìm khách sạn không phí ẩn",
+      "insightmole": "Tin tức hàng đầu, không giật tít",
+      "rentacarmole": "Thuê xe từ các nhà cung cấp hàng đầu",
+      "gamesmole": "Xếp hạng trực tiếp, hướng dẫn & tin game",
+      "shoppingmole": "So sánh giá tại hàng nghìn cửa hàng"
+    }
   },
   "noAds": {
     "tagline": "Tìm kiếm sạch · Không quảng cáo · Không đăng ký"
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — Hệ thống phần mềm, xây dựng chuyên sâu.",
+    "homeDescription": "BurrowSoft phát triển SolvyMed, phần mềm quản lý phòng khám, và Moodbow, nhật ký cá nhân dùng AI, cùng sáu trang web miễn phí cho người dùng.",
+    "websitesTitle": "Các trang web của BurrowSoft — Tìm ưu đãi tốt hơn. Không chiêu trò.",
+    "websitesDescription": "BurrowSoft xây dựng các công cụ tìm kiếm trung thực và tập trung — vé máy bay, khách sạn, thuê xe, tin tức, trò chơi và mua sắm, không dark pattern, không phí ẩn."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Đào sâu.",
+      "titleLine2": "Xây dựng giải pháp.",
+      "subtitle": "BurrowSoft xây dựng các hệ thống phần mềm cho những công việc quan trọng, từ vận hành phòng khám đến thấu hiểu chính mình.",
+      "primaryCta": "Xem hệ thống của chúng tôi",
+      "secondaryCta": "Xem các trang web của chúng tôi",
+      "panelTitle": "Những gì chúng tôi xây dựng"
+    },
+    "logoAlt": "Logo {name}",
+    "systems": {
+      "title": "Hệ thống của chúng tôi",
+      "subtitle": "Phần mềm tập trung cho phòng khám và cuộc sống hằng ngày.",
+      "live": "Đã ra mắt",
+      "comingSoon": "Sắp ra mắt"
+    },
+    "solvymed": {
+      "tagline": "Quản lý phòng khám, thật đơn giản.",
+      "description": "SolvyMed kết hợp lịch hẹn, hồ sơ bệnh nhân, đơn thuốc và thanh toán vào một ứng dụng nhanh và gọn, được xây dựng cho các chuyên gia y tế.",
+      "cta": "Truy cập SolvyMed",
+      "features": {
+        "scheduling": "Lịch hẹn",
+        "records": "Hồ sơ bệnh nhân",
+        "prescriptions": "Đơn thuốc",
+        "payments": "Thanh toán"
+      }
+    },
+    "moodbow": {
+      "tagline": "Cuốn nhật ký hiểu câu chuyện của bạn.",
+      "description": "Một cuốn nhật ký riêng tư giúp bạn nhận ra các khuôn mẫu trong tâm trạng, giấc ngủ và thói quen theo thời gian.",
+      "cta": "Nhận thông báo",
+      "features": {
+        "mood": "Tâm trạng",
+        "sleep": "Giấc ngủ",
+        "habits": "Thói quen"
+      }
+    },
+    "teaser": {
+      "text": "Chúng tôi cũng vận hành sáu trang web miễn phí cho người dùng: vé máy bay, khách sạn, thuê xe, tin tức, trò chơi và mua sắm.",
+      "link": "Khám phá các trang web của chúng tôi"
+    },
+    "contact": {
+      "title": "Liên hệ với chúng tôi",
+      "text": "Bạn có dự án hoặc muốn dùng thử sớm Moodbow?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "Sáu công cụ tập trung. Một sứ mệnh.",
+    "mascotAlt": "Linh vật {name}",
+    "taglines": {
+      "flymole": "Tìm chuyến bay",
+      "bookingmole": "Đặt khách sạn",
+      "insightmole": "Tin nổi bật",
+      "rentacarmole": "Thuê xe",
+      "gamesmole": "Trò chơi & xếp hạng",
+      "shoppingmole": "Mua sắm thông minh"
+    },
+    "ctas": {
+      "flymole": "Tìm chuyến bay",
+      "bookingmole": "Xem khách sạn",
+      "insightmole": "Đọc tin tức",
+      "rentacarmole": "Tìm xe",
+      "gamesmole": "Khám phá trò chơi",
+      "shoppingmole": "Bắt đầu mua sắm"
+    },
+    "valuesTitle": "Cách chúng tôi xây dựng",
+    "values": {
+      "fastTitle": "Nhanh",
+      "fastBody": "Kết quả trong chưa đầy một giây. Không phải chờ.",
+      "transparentTitle": "Minh bạch",
+      "transparentBody": "Giá bạn thấy là giá bạn trả. Luôn luôn.",
+      "focusedTitle": "Tập trung",
+      "focusedBody": "Mỗi sản phẩm một nhiệm vụ, làm thật tốt."
+    },
+    "ctaTitle": "Sẵn sàng khám phá?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole"
+  ]
 }

@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "ผลิตภัณฑ์", "about": "เกี่ยวกับเรา" },
+  "nav": {
+    "products": "ผลิตภัณฑ์",
+    "about": "เกี่ยวกับเรา",
+    "systems": "ระบบ",
+    "websites": "เว็บไซต์",
+    "contact": "ติดต่อ",
+    "openMenu": "เปิดเมนู",
+    "closeMenu": "ปิดเมนู"
+  },
   "hero": {
     "title": "ค้นหาดีล",
     "titleAccent": "ไม่มีกลโกง",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "ผลิตภัณฑ์ของเรา",
+    "sectionTitle": "เว็บไซต์ของเรา",
     "flymole": "เปรียบเทียบราคาตั๋วเครื่องบิน",
     "bookingmole": "ค้นหาและเปรียบเทียบโรงแรม",
     "insightmole": "ติดตามข่าวสารทันสมัย",
@@ -27,9 +35,170 @@
     "tagline": "ค้นหาลึก สร้างสรรค์โซลูชัน",
     "products": "ผลิตภัณฑ์",
     "support": "ช่วยเหลือ",
-    "copyright": "© 2026 BurrowSoft สงวนลิขสิทธิ์"
+    "copyright": "© 2026 BurrowSoft สงวนลิขสิทธิ์",
+    "systems": "ระบบ",
+    "websites": "เว็บไซต์",
+    "sites": {
+      "flymole": "เปรียบเทียบเที่ยวบินจากสายการบินชั้นนำ",
+      "bookingmole": "ค้นหาโรงแรมโดยไม่มีค่าธรรมเนียมแอบแฝง",
+      "insightmole": "ข่าวเด่น ไม่มีคลิกเบต",
+      "rentacarmole": "รถเช่าจากผู้ให้บริการชั้นนำ",
+      "gamesmole": "อันดับสด คู่มือ และข่าวเกม",
+      "shoppingmole": "เปรียบเทียบราคาจากร้านค้านับพัน"
+    }
   },
   "noAds": {
     "tagline": "ค้นหาสะอาด ไม่มีโฆษณา ไม่ต้องสมัคร"
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — ระบบซอฟต์แวร์ที่สร้างอย่างลึกซึ้ง",
+    "homeDescription": "BurrowSoft พัฒนา SolvyMed ซอฟต์แวร์บริหารคลินิก และ Moodbow ไดอารี่ส่วนตัวที่ใช้ AI พร้อมเว็บไซต์ฟรีสำหรับผู้บริโภคอีกหกเว็บไซต์",
+    "websitesTitle": "เว็บไซต์ของ BurrowSoft — ค้นหาดีลที่ดีกว่า ไม่มีกลโกง",
+    "websitesDescription": "BurrowSoft สร้างเครื่องมือค้นหาที่ซื่อตรงและตรงจุด สำหรับเที่ยวบิน โรงแรม รถเช่า ข่าว เกม และช้อปปิ้ง ไม่มี Dark Pattern ไม่มีค่าธรรมเนียมแอบแฝง"
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "ค้นหาลึก",
+      "titleLine2": "สร้างสรรค์โซลูชัน",
+      "subtitle": "BurrowSoft สร้างระบบซอฟต์แวร์สำหรับงานที่สำคัญ ตั้งแต่การบริหารคลินิกไปจนถึงการทำความเข้าใจตัวเอง",
+      "primaryCta": "ดูระบบของเรา",
+      "secondaryCta": "ดูเว็บไซต์ของเรา",
+      "panelTitle": "สิ่งที่เราสร้าง"
+    },
+    "logoAlt": "โลโก้ {name}",
+    "systems": {
+      "title": "ระบบของเรา",
+      "subtitle": "ซอฟต์แวร์ที่ตรงจุด สำหรับคลินิกและชีวิตประจำวัน",
+      "live": "พร้อมใช้งาน",
+      "comingSoon": "เร็ว ๆ นี้"
+    },
+    "solvymed": {
+      "tagline": "การบริหารคลินิกที่เรียบง่าย",
+      "description": "SolvyMed รวมการนัดหมาย บันทึกผู้ป่วย ใบสั่งยา และการชำระเงินไว้ในแอปเดียว รวดเร็วและเป็นระเบียบ สำหรับผู้เชี่ยวชาญด้านสุขภาพ",
+      "cta": "ไปที่ SolvyMed",
+      "features": {
+        "scheduling": "การนัดหมาย",
+        "records": "บันทึกผู้ป่วย",
+        "prescriptions": "ใบสั่งยา",
+        "payments": "การชำระเงิน"
+      }
+    },
+    "moodbow": {
+      "tagline": "ไดอารี่ที่เรียนรู้เรื่องราวของคุณ",
+      "description": "ไดอารี่ส่วนตัวที่ช่วยให้คุณสังเกตรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
+      "cta": "รับการแจ้งเตือน",
+      "features": {
+        "mood": "อารมณ์",
+        "sleep": "การนอน",
+        "habits": "นิสัย"
+      }
+    },
+    "teaser": {
+      "text": "เรายังดูแลเว็บไซต์ฟรีสำหรับผู้บริโภคอีกหกเว็บไซต์ สำหรับเที่ยวบิน โรงแรม รถเช่า ข่าว เกม และช้อปปิ้ง",
+      "link": "สำรวจเว็บไซต์ของเรา"
+    },
+    "contact": {
+      "title": "ติดต่อเรา",
+      "text": "มีโปรเจกต์ หรืออยากลองใช้ Moodbow ก่อนใคร?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "หกเครื่องมือที่ตรงจุด หนึ่งพันธกิจ",
+    "mascotAlt": "มาสคอต {name}",
+    "taglines": {
+      "flymole": "ค้นหาเที่ยวบิน",
+      "bookingmole": "จองโรงแรม",
+      "insightmole": "ข่าวมาแรง",
+      "rentacarmole": "เช่ารถ",
+      "gamesmole": "เกมและอันดับ",
+      "shoppingmole": "ช้อปอย่างชาญฉลาด"
+    },
+    "ctas": {
+      "flymole": "ค้นหาเที่ยวบิน",
+      "bookingmole": "ดูโรงแรม",
+      "insightmole": "อ่านข่าว",
+      "rentacarmole": "หารถเช่า",
+      "gamesmole": "สำรวจเกม",
+      "shoppingmole": "เริ่มช้อปปิ้ง"
+    },
+    "valuesTitle": "วิธีที่เราสร้าง",
+    "values": {
+      "fastTitle": "รวดเร็ว",
+      "fastBody": "ได้ผลลัพธ์ในไม่ถึงวินาที ไม่ต้องรอ",
+      "transparentTitle": "โปร่งใส",
+      "transparentBody": "ราคาที่คุณเห็นคือราคาที่คุณจ่าย เสมอ",
+      "focusedTitle": "ตรงจุด",
+      "focusedBody": "หนึ่งผลิตภัณฑ์ หนึ่งหน้าที่ ทำให้ดีที่สุด"
+    },
+    "ctaTitle": "พร้อมสำรวจแล้วหรือยัง?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole"
+  ]
 }

@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "产品", "about": "关于我们" },
+  "nav": {
+    "products": "产品",
+    "about": "关于我们",
+    "systems": "系统",
+    "websites": "网站",
+    "contact": "联系我们",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
   "hero": {
     "title": "找到更好的优惠。",
     "titleAccent": "没有套路。",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "我们的产品",
+    "sectionTitle": "我们的网站",
     "flymole": "比较顶级航空公司的航班",
     "bookingmole": "在全球范围内搜索和比较酒店",
     "insightmole": "随时了解最新头条新闻",
@@ -27,9 +35,170 @@
     "tagline": "深入挖掘，打造解决方案。",
     "products": "产品",
     "support": "客服支持",
-    "copyright": "© 2026 BurrowSoft. 保留所有权利。"
+    "copyright": "© 2026 BurrowSoft. 保留所有权利。",
+    "systems": "系统",
+    "websites": "网站",
+    "sites": {
+      "flymole": "比较各大航空公司的航班",
+      "bookingmole": "查找无隐藏费用的酒店",
+      "insightmole": "头条新闻，拒绝标题党",
+      "rentacarmole": "来自顶级供应商的租车服务",
+      "gamesmole": "实时排行、攻略和游戏新闻",
+      "shoppingmole": "比较数千家商店的价格"
+    }
   },
   "noAds": {
     "tagline": "纯净搜索 · 无广告 · 无需注册"
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — 深耕细作的软件系统",
+    "homeDescription": "BurrowSoft 开发了诊所管理软件 SolvyMed 和个人 AI 日记 Moodbow，并运营六个面向用户的免费网站。",
+    "websitesTitle": "BurrowSoft 网站 — 找到更好的优惠，没有套路。",
+    "websitesDescription": "BurrowSoft 打造诚实、专注的搜索工具——机票、酒店、租车、新闻、游戏和购物，没有暗黑模式，没有隐藏费用。"
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "深入挖掘，",
+      "titleLine2": "打造解决方案。",
+      "subtitle": "BurrowSoft 为重要的工作打造软件系统，从经营诊所到了解自己。",
+      "primaryCta": "查看我们的系统",
+      "secondaryCta": "浏览我们的网站",
+      "panelTitle": "我们打造的产品"
+    },
+    "logoAlt": "{name} 标志",
+    "systems": {
+      "title": "我们的系统",
+      "subtitle": "为诊所和日常生活打造的专注软件。",
+      "live": "现已上线",
+      "comingSoon": "即将推出"
+    },
+    "solvymed": {
+      "tagline": "诊所管理，化繁为简。",
+      "description": "SolvyMed 将预约管理、患者档案、处方和付款整合在一款快速简洁的应用中，专为医疗专业人员设计。",
+      "cta": "访问 SolvyMed",
+      "features": {
+        "scheduling": "预约管理",
+        "records": "患者档案",
+        "prescriptions": "处方",
+        "payments": "付款"
+      }
+    },
+    "moodbow": {
+      "tagline": "一本懂你故事的日记。",
+      "description": "一本私密日记，帮助你随着时间发现情绪、睡眠和习惯中的规律。",
+      "cta": "上线时通知我",
+      "features": {
+        "mood": "情绪",
+        "sleep": "睡眠",
+        "habits": "习惯"
+      }
+    },
+    "teaser": {
+      "text": "我们还运营六个面向用户的免费网站，涵盖机票、酒店、租车、新闻、游戏和购物。",
+      "link": "探索我们的网站"
+    },
+    "contact": {
+      "title": "联系我们",
+      "text": "有项目想合作，或想抢先体验 Moodbow？"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "六个专注工具，一个使命。",
+    "mascotAlt": "{name} 吉祥物",
+    "taglines": {
+      "flymole": "搜索机票",
+      "bookingmole": "预订酒店",
+      "insightmole": "热门新闻",
+      "rentacarmole": "租车",
+      "gamesmole": "游戏与排行",
+      "shoppingmole": "聪明购物"
+    },
+    "ctas": {
+      "flymole": "搜索机票",
+      "bookingmole": "浏览酒店",
+      "insightmole": "阅读新闻",
+      "rentacarmole": "寻找租车",
+      "gamesmole": "探索游戏",
+      "shoppingmole": "开始购物"
+    },
+    "valuesTitle": "我们的打造方式",
+    "values": {
+      "fastTitle": "快速",
+      "fastBody": "不到一秒即出结果，无需等待。",
+      "transparentTitle": "透明",
+      "transparentBody": "你看到的价格就是你支付的价格，始终如此。",
+      "focusedTitle": "专注",
+      "focusedBody": "每个产品只做一件事，并做到极致。"
+    },
+    "ctaTitle": "准备好探索了吗？"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole"
+  ]
 }

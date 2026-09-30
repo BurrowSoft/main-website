@@ -1,5 +1,13 @@
 {
-  "nav": { "products": "Productos", "about": "Acerca de" },
+  "nav": {
+    "products": "Productos",
+    "about": "Acerca de",
+    "systems": "Sistemas",
+    "websites": "Sitios web",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
   "hero": {
     "title": "Encuentra mejores ofertas.",
     "titleAccent": "Sin trucos.",
@@ -15,7 +23,7 @@
     }
   },
   "products": {
-    "sectionTitle": "Nuestros Productos",
+    "sectionTitle": "Nuestros sitios web",
     "flymole": "Compara vuelos de las mejores aerolíneas",
     "bookingmole": "Encuentra y compara hoteles en todo el mundo",
     "insightmole": "Mantente informado con las principales noticias",
@@ -27,9 +35,170 @@
     "tagline": "CAVANDO PROFUNDO. CONSTRUYENDO SOLUCIONES.",
     "products": "Productos",
     "support": "Soporte",
-    "copyright": "© 2026 BurrowSoft. Todos los derechos reservados."
+    "copyright": "© 2026 BurrowSoft. Todos los derechos reservados.",
+    "systems": "Sistemas",
+    "websites": "Sitios web",
+    "sites": {
+      "flymole": "Compara vuelos de las principales aerolíneas",
+      "bookingmole": "Encuentra hoteles sin tarifas ocultas",
+      "insightmole": "Titulares principales, sin clickbait",
+      "rentacarmole": "Alquiler de autos de los mejores proveedores",
+      "gamesmole": "Rankings en vivo, guías y noticias de juegos",
+      "shoppingmole": "Compara precios en miles de tiendas"
+    }
   },
   "noAds": {
     "tagline": "Búsqueda limpia. Sin anuncios. Sin registro."
-  }
+  },
+  "meta": {
+    "homeTitle": "BurrowSoft — Sistemas de software, construidos a fondo.",
+    "homeDescription": "BurrowSoft desarrolla SolvyMed, software de gestión de clínicas, y Moodbow, un diario personal con IA, además de seis sitios web gratuitos para consumidores.",
+    "websitesTitle": "Sitios web de BurrowSoft — Encuentra mejores ofertas. Sin trucos.",
+    "websitesDescription": "BurrowSoft crea herramientas de búsqueda honestas y enfocadas: vuelos, hoteles, autos, noticias, juegos y compras, sin patrones oscuros ni tarifas ocultas."
+  },
+  "home": {
+    "hero": {
+      "titleLine1": "Cavando profundo.",
+      "titleLine2": "Construyendo soluciones.",
+      "subtitle": "BurrowSoft crea sistemas de software para el trabajo que importa, desde administrar una clínica hasta conocerte mejor.",
+      "primaryCta": "Ver nuestros sistemas",
+      "secondaryCta": "Ver nuestros sitios web",
+      "panelTitle": "Lo que construimos"
+    },
+    "logoAlt": "Logotipo de {name}",
+    "systems": {
+      "title": "Nuestros sistemas",
+      "subtitle": "Software enfocado para clínicas y para la vida diaria.",
+      "live": "Disponible ahora",
+      "comingSoon": "Próximamente"
+    },
+    "solvymed": {
+      "tagline": "Gestión de clínicas, simplificada.",
+      "description": "SolvyMed reúne citas, historiales de pacientes, recetas y pagos en una sola app rápida y limpia, diseñada para profesionales de la salud.",
+      "cta": "Visitar SolvyMed",
+      "features": {
+        "scheduling": "Citas",
+        "records": "Historiales de pacientes",
+        "prescriptions": "Recetas",
+        "payments": "Pagos"
+      }
+    },
+    "moodbow": {
+      "tagline": "Un diario que aprende tu historia.",
+      "description": "Un diario privado que te ayuda a notar patrones en tu estado de ánimo, tu sueño y tus hábitos con el tiempo.",
+      "cta": "Avísame",
+      "features": {
+        "mood": "Ánimo",
+        "sleep": "Sueño",
+        "habits": "Hábitos"
+      }
+    },
+    "teaser": {
+      "text": "También tenemos seis sitios web gratuitos para consumidores: vuelos, hoteles, alquiler de autos, noticias, juegos y compras.",
+      "link": "Explorar nuestros sitios web"
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "text": "¿Tienes un proyecto o quieres acceso anticipado a Moodbow?"
+    }
+  },
+  "websitesPage": {
+    "sectionSubtitle": "Seis herramientas enfocadas. Una misión.",
+    "mascotAlt": "Mascota de {name}",
+    "taglines": {
+      "flymole": "Buscar vuelos",
+      "bookingmole": "Reservar hoteles",
+      "insightmole": "Noticias del momento",
+      "rentacarmole": "Alquilar un auto",
+      "gamesmole": "Juegos y rankings",
+      "shoppingmole": "Compra con inteligencia"
+    },
+    "ctas": {
+      "flymole": "Buscar vuelos",
+      "bookingmole": "Ver hoteles",
+      "insightmole": "Leer noticias",
+      "rentacarmole": "Buscar un auto",
+      "gamesmole": "Explorar juegos",
+      "shoppingmole": "Empezar a comprar"
+    },
+    "valuesTitle": "Cómo construimos",
+    "values": {
+      "fastTitle": "Rápido",
+      "fastBody": "Resultados en menos de un segundo. Sin esperas.",
+      "transparentTitle": "Transparente",
+      "transparentBody": "El precio que ves es el precio que pagas. Siempre.",
+      "focusedTitle": "Enfocado",
+      "focusedBody": "Un trabajo por producto, hecho extremadamente bien."
+    },
+    "ctaTitle": "¿Listo para explorar?"
+  },
+  "_needsReview": [
+    "nav.systems",
+    "nav.websites",
+    "nav.contact",
+    "nav.openMenu",
+    "nav.closeMenu",
+    "meta.homeTitle",
+    "meta.homeDescription",
+    "meta.websitesTitle",
+    "meta.websitesDescription",
+    "home.hero.titleLine1",
+    "home.hero.titleLine2",
+    "home.hero.subtitle",
+    "home.hero.primaryCta",
+    "home.hero.secondaryCta",
+    "home.hero.panelTitle",
+    "home.logoAlt",
+    "home.systems.title",
+    "home.systems.subtitle",
+    "home.systems.live",
+    "home.systems.comingSoon",
+    "home.solvymed.tagline",
+    "home.solvymed.cta",
+    "home.solvymed.features.scheduling",
+    "home.solvymed.features.records",
+    "home.solvymed.features.prescriptions",
+    "home.solvymed.features.payments",
+    "home.moodbow.tagline",
+    "home.moodbow.description",
+    "home.moodbow.cta",
+    "home.moodbow.features.mood",
+    "home.moodbow.features.sleep",
+    "home.moodbow.features.habits",
+    "home.teaser.text",
+    "home.teaser.link",
+    "home.contact.title",
+    "home.contact.text",
+    "websitesPage.sectionSubtitle",
+    "websitesPage.mascotAlt",
+    "websitesPage.taglines.flymole",
+    "websitesPage.taglines.bookingmole",
+    "websitesPage.taglines.insightmole",
+    "websitesPage.taglines.rentacarmole",
+    "websitesPage.taglines.gamesmole",
+    "websitesPage.taglines.shoppingmole",
+    "websitesPage.ctas.flymole",
+    "websitesPage.ctas.bookingmole",
+    "websitesPage.ctas.insightmole",
+    "websitesPage.ctas.rentacarmole",
+    "websitesPage.ctas.gamesmole",
+    "websitesPage.ctas.shoppingmole",
+    "websitesPage.valuesTitle",
+    "websitesPage.values.fastTitle",
+    "websitesPage.values.fastBody",
+    "websitesPage.values.transparentTitle",
+    "websitesPage.values.transparentBody",
+    "websitesPage.values.focusedTitle",
+    "websitesPage.values.focusedBody",
+    "websitesPage.ctaTitle",
+    "products.sectionTitle",
+    "footer.systems",
+    "footer.websites",
+    "footer.sites.flymole",
+    "footer.sites.bookingmole",
+    "footer.sites.insightmole",
+    "footer.sites.rentacarmole",
+    "footer.sites.gamesmole",
+    "footer.sites.shoppingmole"
+  ]
 }
