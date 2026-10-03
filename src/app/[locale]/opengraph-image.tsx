@@ -65,7 +65,7 @@ export default async function OGImage() {
             <img src={solvymedSrc} width={64} height={64} alt="" style={{ borderRadius: 16 }} />
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span style={{ fontSize: 30, fontWeight: 700, color: "white" }}>SolvyMed</span>
-              <span style={{ fontSize: 18, color: "#A9D6EC" }}>Clinic management, simplified.</span>
+              <span style={{ fontSize: 18, color: "#A9D6EC" }}>Your practice, your brand.</span>
             </div>
           </div>
           <div style={pill}>
