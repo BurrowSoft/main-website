@@ -52,7 +52,7 @@
   },
   "meta": {
     "homeTitle": "BurrowSoft — Sistemas de software, construídos a fundo.",
-    "homeDescription": "A BurrowSoft desenvolve o SolvyMed, software de gestão de clínicas, e o Moodbow, um diário pessoal com IA, além de seis sites gratuitos para consumidores.",
+    "homeDescription": "A BurrowSoft desenvolve o SolvyMed, software para consultórios, e o Moodbow, um diário pessoal com IA, além de seis sites gratuitos para consumidores.",
     "websitesTitle": "Sites da BurrowSoft — Encontre ofertas melhores. Sem truques.",
     "websitesDescription": "A BurrowSoft cria ferramentas de busca honestas e focadas — voos, hotéis, carros, notícias, jogos e compras, sem padrões obscuros e sem taxas ocultas."
   },
@@ -73,7 +73,7 @@
       "comingSoon": "Em breve"
     },
     "solvymed": {
-      "tagline": "Gestão de clínicas, simplificada.",
+      "tagline": "Seu consultório, sua marca.",
       "description": "O SolvyMed é o app para clínicas feito para médicos autônomos e consultórios pequenos: agenda, pacientes, prontuários, prescrições e pagamentos em um só lugar, com conta para secretária, um app para seus pacientes e, em breve, o SolvyAI, um assistente para quem você simplesmente diz o que precisa.",
       "cta": "Visitar o SolvyMed",
       "features": {

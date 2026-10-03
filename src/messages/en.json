@@ -52,7 +52,7 @@
   },
   "meta": {
     "homeTitle": "BurrowSoft — Software systems, built deep.",
-    "homeDescription": "BurrowSoft builds SolvyMed, clinic management software, and Moodbow, a personal AI journal, plus six free consumer websites.",
+    "homeDescription": "BurrowSoft builds SolvyMed, software for medical practices, and Moodbow, a personal AI journal, plus six free consumer websites.",
     "websitesTitle": "BurrowSoft Websites — Find better deals. No tricks.",
     "websitesDescription": "BurrowSoft builds honest, focused search tools — flights, hotels, cars, news, games, and shopping with no dark patterns and no hidden fees."
   },
@@ -73,7 +73,7 @@
       "comingSoon": "Coming soon"
     },
     "solvymed": {
-      "tagline": "Clinic management, simplified.",
+      "tagline": "Your practice, your brand.",
       "description": "SolvyMed is the clinic app for independent doctors and small practices: schedule, patients, records, prescriptions and payments in one place, with a secretary account, an app for your patients and, coming soon, SolvyAI, an assistant you can simply tell what you need.",
       "cta": "Visit SolvyMed",
       "features": {
