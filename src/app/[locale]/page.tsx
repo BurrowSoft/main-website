@@ -12,6 +12,7 @@ import {
   SUPPORT_EMAIL,
   alternatesFor,
   localeUrl,
+  showPiggybow,
 } from "@/lib/site";
 
 export async function generateMetadata({
@@ -71,7 +72,12 @@ function CheckIcon({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
-export default async function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("home");
   const tNav = await getTranslations("nav");
 
@@ -157,6 +163,21 @@ export default async function HomePage() {
                   </span>
                   </a>
                 </li>
+                {showPiggybow(locale) && (
+                <li>
+                  {/* Piggybow: not a link until www.piggybow.com is live. */}
+                  <div className="flex items-center gap-4 rounded-2xl border border-[#F2A07B]/25 bg-[#FFF6F0] p-3">
+                  <Image src="/brand/piggybow/piggybow-app-icon.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#F3DDD0]" />
+                  <div className="min-w-0 flex-1">
+                    <p className="font-bold text-[#2B2438]">Piggybow</p>
+                    <p className="text-sm text-[#5B5068]">{t("piggybow.tagline")}</p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-[#A8456A]/10 px-2.5 py-1 text-xs font-semibold text-[#A8456A]">
+                    {t("systems.comingSoon")}
+                  </span>
+                  </div>
+                </li>
+                )}
               </ul>
 
               <div className="my-4 border-t border-dashed border-slate-200" />

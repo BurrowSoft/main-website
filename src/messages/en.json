@@ -103,6 +103,9 @@
         "private": "Private and secure"
       }
     },
+    "piggybow": {
+      "tagline": "A friendly money journal."
+    },
     "teaser": {
       "text": "We also run six free consumer websites for flights, hotels, car rentals, news, games and shopping.",
       "link": "Explore our websites"

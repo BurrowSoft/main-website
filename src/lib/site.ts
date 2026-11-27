@@ -8,6 +8,10 @@ export const SOLVYMED_URL = "https://www.solvymed.com";
 export const MOODBOW_URL = "https://www.moodbow.com";
 export const MOODBOW_NOTIFY_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=Notify%20me%20about%20Moodbow`;
 
+/** Piggybow is listed as coming soon, except on these locales for now (a market decision is pending). */
+export const PIGGYBOW_HIDDEN_LOCALES: readonly string[] = ["ar", "id"];
+export const showPiggybow = (locale: string) => !PIGGYBOW_HIDDEN_LOCALES.includes(locale);
+
 /** Absolute URL for a path in a given locale, matching the `as-needed` prefix scheme. */
 export function localeUrl(locale: string, path = "/") {
   const suffix = path === "/" ? "/" : `${path}`;

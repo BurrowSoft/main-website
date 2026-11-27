@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Piggybow</title>
+  <rect x="0" y="0" width="512" height="512" fill="#FBF6F1"/>
+  <path d="M60 236 A196 196 0 0 1 452 236" stroke="#E27D9A" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <path d="M88 236 A168 168 0 0 1 424 236" stroke="#F2A07B" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <path d="M116 236 A140 140 0 0 1 396 236" stroke="#F3C24F" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <g transform="translate(66,92) scale(1.9)">
+  <ellipse cx="100" cy="184" rx="64" ry="6" fill="#2B2438" opacity="0.08"/>
+  <path d="M22 142 Q20 64 100 62 Q180 64 178 142 Q178 180 100 180 Q22 180 22 142 Z" fill="#F9C5D3"/>
+  <rect x="86" y="68" width="28" height="6" rx="3" fill="#D27D97"/>
+  <ellipse cx="46" cy="140" rx="12" ry="7.5" fill="#F48FAA" opacity="0.8"/>
+  <ellipse cx="154" cy="140" rx="12" ry="7.5" fill="#F48FAA" opacity="0.8"/>
+  <path d="M53 123 Q62 112 71 123" stroke="#2B2438" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M129 123 Q138 112 147 123" stroke="#2B2438" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <ellipse cx="100" cy="130" rx="20" ry="13" fill="#F3A3B9"/>
+  <ellipse cx="93" cy="130" rx="3" ry="4.5" fill="#C46A87"/>
+  <ellipse cx="107" cy="130" rx="3" ry="4.5" fill="#C46A87"/>
+  <path d="M89.5 150 Q100 163 110.5 150" stroke="#2B2438" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

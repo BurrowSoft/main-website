@@ -16,7 +16,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { LanguageSelector, AppHeader } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { BASE, SITE_NAME, SUPPORT_EMAIL, SOLVYMED_URL, MOODBOW_URL, MOLE_SITES } from "@/lib/site";
+import { BASE, SITE_NAME, SUPPORT_EMAIL, SOLVYMED_URL, MOODBOW_URL, MOLE_SITES, showPiggybow } from "@/lib/site";
 import "../globals.css";
 
 const sarabun = Sarabun({ subsets: ["thai", "latin"], weight: ["400", "600", "700"], variable: "--font-sarabun", display: "swap" });
@@ -177,6 +177,18 @@ export default async function LocaleLayout({
                         <span className="block text-xs text-slate-400 group-hover:text-slate-300 transition-colors">{tHome("moodbow.tagline")}</span>
                       </a>
                     </li>
+                    {showPiggybow(locale) && (
+                      <li>
+                        {/* Piggybow: not a link until www.piggybow.com is live. */}
+                        <div className="block">
+                          <span className="text-sm font-semibold text-white">Piggybow</span>
+                          <span className="ms-2 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#F7C3D3]">
+                            {tHome("systems.comingSoon")}
+                          </span>
+                          <span className="block text-xs text-slate-400">{tHome("piggybow.tagline")}</span>
+                        </div>
+                      </li>
+                    )}
                   </ul>
                 </div>
 
