@@ -16,7 +16,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { LanguageSelector, AppHeader } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { BASE, SITE_NAME, SUPPORT_EMAIL, SOLVYMED_URL, MOODBOW_URL, MOODBOW_APP_STORE_URL, PIGGYBOW_URL, MOLE_SITES, showPiggybow } from "@/lib/site";
+import { BASE, SITE_NAME, SUPPORT_EMAIL, SOLVYMED_URL, MOODBOW_URL, PIGGYBOW_URL, MOLE_SITES, showPiggybow } from "@/lib/site";
 import { TRADEMARK_LINES } from "@/lib/stores";
 import "../globals.css";
 
@@ -206,9 +206,9 @@ export default async function LocaleLayout({
                 </div>
               </div>
 
-              {/* The store badges' trademark lines: in English in every locale; Apple's only once its badge shows */}
+              {/* The store badges' trademark lines, in English in every locale */}
               <div lang="en" dir="ltr" className="mt-12 space-y-1 border-t border-slate-800 pt-6 text-[11px] leading-relaxed text-slate-500 rtl:text-right">
-                {MOODBOW_APP_STORE_URL && <p>{TRADEMARK_LINES.apple}</p>}
+                <p>{TRADEMARK_LINES.apple}</p>
                 <p>{TRADEMARK_LINES.google}</p>
               </div>
             </div>
