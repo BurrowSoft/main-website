@@ -448,9 +448,9 @@ export default async function HomePage() {
               <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 end-1/3 h-48 w-48 rounded-full bg-[#F3C24F]/20 blur-3xl" />
               <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -start-10 h-44 w-44 rounded-full bg-[#E27D9A]/15 blur-3xl" />
 
-              <div className="relative grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-14">
+              <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
                     <div className="flex items-center gap-3">
                       <Image
                         src="/brand/piggybow/piggybow-app-icon.svg"
