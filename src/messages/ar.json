@@ -66,6 +66,9 @@
       "panelTitle": "ما نبنيه"
     },
     "logoAlt": "شعار {name}",
+    "badges": {
+      "googlePlay": "احصل عليه من Google Play"
+    },
     "systems": {
       "title": "أنظمتنا",
       "subtitle": "برمجيات مركّزة للعيادات وللحياة اليومية.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "مذكرات تتعلّم قصتك.",
       "description": "Moodbow مذكرات خاصة بالذكاء الاصطناعي تتعلّم قصتك وتساعدك على رؤية الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
-      "cta": "أبلغني عند الإطلاق",
       "visit": "زيارة Moodbow",
       "features": {
         "mood": "المزاج",
@@ -103,13 +105,30 @@
         "private": "خاص وآمن"
       }
     },
+    "piggybow": {
+      "tagline": "دفتر مالي ودود.",
+      "description": "Piggybow دفتر مالي خاص برفقة خنزير صغير ودود. دوّن ما تنفقه وما تدّخره، وسجّل شعورك تجاه كل عملية إنفاق، وشاهد قوس قزح يكتمل كلما اقتربت من أهدافك. لا تسجيل دخول إلى البنك ولا حساب: تبقى مدخلاتك معك.",
+      "features": {
+        "spending": "الإنفاق",
+        "savings": "الادخار",
+        "goals": "الأهداف"
+      },
+      "highlights": {
+        "glance": "أسبوعك وشهرك في لمحة",
+        "reminder": "تذكير يومي لطيف، إن أردت",
+        "lock": "قفل التطبيق برمز PIN أو البصمة أو الوجه",
+        "noAds": "بلا إعلانات ولا تتبّع"
+      },
+      "cta": "أبلغني عند الإطلاق",
+      "visit": "زيارة Piggybow"
+    },
     "teaser": {
       "text": "ندير أيضاً ستة مواقع مجانية للمستخدمين للرحلات الجوية والفنادق وتأجير السيارات والأخبار والألعاب والتسوق.",
       "link": "استكشف مواقعنا"
     },
     "contact": {
       "title": "تواصل معنا",
-      "text": "لديك مشروع أو تريد وصولاً مبكراً إلى Moodbow؟"
+      "text": "لديك مشروع في ذهنك أو سؤال عن أحد تطبيقاتنا؟"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

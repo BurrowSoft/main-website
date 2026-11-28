@@ -66,6 +66,9 @@
       "panelTitle": "Was wir bauen"
     },
     "logoAlt": "{name}-Logo",
+    "badges": {
+      "googlePlay": "Jetzt bei Google Play"
+    },
     "systems": {
       "title": "Unsere Systeme",
       "subtitle": "Fokussierte Software für Praxen und den Alltag.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Ein Tagebuch, das deine Geschichte lernt.",
       "description": "Moodbow ist ein privates KI-Tagebuch, das deine Geschichte lernt und dir hilft, mit der Zeit Muster in Stimmung, Schlaf und Gewohnheiten zu erkennen.",
-      "cta": "Benachrichtige mich",
       "visit": "Moodbow besuchen",
       "features": {
         "mood": "Stimmung",
@@ -103,13 +105,30 @@
         "private": "Privat und sicher"
       }
     },
+    "piggybow": {
+      "tagline": "Ein freundliches Geldtagebuch.",
+      "description": "Piggybow ist ein privates Geldtagebuch mit einem freundlichen Schwein. Notiere, was du ausgibst und was du sparst, halte fest, wie sich jede Ausgabe angefühlt hat, und sieh zu, wie sich ein Regenbogen füllt, während du deine Ziele erreichst. Kein Bank-Login, kein Benutzerkonto: Deine Einträge bleiben bei dir.",
+      "features": {
+        "spending": "Ausgaben",
+        "savings": "Ersparnisse",
+        "goals": "Ziele"
+      },
+      "highlights": {
+        "glance": "Deine Woche und dein Monat auf einen Blick",
+        "reminder": "Eine sanfte tägliche Erinnerung, wenn du möchtest",
+        "lock": "App-Sperre mit PIN, Fingerabdruck oder Gesicht",
+        "noAds": "Keine Werbung, kein Tracking"
+      },
+      "cta": "Benachrichtige mich",
+      "visit": "Piggybow besuchen"
+    },
     "teaser": {
       "text": "Außerdem betreiben wir sechs kostenlose Websites für Flüge, Hotels, Mietwagen, Nachrichten, Spiele und Shopping.",
       "link": "Unsere Websites entdecken"
     },
     "contact": {
       "title": "Kontakt aufnehmen",
-      "text": "Du hast ein Projekt oder möchtest frühen Zugang zu Moodbow?"
+      "text": "Du hast ein Projekt im Kopf oder eine Frage zu einer unserer Apps?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

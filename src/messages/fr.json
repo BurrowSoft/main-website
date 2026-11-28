@@ -66,6 +66,9 @@
       "panelTitle": "Ce que nous construisons"
     },
     "logoAlt": "Logo {name}",
+    "badges": {
+      "googlePlay": "Disponible sur Google Play"
+    },
     "systems": {
       "title": "Nos systèmes",
       "subtitle": "Des logiciels ciblés pour les cabinets médicaux et pour le quotidien.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Un journal qui apprend votre histoire.",
       "description": "Moodbow est un journal privé avec IA qui apprend votre histoire et vous aide à repérer, au fil du temps, des tendances dans votre humeur, votre sommeil et vos habitudes.",
-      "cta": "Être prévenu",
       "visit": "Visiter Moodbow",
       "features": {
         "mood": "Humeur",
@@ -103,13 +105,30 @@
         "private": "Privé et sécurisé"
       }
     },
+    "piggybow": {
+      "tagline": "Un carnet d'argent bienveillant.",
+      "description": "Piggybow est un carnet d'argent privé avec un petit cochon bienveillant. Notez ce que vous dépensez et ce que vous épargnez, indiquez ce que chaque dépense vous a fait ressentir et regardez un arc-en-ciel se remplir à mesure que vous atteignez vos objectifs. Pas de connexion bancaire, pas de compte : vos notes restent avec vous.",
+      "features": {
+        "spending": "Dépenses",
+        "savings": "Épargne",
+        "goals": "Objectifs"
+      },
+      "highlights": {
+        "glance": "Votre semaine et votre mois en un coup d'œil",
+        "reminder": "Un petit rappel quotidien, si vous le souhaitez",
+        "lock": "Verrouillage par code, empreinte ou visage",
+        "noAds": "Sans publicité, sans pistage"
+      },
+      "cta": "Être prévenu",
+      "visit": "Visiter Piggybow"
+    },
     "teaser": {
       "text": "Nous gérons aussi six sites web gratuits pour le grand public : vols, hôtels, location de voitures, actualités, jeux et shopping.",
       "link": "Découvrir nos sites web"
     },
     "contact": {
       "title": "Contactez-nous",
-      "text": "Vous avez un projet ou souhaitez un accès anticipé à Moodbow ?"
+      "text": "Vous avez un projet en tête ou une question sur l'une de nos applis ?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

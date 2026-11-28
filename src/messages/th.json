@@ -66,6 +66,9 @@
       "panelTitle": "สิ่งที่เราสร้าง"
     },
     "logoAlt": "โลโก้ {name}",
+    "badges": {
+      "googlePlay": "ดาวน์โหลดที่ Google Play"
+    },
     "systems": {
       "title": "ระบบของเรา",
       "subtitle": "ซอฟต์แวร์ที่ตรงจุด สำหรับคลินิกและชีวิตประจำวัน",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "ไดอารี่ที่เรียนรู้เรื่องราวของคุณ",
       "description": "Moodbow คือไดอารี่ AI ส่วนตัวที่เรียนรู้เรื่องราวของคุณ และช่วยให้คุณเห็นรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
-      "cta": "รับการแจ้งเตือน",
       "visit": "ไปที่ Moodbow",
       "features": {
         "mood": "อารมณ์",
@@ -103,13 +105,30 @@
         "private": "เป็นส่วนตัวและปลอดภัย"
       }
     },
+    "piggybow": {
+      "tagline": "บันทึกรายจ่ายและเงินออม กับหมูน้อยใจดี",
+      "description": "Piggybow คือสมุดบันทึกการเงินส่วนตัว กับหมูน้อยใจดี จดสิ่งที่คุณใช้จ่ายและเงินที่เก็บออม บอกว่ารายจ่ายแต่ละครั้งรู้สึกอย่างไร แล้วดูสายรุ้งค่อยๆ เติมเต็มเมื่อคุณเข้าใกล้เป้าหมาย ไม่ต้องเข้าสู่ระบบธนาคาร ไม่ต้องสมัครบัญชีผู้ใช้ บันทึกของคุณอยู่กับคุณ",
+      "features": {
+        "spending": "รายจ่าย",
+        "savings": "เงินออม",
+        "goals": "เป้าหมาย"
+      },
+      "highlights": {
+        "glance": "ดูภาพรวมรายสัปดาห์และรายเดือน",
+        "reminder": "การแจ้งเตือนรายวันแบบนุ่มนวล ถ้าคุณต้องการ",
+        "lock": "ล็อกแอปด้วย PIN ลายนิ้วมือ หรือใบหน้า",
+        "noAds": "ไม่มีโฆษณา ไม่มีการติดตาม"
+      },
+      "cta": "รับการแจ้งเตือน",
+      "visit": "ไปที่ Piggybow"
+    },
     "teaser": {
       "text": "เรายังดูแลเว็บไซต์ฟรีสำหรับผู้บริโภคอีกหกเว็บไซต์ สำหรับเที่ยวบิน โรงแรม รถเช่า ข่าว เกม และช้อปปิ้ง",
       "link": "สำรวจเว็บไซต์ของเรา"
     },
     "contact": {
       "title": "ติดต่อเรา",
-      "text": "มีโปรเจกต์ หรืออยากลองใช้ Moodbow ก่อนใคร?"
+      "text": "มีโปรเจกต์ในใจ หรือมีคำถามเกี่ยวกับแอปของเรา?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,17 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit",
+    "home.piggybow.tagline"
   ]
 }

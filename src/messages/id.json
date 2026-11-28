@@ -66,6 +66,9 @@
       "panelTitle": "Yang kami bangun"
     },
     "logoAlt": "Logo {name}",
+    "badges": {
+      "googlePlay": "Dapatkan di Google Play"
+    },
     "systems": {
       "title": "Sistem kami",
       "subtitle": "Perangkat lunak yang fokus untuk klinik dan kehidupan sehari-hari.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Jurnal yang mempelajari kisahmu.",
       "description": "Moodbow adalah jurnal AI pribadi yang mempelajari kisahmu dan membantumu melihat pola suasana hati, tidur, dan kebiasaanmu dari waktu ke waktu.",
-      "cta": "Beri tahu saya",
       "visit": "Kunjungi Moodbow",
       "features": {
         "mood": "Suasana hati",
@@ -103,13 +105,30 @@
         "private": "Pribadi dan aman"
       }
     },
+    "piggybow": {
+      "tagline": "Jurnal keuangan yang ramah.",
+      "description": "Piggybow adalah jurnal keuangan pribadi dengan babi kecil yang ramah. Catat apa yang kamu belanjakan dan tabung, tandai bagaimana perasaanmu tentang setiap pengeluaran, dan lihat pelangi terisi saat kamu mencapai targetmu. Tanpa login bank, tanpa akun: catatanmu tetap bersamamu.",
+      "features": {
+        "spending": "Pengeluaran",
+        "savings": "Tabungan",
+        "goals": "Target"
+      },
+      "highlights": {
+        "glance": "Minggu dan bulanmu sekilas",
+        "reminder": "Pengingat harian yang lembut, jika kamu mau",
+        "lock": "Kunci aplikasi dengan PIN, sidik jari, atau wajah",
+        "noAds": "Tanpa iklan, tanpa pelacakan"
+      },
+      "cta": "Beri tahu saya",
+      "visit": "Kunjungi Piggybow"
+    },
     "teaser": {
       "text": "Kami juga mengelola enam situs web gratis untuk konsumen: penerbangan, hotel, sewa mobil, berita, game, dan belanja.",
       "link": "Jelajahi situs web kami"
     },
     "contact": {
       "title": "Hubungi kami",
-      "text": "Punya proyek atau ingin akses awal ke Moodbow?"
+      "text": "Punya proyek atau pertanyaan tentang salah satu aplikasi kami?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

@@ -66,6 +66,9 @@
       "panelTitle": "Lo que construimos"
     },
     "logoAlt": "Logotipo de {name}",
+    "badges": {
+      "googlePlay": "Disponible en Google Play"
+    },
     "systems": {
       "title": "Nuestros sistemas",
       "subtitle": "Software enfocado para clínicas y para la vida diaria.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Un diario que aprende tu historia.",
       "description": "Moodbow es un diario privado con IA que aprende tu historia y te ayuda a ver patrones en tu estado de ánimo, tu sueño y tus hábitos con el tiempo.",
-      "cta": "Avísame",
       "visit": "Visitar Moodbow",
       "features": {
         "mood": "Ánimo",
@@ -103,13 +105,30 @@
         "private": "Privado y seguro"
       }
     },
+    "piggybow": {
+      "tagline": "Un diario de dinero amigable.",
+      "description": "Piggybow es un diario de dinero privado con un cerdito amigable. Anota lo que gastas y lo que ahorras, marca cómo te hizo sentir cada gasto y mira cómo se llena un arcoíris a medida que alcanzas tus metas. Sin acceso bancario, sin cuenta: tus registros se quedan contigo.",
+      "features": {
+        "spending": "Gastos",
+        "savings": "Ahorros",
+        "goals": "Metas"
+      },
+      "highlights": {
+        "glance": "Tu semana y tu mes de un vistazo",
+        "reminder": "Un recordatorio diario amable, si lo quieres",
+        "lock": "Bloqueo con PIN, huella o rostro",
+        "noAds": "Sin anuncios, sin rastreo"
+      },
+      "cta": "Avísame",
+      "visit": "Visitar Piggybow"
+    },
     "teaser": {
       "text": "También tenemos seis sitios web gratuitos para consumidores: vuelos, hoteles, alquiler de autos, noticias, juegos y compras.",
       "link": "Explorar nuestros sitios web"
     },
     "contact": {
       "title": "Contáctanos",
-      "text": "¿Tienes un proyecto o quieres acceso anticipado a Moodbow?"
+      "text": "¿Tienes un proyecto en mente o una pregunta sobre alguna de nuestras apps?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

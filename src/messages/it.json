@@ -66,6 +66,9 @@
       "panelTitle": "Cosa costruiamo"
     },
     "logoAlt": "Logo di {name}",
+    "badges": {
+      "googlePlay": "Disponibile su Google Play"
+    },
     "systems": {
       "title": "I nostri sistemi",
       "subtitle": "Software mirato per gli studi medici e per la vita di tutti i giorni.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Un diario che impara la tua storia.",
       "description": "Moodbow è un diario privato con IA che impara la tua storia e ti aiuta a vedere, nel tempo, gli schemi del tuo umore, del sonno e delle abitudini.",
-      "cta": "Avvisami",
       "visit": "Visita Moodbow",
       "features": {
         "mood": "Umore",
@@ -103,13 +105,30 @@
         "private": "Privato e sicuro"
       }
     },
+    "piggybow": {
+      "tagline": "Un diario delle finanze amichevole.",
+      "description": "Piggybow è un diario delle finanze privato con un maialino amichevole. Annota quello che spendi e quello che risparmi, segna come ti ha fatto sentire ogni spesa e guarda un arcobaleno riempirsi man mano che raggiungi i tuoi obiettivi. Nessun accesso alla banca, nessun account: le tue note restano con te.",
+      "features": {
+        "spending": "Spese",
+        "savings": "Risparmi",
+        "goals": "Obiettivi"
+      },
+      "highlights": {
+        "glance": "La tua settimana e il tuo mese a colpo d'occhio",
+        "reminder": "Un promemoria quotidiano gentile, se lo vuoi",
+        "lock": "Blocco con PIN, impronta o volto",
+        "noAds": "Niente pubblicità, niente tracciamento"
+      },
+      "cta": "Avvisami",
+      "visit": "Visita Piggybow"
+    },
     "teaser": {
       "text": "Gestiamo anche sei siti web gratuiti per i consumatori: voli, hotel, noleggio auto, notizie, giochi e shopping.",
       "link": "Esplora i nostri siti web"
     },
     "contact": {
       "title": "Contattaci",
-      "text": "Hai un progetto o vuoi l'accesso anticipato a Moodbow?"
+      "text": "Hai un progetto in mente o una domanda su una delle nostre app?"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,17 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit",
+    "home.piggybow.tagline"
   ]
 }

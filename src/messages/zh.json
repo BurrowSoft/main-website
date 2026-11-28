@@ -66,6 +66,9 @@
       "panelTitle": "我们打造的产品"
     },
     "logoAlt": "{name} 标志",
+    "badges": {
+      "googlePlay": "去商店下载 Google Play"
+    },
     "systems": {
       "title": "我们的系统",
       "subtitle": "为诊所和日常生活打造的专注软件。",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "一本懂你故事的日记。",
       "description": "Moodbow 是一本私密的 AI 日记，它会了解你的故事，帮助你随着时间看清情绪、睡眠和习惯中的规律。",
-      "cta": "上线时通知我",
       "visit": "访问 Moodbow",
       "features": {
         "mood": "情绪",
@@ -103,13 +105,30 @@
         "private": "私密且安全"
       }
     },
+    "piggybow": {
+      "tagline": "亲切的记账日记。",
+      "description": "Piggybow 是一本有亲切小猪陪伴的私人记账日记。记下你花了什么、存了什么，标记每笔花费带给你的感受，看着彩虹随着你接近目标慢慢填满。无需登录银行，也无需账号：你的记录只属于你。",
+      "features": {
+        "spending": "支出",
+        "savings": "储蓄",
+        "goals": "目标"
+      },
+      "highlights": {
+        "glance": "一眼看懂你的一周与一个月",
+        "reminder": "温和的每日提醒，想要才开启",
+        "lock": "使用 PIN、指纹或面容锁定应用",
+        "noAds": "无广告、无追踪"
+      },
+      "cta": "上线时通知我",
+      "visit": "访问 Piggybow"
+    },
     "teaser": {
       "text": "我们还运营六个面向用户的免费网站，涵盖机票、酒店、租车、新闻、游戏和购物。",
       "link": "探索我们的网站"
     },
     "contact": {
       "title": "联系我们",
-      "text": "有项目想合作，或想抢先体验 Moodbow？"
+      "text": "有项目想合作，或对我们的应用有疑问？"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

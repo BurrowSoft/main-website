@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { BurrowSoftIcon } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import {
   MOLE_SITES,
-  MOODBOW_NOTIFY_MAILTO,
+  MOODBOW_APP_STORE_URL,
+  MOODBOW_PLAY_URL,
   MOODBOW_URL,
+  PIGGYBOW_APP_STORE_URL,
+  PIGGYBOW_NOTIFY_MAILTO,
+  PIGGYBOW_PLAY_URL,
+  PIGGYBOW_STORE_BADGES,
+  PIGGYBOW_URL,
   SITE_NAME,
+  SOLVYMED_PLAY_URL,
   SOLVYMED_URL,
   SUPPORT_EMAIL,
   alternatesFor,
   localeUrl,
+  showPiggybow,
 } from "@/lib/site";
+import { APP_STORE_BADGE, googlePlayBadge } from "@/lib/stores";
 
 export async function generateMetadata({
   params,
@@ -46,6 +56,13 @@ const MOODBOW_FEATURES = [
   { key: "habits", color: "#E27D9A" },
 ] as const;
 const MOODBOW_HIGHLIGHTS = ["charts", "reports", "timeline", "private"] as const;
+/** Piggybow's three features take the rainbow's three colours, outside in. */
+const PIGGYBOW_FEATURES = [
+  { key: "spending", color: "#E27D9A" },
+  { key: "savings", color: "#F2A07B" },
+  { key: "goals", color: "#F3C24F" },
+] as const;
+const PIGGYBOW_HIGHLIGHTS = ["glance", "reminder", "lock", "noAds"] as const;
 
 function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -71,7 +88,75 @@ function CheckIcon({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
+const STORE_CHIP = "inline-flex items-center rounded-full border border-slate-300/80 bg-white px-2 py-0.5 text-[0.6875rem] font-semibold text-slate-700";
+
+/**
+ * A store's name as a small chip in a hero row. With a store page it's a link that sits above
+ * the row's stretched link; without one (not out yet, or the page isn't known) it's plain text
+ * that lets clicks through to the row's link.
+ */
+function StoreChip({ href, label, children }: { href: string | null; label: string; children: string }) {
+  if (!href) return <span className={`${STORE_CHIP} pointer-events-none`}>{children}</span>;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className={`${STORE_CHIP} transition-colors hover:border-slate-400 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500`}
+    >
+      {children}
+    </a>
+  );
+}
+
+/** An official badge: a link to the store page when there is one, else the artwork alone (never a dead link). */
+function BadgeLink({ href, focusClass, children }: { href: string | null; focusClass: string; children: ReactNode }) {
+  if (!href) return <span className="inline-flex">{children}</span>;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${focusClass}`}
+    >
+      {children}
+    </a>
+  );
+}
+
+/**
+ * Google Play's official badge. Its PNG carries built-in padding (more in the older en/ar
+ * artwork), so it is drawn larger with negative margins until the visible badge is 40px tall,
+ * the height of Apple's.
+ */
+function GooglePlayBadge({ href, locale, alt, focusClass }: { href: string | null; locale: string; alt: string; focusClass: string }) {
+  const badge = googlePlayBadge(locale);
+  return (
+    <BadgeLink href={href} focusClass={focusClass}>
+      <Image
+        src={badge.src}
+        alt={alt}
+        width={646}
+        height={250}
+        className={badge.oldArtwork ? "-mx-[10px] -my-[10.5px] h-[61px] w-auto max-w-none" : "-my-[6.5px] h-[53px] w-auto max-w-none"}
+      />
+    </BadgeLink>
+  );
+}
+
+/** Apple's official badge, 40px tall (its minimum). */
+function AppStoreBadge({ href, focusClass }: { href: string | null; focusClass: string }) {
+  return (
+    <BadgeLink href={href} focusClass={focusClass}>
+      <Image src={APP_STORE_BADGE.src} alt={APP_STORE_BADGE.alt} width={120} height={40} className="h-10 w-auto" />
+    </BadgeLink>
+  );
+}
+
 export default async function HomePage() {
+  const locale = await getLocale();
+  const piggybow = showPiggybow(locale);
   const t = await getTranslations("home");
   const tNav = await getTranslations("nav");
 
@@ -122,41 +207,85 @@ export default async function HomePage() {
 
               <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{tNav("systems")}</p>
               <ul className="space-y-2">
+                {/* Each row: the product's name is its link, stretched over the row; the store chips sit above it. */}
                 <li>
-                  <a
-                    href={SOLVYMED_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#116E99]"
-                  >
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08]">
                   <Image src="/brand/solvymed/solvymed-app-icon-blue-192.png" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-slate-900">SolvyMed</p>
+                    <p className="font-bold text-slate-900">
+                      <a
+                        href={SOLVYMED_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#116E99]"
+                      >
+                        SolvyMed
+                      </a>
+                    </p>
                     <p className="text-sm text-slate-600">{t("solvymed.tagline")}</p>
+                    <div className="relative z-10 mt-1.5 flex flex-wrap gap-1.5">
+                      <StoreChip href={SOLVYMED_PLAY_URL} label="SolvyMed: Google Play">Google Play</StoreChip>
+                    </div>
                   </div>
                   <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
                     {t("systems.live")}
                   </span>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a
-                    href={MOODBOW_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
-                  >
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6]">
                   <Image src="/brand/moodbow/moodbow-app-icon-light.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#EADFD6]" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-[#2B2438]">Moodbow</p>
+                    <p className="font-bold text-[#2B2438]">
+                      <a
+                        href={MOODBOW_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#A8456A]"
+                      >
+                        Moodbow
+                      </a>
+                    </p>
                     <p className="text-sm text-[#5B5068]">{t("moodbow.tagline")}</p>
+                    <div className="relative z-10 mt-1.5 flex flex-wrap gap-1.5">
+                      <StoreChip href={MOODBOW_APP_STORE_URL} label="Moodbow: App Store">App Store</StoreChip>
+                      <StoreChip href={MOODBOW_PLAY_URL} label="Moodbow: Google Play">Google Play</StoreChip>
+                    </div>
+                  </div>
+                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                    {t("systems.live")}
+                  </span>
+                  </div>
+                </li>
+                {piggybow && (
+                <li>
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#F2A07B]/25 bg-[#FFF6F0] p-3 transition-colors hover:border-[#F2A07B]/50 hover:bg-[#FCEDE3]">
+                  <Image src="/brand/piggybow/piggybow-app-icon.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#F3DDD0]" />
+                  <div className="min-w-0 flex-1">
+                    <p className="font-bold text-[#2B2438]">
+                      <a
+                        href={PIGGYBOW_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#A8456A]"
+                      >
+                        Piggybow
+                      </a>
+                    </p>
+                    <p className="text-sm text-[#5B5068]">{t("piggybow.tagline")}</p>
+                    <div className="relative z-10 mt-1.5 flex flex-wrap gap-1.5">
+                      <StoreChip href={PIGGYBOW_APP_STORE_URL} label="Piggybow: App Store">App Store</StoreChip>
+                      <StoreChip href={PIGGYBOW_PLAY_URL} label="Piggybow: Google Play">Google Play</StoreChip>
+                    </div>
                   </div>
                   <span className="shrink-0 rounded-full bg-[#A8456A]/10 px-2.5 py-1 text-xs font-semibold text-[#A8456A]">
                     {t("systems.comingSoon")}
                   </span>
-                  </a>
+                  </div>
                 </li>
+                )}
               </ul>
 
               <div className="my-4 border-t border-dashed border-slate-200" />
@@ -199,21 +328,26 @@ export default async function HomePage() {
             <p className="mt-3 text-lg text-slate-600">{t("systems.subtitle")}</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
-            {/* SolvyMed — live, visually first and larger */}
-            <article className="relative flex flex-col overflow-hidden rounded-3xl bg-[#0C2230] p-8 text-white shadow-xl shadow-[#0C2230]/20 sm:p-10 lg:col-span-3">
+          {/*
+            Equal cards, one row stretched to its tallest card. With Piggybow: stacked on phones, two
+            across from md with Piggybow full width (laid out in two columns), three across from xl.
+            Without it (ar, id): SolvyMed and Moodbow as two equal halves from md.
+          */}
+          <div className={`grid grid-cols-1 gap-6 md:grid-cols-2 ${piggybow ? "xl:grid-cols-3" : ""}`}>
+            {/* SolvyMed — live */}
+            <article className="relative flex flex-col overflow-hidden rounded-3xl bg-[#0C2230] p-7 text-white shadow-xl shadow-[#0C2230]/20 sm:p-8">
               <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 -end-40 h-[28rem] w-[28rem] rounded-full bg-[#116E99]/40 blur-3xl" />
               <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -end-24 h-72 w-72 rounded-full border border-white/10" />
               <div aria-hidden="true" className="pointer-events-none absolute -bottom-12 -end-12 h-48 w-48 rounded-full border border-white/10" />
               <div aria-hidden="true" className="pointer-events-none absolute bottom-0 end-0 h-24 w-24 rounded-full border border-white/10" />
 
-              <div className="relative flex flex-wrap items-center justify-between gap-4">
+              <div className="relative flex flex-col items-start gap-4">
                 <Image
                   src="/brand/solvymed/solvymed-logo-horizontal-dark-small.png"
                   alt={t("logoAlt", { name: "SolvyMed" })}
                   width={433}
                   height={200}
-                  className="h-16 w-auto sm:h-20"
+                  className="h-14 w-auto"
                 />
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#A9D6EC] ring-1 ring-white/15">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
@@ -221,10 +355,10 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <h3 className="relative mt-8 text-2xl font-bold tracking-tight sm:text-3xl">{t("solvymed.tagline")}</h3>
-              <p className="relative mt-3 max-w-xl leading-relaxed text-white/80">{t("solvymed.description")}</p>
+              <h3 className="relative mt-6 text-2xl font-bold tracking-tight">{t("solvymed.tagline")}</h3>
+              <p className="relative mt-3 leading-relaxed text-white/80">{t("solvymed.description")}</p>
 
-              <ul className="relative mt-7 grid gap-3 sm:grid-cols-2">
+              <ul className={`relative mt-7 grid gap-3 ${piggybow ? "lg:grid-cols-2 xl:grid-cols-1" : "lg:grid-cols-2"}`}>
                 {SOLVYMED_FEATURES.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-sm font-medium text-white/90">
                     <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#116E99] text-white">
@@ -247,7 +381,7 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <div className="relative mt-auto pt-9">
+              <div className="relative mt-auto flex flex-wrap items-center gap-x-4 gap-y-3 pt-8">
                 <a
                   href={SOLVYMED_URL}
                   target="_blank"
@@ -257,29 +391,36 @@ export default async function HomePage() {
                   {t("solvymed.cta")}
                   <ExternalIcon />
                 </a>
+                <GooglePlayBadge
+                  href={SOLVYMED_PLAY_URL}
+                  locale={locale}
+                  alt={t("badges.googlePlay")}
+                  focusClass="focus-visible:ring-[#A9D6EC] focus-visible:ring-offset-[#0C2230]"
+                />
               </div>
             </article>
 
-            {/* Moodbow — coming soon */}
-            <article className="relative flex flex-col overflow-hidden rounded-3xl border border-[#EADFD6] bg-[#FBF6F1] p-8 text-[#2B2438] sm:p-10 lg:col-span-2">
+            {/* Moodbow — live */}
+            <article className="relative flex flex-col overflow-hidden rounded-3xl border border-[#EADFD6] bg-[#FBF6F1] p-7 text-[#2B2438] sm:p-8">
               <div aria-hidden="true" className="pointer-events-none absolute -top-16 -end-10 h-40 w-40 rounded-full bg-[#F2A07B]/30 blur-2xl" />
               <div aria-hidden="true" className="pointer-events-none absolute -top-6 end-20 h-32 w-32 rounded-full bg-[#9B84D6]/25 blur-2xl" />
               <div aria-hidden="true" className="pointer-events-none absolute top-10 -end-4 h-24 w-24 rounded-full bg-[#E27D9A]/25 blur-2xl" />
 
-              <div className="relative flex flex-wrap items-center justify-between gap-4">
+              <div className="relative flex flex-col items-start gap-4">
                 <Image
                   src="/brand/moodbow/moodbow-logo-horizontal-light.svg"
                   alt={t("logoAlt", { name: "Moodbow" })}
                   width={686}
                   height={140}
-                  className="h-10 w-auto sm:h-11"
+                  className="h-10 w-auto"
                 />
-                <span className="rounded-full border border-[#A8456A]/25 bg-white/70 px-3 py-1 text-xs font-semibold text-[#A8456A]">
-                  {t("systems.comingSoon")}
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                  {t("systems.live")}
                 </span>
               </div>
 
-              <h3 className="relative mt-8 text-2xl font-semibold tracking-tight sm:text-3xl">{t("moodbow.tagline")}</h3>
+              <h3 className="relative mt-6 text-2xl font-semibold tracking-tight">{t("moodbow.tagline")}</h3>
               <p className="relative mt-3 leading-relaxed text-[#4A4257]">{t("moodbow.description")}</p>
 
               <ul className="relative mt-7 flex flex-wrap gap-2">
@@ -302,27 +443,138 @@ export default async function HomePage() {
                 ))}
               </ul>
 
-              <div className="relative mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 pt-9">
-                <a
-                  href={MOODBOW_NOTIFY_MAILTO}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#2B2438] px-5 py-3 text-sm font-semibold text-[#FBF6F1] transition-colors hover:bg-[#3D344D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF6F1]"
-                >
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2a2 2 0 01-.6 1.4L4 17h5m6 0a3 3 0 11-6 0" />
-                  </svg>
-                  {t("moodbow.cta")}
-                </a>
+              <div className="relative mt-auto pt-8">
+                <div className="flex flex-wrap items-center gap-3">
+                  <AppStoreBadge href={MOODBOW_APP_STORE_URL} focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FBF6F1]" />
+                  <GooglePlayBadge
+                    href={MOODBOW_PLAY_URL}
+                    locale={locale}
+                    alt={t("badges.googlePlay")}
+                    focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FBF6F1]"
+                  />
+                </div>
                 <a
                   href={MOODBOW_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-[#A8456A] transition-colors hover:text-[#2B2438] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
+                  className="mt-4 inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-[#A8456A] transition-colors hover:text-[#2B2438] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
                 >
                   {t("moodbow.visit")}
                   <ExternalIcon />
                 </a>
               </div>
             </article>
+
+            {/*
+              Piggybow — coming soon. Phones and xl: one column like the others, its buttons at the
+              bottom. md–lg: full width, in two columns (the lists on the right, with the pig at lg). The
+              left wrapper is display:contents in the one-column layouts, so its buttons can be
+              ordered last, after the lists.
+            */}
+            {piggybow && (
+            <article className="relative flex flex-col overflow-hidden rounded-3xl border border-[#F3DDD0] bg-[#FFF6F0] p-7 text-[#2B2438] sm:p-8 md:col-span-2 xl:col-span-1">
+              <div aria-hidden="true" className="pointer-events-none absolute -top-20 -end-16 h-56 w-56 rounded-full bg-[#F2A07B]/25 blur-3xl" />
+              <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 end-1/3 h-48 w-48 rounded-full bg-[#F3C24F]/20 blur-3xl" />
+              <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -start-10 h-44 w-44 rounded-full bg-[#E27D9A]/15 blur-3xl" />
+
+              <div className="relative flex flex-1 flex-col md:grid md:grid-cols-2 md:items-center md:gap-x-12 xl:flex xl:items-stretch">
+                <div className="contents md:flex md:flex-col xl:contents">
+                  <div className="flex flex-col items-start gap-4">
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/brand/piggybow/piggybow-app-icon.svg"
+                        alt=""
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 rounded-xl ring-1 ring-[#F3DDD0]"
+                      />
+                      <span className="text-2xl font-semibold tracking-tight">Piggybow</span>
+                    </div>
+                    <span className="rounded-full border border-[#A8456A]/25 bg-white/70 px-3 py-1 text-xs font-semibold text-[#A8456A]">
+                      {t("systems.comingSoon")}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-semibold tracking-tight">{t("piggybow.tagline")}</h3>
+                  <p className="mt-3 leading-relaxed text-[#4A4257]">{t("piggybow.description")}</p>
+
+                  <div className="order-last mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 pt-8 md:order-none md:mt-8 md:pt-0 xl:order-last xl:mt-auto xl:pt-8">
+                    <a
+                      href={PIGGYBOW_NOTIFY_MAILTO}
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#2B2438] px-5 py-3 text-sm font-semibold text-[#FFF6F0] transition-colors hover:bg-[#3D344D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFF6F0]"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2a2 2 0 01-.6 1.4L4 17h5m6 0a3 3 0 11-6 0" />
+                      </svg>
+                      {t("piggybow.cta")}
+                    </a>
+                    <a
+                      href={PIGGYBOW_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-[#A8456A] transition-colors hover:text-[#2B2438] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
+                    >
+                      {t("piggybow.visit")}
+                      <ExternalIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-7 flex items-start gap-6 md:mt-0 xl:mt-7">
+                  <div className="min-w-0 flex-1">
+                    <ul className="flex flex-wrap gap-2">
+                      {PIGGYBOW_FEATURES.map((f) => (
+                        <li key={f.key} className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-[#2B2438] ring-1 ring-[#F3DDD0]">
+                          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: f.color }} aria-hidden="true" />
+                          {t(`piggybow.features.${f.key}`)}
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="mt-6 space-y-2.5">
+                      {PIGGYBOW_HIGHLIGHTS.map((h) => (
+                        <li key={h} className="flex items-start gap-3 text-sm text-[#2B2438]">
+                          <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#A8456A]/10 text-[#A8456A]">
+                            <CheckIcon className="h-3 w-3" />
+                          </span>
+                          {t(`piggybow.highlights.${h}`)}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* The stores, not links until Piggybow is in them. */}
+                    <div className="mt-7">
+                      <p className="text-xs font-semibold text-[#A8456A]">{t("systems.comingSoon")}</p>
+                      <div className="mt-2.5 flex flex-wrap items-center gap-3">
+                        {PIGGYBOW_STORE_BADGES ? (
+                          <>
+                            <AppStoreBadge href={PIGGYBOW_APP_STORE_URL} focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FFF6F0]" />
+                            <GooglePlayBadge
+                              href={PIGGYBOW_PLAY_URL}
+                              locale={locale}
+                              alt={t("badges.googlePlay")}
+                              focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FFF6F0]"
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <StoreChip href={PIGGYBOW_APP_STORE_URL} label="Piggybow: App Store">App Store</StoreChip>
+                            <StoreChip href={PIGGYBOW_PLAY_URL} label="Piggybow: Google Play">Google Play</StoreChip>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <Image
+                    src="/brand/piggybow/piggybow-pig-happy.svg"
+                    alt=""
+                    width={200}
+                    height={200}
+                    className="hidden h-28 w-28 shrink-0 self-center lg:block xl:hidden"
+                  />
+                </div>
+              </div>
+            </article>
+            )}
           </div>
         </div>
       </section>

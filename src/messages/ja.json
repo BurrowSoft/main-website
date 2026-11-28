@@ -66,6 +66,9 @@
       "panelTitle": "私たちがつくるもの"
     },
     "logoAlt": "{name}のロゴ",
+    "badges": {
+      "googlePlay": "Google Play で手に入れよう"
+    },
     "systems": {
       "title": "私たちのシステム",
       "subtitle": "クリニックと日々の暮らしのための、目的に特化したソフトウェア。",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "あなたのストーリーを学ぶジャーナル。",
       "description": "Moodbowは、あなたのストーリーを学び、気分・睡眠・習慣のパターンを時間とともに見えるようにするプライベートなAIジャーナルです。",
-      "cta": "公開時に通知を受け取る",
       "visit": "Moodbowへ",
       "features": {
         "mood": "気分",
@@ -103,13 +105,30 @@
         "private": "プライベートで安全"
       }
     },
+    "piggybow": {
+      "tagline": "やさしいお金の日記。",
+      "description": "Piggybowは、やさしいブタがいるプライベートなお金の日記です。使ったお金と貯めたお金を記録し、それぞれの出費がどう感じられたかを残して、目標に近づくたびに虹が満ちていくのを見守りましょう。銀行へのログインもアカウントも不要。記録はあなたの手元に残ります。",
+      "features": {
+        "spending": "支出",
+        "savings": "貯金",
+        "goals": "目標"
+      },
+      "highlights": {
+        "glance": "1週間と1か月をひと目で",
+        "reminder": "希望すれば、毎日のやさしいリマインダー",
+        "lock": "PIN・指紋・顔でアプリをロック",
+        "noAds": "広告なし、トラッキングなし"
+      },
+      "cta": "公開時に通知を受け取る",
+      "visit": "Piggybowへ"
+    },
     "teaser": {
       "text": "航空券、ホテル、レンタカー、ニュース、ゲーム、ショッピングの6つの無料ウェブサイトも運営しています。",
       "link": "ウェブサイトを見る"
     },
     "contact": {
       "title": "お問い合わせ",
-      "text": "プロジェクトのご相談や、Moodbowの先行利用をご希望ですか？"
+      "text": "プロジェクトのご相談や、アプリについてのご質問はありますか？"
     }
   },
   "websitesPage": {
@@ -171,7 +190,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
@@ -218,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }
