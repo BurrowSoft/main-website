@@ -66,6 +66,9 @@
       "panelTitle": "สิ่งที่เราสร้าง"
     },
     "logoAlt": "โลโก้ {name}",
+    "badges": {
+      "googlePlay": "ดาวน์โหลดที่ Google Play"
+    },
     "systems": {
       "title": "ระบบของเรา",
       "subtitle": "ซอฟต์แวร์ที่ตรงจุด สำหรับคลินิกและชีวิตประจำวัน",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "ไดอารี่ที่เรียนรู้เรื่องราวของคุณ",
       "description": "Moodbow คือไดอารี่ AI ส่วนตัวที่เรียนรู้เรื่องราวของคุณ และช่วยให้คุณเห็นรูปแบบของอารมณ์ การนอน และนิสัยของคุณเมื่อเวลาผ่านไป",
-      "cta": "รับการแจ้งเตือน",
       "visit": "ไปที่ Moodbow",
       "features": {
         "mood": "อารมณ์",
@@ -174,7 +176,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

@@ -66,6 +66,9 @@
       "panelTitle": "Ce que nous construisons"
     },
     "logoAlt": "Logo {name}",
+    "badges": {
+      "googlePlay": "Disponible sur Google Play"
+    },
     "systems": {
       "title": "Nos systèmes",
       "subtitle": "Des logiciels ciblés pour les cabinets médicaux et pour le quotidien.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Un journal qui apprend votre histoire.",
       "description": "Moodbow est un journal privé avec IA qui apprend votre histoire et vous aide à repérer, au fil du temps, des tendances dans votre humeur, votre sommeil et vos habitudes.",
-      "cta": "Être prévenu",
       "visit": "Visiter Moodbow",
       "features": {
         "mood": "Humeur",
@@ -174,7 +176,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

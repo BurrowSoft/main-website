@@ -66,6 +66,9 @@
       "panelTitle": "Cosa costruiamo"
     },
     "logoAlt": "Logo di {name}",
+    "badges": {
+      "googlePlay": "Disponibile su Google Play"
+    },
     "systems": {
       "title": "I nostri sistemi",
       "subtitle": "Software mirato per gli studi medici e per la vita di tutti i giorni.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Un diario che impara la tua storia.",
       "description": "Moodbow è un diario privato con IA che impara la tua storia e ti aiuta a vedere, nel tempo, gli schemi del tuo umore, del sonno e delle abitudini.",
-      "cta": "Avvisami",
       "visit": "Visita Moodbow",
       "features": {
         "mood": "Umore",
@@ -174,7 +176,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

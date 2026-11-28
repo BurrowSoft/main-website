@@ -66,6 +66,9 @@
       "panelTitle": "我们打造的产品"
     },
     "logoAlt": "{name} 标志",
+    "badges": {
+      "googlePlay": "去商店下载 Google Play"
+    },
     "systems": {
       "title": "我们的系统",
       "subtitle": "为诊所和日常生活打造的专注软件。",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "一本懂你故事的日记。",
       "description": "Moodbow 是一本私密的 AI 日记，它会了解你的故事，帮助你随着时间看清情绪、睡眠和习惯中的规律。",
-      "cta": "上线时通知我",
       "visit": "访问 Moodbow",
       "features": {
         "mood": "情绪",
@@ -174,7 +176,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

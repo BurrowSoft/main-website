@@ -66,6 +66,9 @@
       "panelTitle": "Что мы создаём"
     },
     "logoAlt": "Логотип {name}",
+    "badges": {
+      "googlePlay": "Скачать из Google Play"
+    },
     "systems": {
       "title": "Наши системы",
       "subtitle": "Продуманное ПО для клиник и повседневной жизни.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Дневник, который узнаёт вашу историю.",
       "description": "Moodbow — личный дневник с ИИ, который узнаёт вашу историю и помогает со временем замечать закономерности в настроении, сне и привычках.",
-      "cta": "Сообщить о запуске",
       "visit": "Перейти на Moodbow",
       "features": {
         "mood": "Настроение",
@@ -174,7 +176,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",
