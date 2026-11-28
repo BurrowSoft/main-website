@@ -106,7 +106,21 @@
       }
     },
     "piggybow": {
-      "tagline": "Um diário financeiro amigável."
+      "tagline": "Um diário financeiro amigável.",
+      "description": "O Piggybow é um diário financeiro privado com um porquinho amigável. Anote o que você gasta e o que você guarda, marque como cada gasto fez você se sentir e veja um arco-íris se completar conforme você alcança suas metas. Sem login no banco, sem conta: seus registros ficam com você.",
+      "features": {
+        "spending": "Gastos",
+        "savings": "Economias",
+        "goals": "Metas"
+      },
+      "highlights": {
+        "glance": "Sua semana e seu mês num relance",
+        "reminder": "Um lembrete diário gentil, se você quiser",
+        "lock": "Bloqueio com PIN, digital ou rosto",
+        "noAds": "Sem anúncios, sem rastreamento"
+      },
+      "cta": "Quero ser avisado",
+      "visit": "Visitar o Piggybow"
     },
     "teaser": {
       "text": "Também mantemos seis sites gratuitos para consumidores: voos, hotéis, aluguel de carros, notícias, jogos e compras.",
@@ -114,7 +128,7 @@
     },
     "contact": {
       "title": "Fale conosco",
-      "text": "Tem um projeto ou quer acesso antecipado ao Moodbow?"
+      "text": "Tem um projeto em mente ou uma dúvida sobre um dos nossos apps?"
     }
   },
   "websitesPage": {
@@ -222,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

@@ -106,7 +106,21 @@
       }
     },
     "piggybow": {
-      "tagline": "Дружелюбный дневник финансов."
+      "tagline": "Дружелюбный дневник финансов.",
+      "description": "Piggybow — личный дневник финансов с дружелюбным поросёнком. Записывайте, что тратите и что откладываете, отмечайте, какие чувства вызвала каждая трата, и смотрите, как радуга заполняется по мере приближения к целям. Без входа в банк и без аккаунта: ваши записи остаются у вас.",
+      "features": {
+        "spending": "Расходы",
+        "savings": "Накопления",
+        "goals": "Цели"
+      },
+      "highlights": {
+        "glance": "Неделя и месяц с одного взгляда",
+        "reminder": "Мягкое ежедневное напоминание, если хотите",
+        "lock": "Блокировка PIN-кодом, отпечатком или лицом",
+        "noAds": "Без рекламы и слежки"
+      },
+      "cta": "Сообщить о запуске",
+      "visit": "Перейти на Piggybow"
     },
     "teaser": {
       "text": "Мы также поддерживаем шесть бесплатных сайтов: авиабилеты, отели, аренда авто, новости, игры и покупки.",
@@ -114,7 +128,7 @@
     },
     "contact": {
       "title": "Свяжитесь с нами",
-      "text": "Есть проект или хотите получить ранний доступ к Moodbow?"
+      "text": "Есть проект или вопрос о наших приложениях?"
     }
   },
   "websitesPage": {
@@ -222,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

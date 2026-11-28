@@ -106,7 +106,21 @@
       }
     },
     "piggybow": {
-      "tagline": "A friendly money journal."
+      "tagline": "A friendly money journal.",
+      "description": "Piggybow is a private money journal with a friendly pig. Note what you spend and what you save, mark how each spend felt, and watch a rainbow fill in as you reach your goals. No bank login, no account: your entries stay with you.",
+      "features": {
+        "spending": "Spending",
+        "savings": "Savings",
+        "goals": "Goals"
+      },
+      "highlights": {
+        "glance": "Your week and month at a glance",
+        "reminder": "A gentle daily reminder, if you want one",
+        "lock": "App lock with a PIN, fingerprint or face",
+        "noAds": "No ads, no tracking"
+      },
+      "cta": "Get notified",
+      "visit": "Visit Piggybow"
     },
     "teaser": {
       "text": "We also run six free consumer websites for flights, hotels, car rentals, news, games and shopping.",
@@ -114,7 +128,7 @@
     },
     "contact": {
       "title": "Get in touch",
-      "text": "Have a project or want early access to Moodbow?"
+      "text": "Have a project in mind, or a question about one of our apps?"
     }
   },
   "websitesPage": {

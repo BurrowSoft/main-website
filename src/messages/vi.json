@@ -106,7 +106,21 @@
       }
     },
     "piggybow": {
-      "tagline": "Nhật ký tài chính thân thiện."
+      "tagline": "Nhật ký tài chính thân thiện.",
+      "description": "Piggybow là cuốn nhật ký tài chính riêng tư với chú heo thân thiện. Ghi lại những gì bạn chi tiêu và tiết kiệm, đánh dấu cảm nhận về từng khoản chi, và ngắm cầu vồng dần đầy lên khi bạn tiến gần mục tiêu. Không cần đăng nhập ngân hàng, không cần tài khoản: ghi chép của bạn luôn ở bên bạn.",
+      "features": {
+        "spending": "Chi tiêu",
+        "savings": "Tiết kiệm",
+        "goals": "Mục tiêu"
+      },
+      "highlights": {
+        "glance": "Tuần và tháng của bạn trong nháy mắt",
+        "reminder": "Lời nhắc nhẹ nhàng mỗi ngày, nếu bạn muốn",
+        "lock": "Khóa ứng dụng bằng PIN, vân tay hoặc khuôn mặt",
+        "noAds": "Không quảng cáo, không theo dõi"
+      },
+      "cta": "Nhận thông báo",
+      "visit": "Truy cập Piggybow"
     },
     "teaser": {
       "text": "Chúng tôi cũng vận hành sáu trang web miễn phí cho người dùng: vé máy bay, khách sạn, thuê xe, tin tức, trò chơi và mua sắm.",
@@ -114,7 +128,7 @@
     },
     "contact": {
       "title": "Liên hệ với chúng tôi",
-      "text": "Bạn có dự án hoặc muốn dùng thử sớm Moodbow?"
+      "text": "Bạn có dự án trong đầu hoặc câu hỏi về ứng dụng của chúng tôi?"
     }
   },
   "websitesPage": {
@@ -222,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

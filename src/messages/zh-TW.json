@@ -67,7 +67,7 @@
     },
     "logoAlt": "{name} 標誌",
     "badges": {
-      "googlePlay": "立即下載 Google Play"
+      "googlePlay": "Google Play 立即下載"
     },
     "systems": {
       "title": "我們的系統",
@@ -106,7 +106,21 @@
       }
     },
     "piggybow": {
-      "tagline": "親切的記帳日記。"
+      "tagline": "親切的記帳日記。",
+      "description": "Piggybow 是一本有親切小豬陪伴的私人記帳日記。記下你花了什麼、存了什麼，標記每筆花費帶給你的感受，看著彩虹隨著你接近目標慢慢填滿。不用登入銀行，也不用帳號：你的紀錄只屬於你。",
+      "features": {
+        "spending": "支出",
+        "savings": "儲蓄",
+        "goals": "目標"
+      },
+      "highlights": {
+        "glance": "一眼看懂你的一週與一個月",
+        "reminder": "溫和的每日提醒，想要才開啟",
+        "lock": "使用 PIN、指紋或臉部鎖定 App",
+        "noAds": "無廣告、無追蹤"
+      },
+      "cta": "上線時通知我",
+      "visit": "前往 Piggybow"
     },
     "teaser": {
       "text": "我們也經營六個面向使用者的免費網站，涵蓋機票、飯店、租車、新聞、遊戲與購物。",
@@ -114,7 +128,7 @@
     },
     "contact": {
       "title": "聯絡我們",
-      "text": "有專案想合作，或想搶先體驗 Moodbow？"
+      "text": "有專案想合作，或對我們的 App 有疑問？"
     }
   },
   "websitesPage": {
@@ -222,6 +236,16 @@
     "home.moodbow.highlights.charts",
     "home.moodbow.highlights.reports",
     "home.moodbow.highlights.timeline",
-    "home.moodbow.highlights.private"
+    "home.moodbow.highlights.private",
+    "home.piggybow.description",
+    "home.piggybow.features.spending",
+    "home.piggybow.features.savings",
+    "home.piggybow.features.goals",
+    "home.piggybow.highlights.glance",
+    "home.piggybow.highlights.reminder",
+    "home.piggybow.highlights.lock",
+    "home.piggybow.highlights.noAds",
+    "home.piggybow.cta",
+    "home.piggybow.visit"
   ]
 }

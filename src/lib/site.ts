@@ -12,6 +12,10 @@ export const SOLVYMED_PLAY_URL = "https://play.google.com/store/apps/details?id=
 export const MOODBOW_PLAY_URL = "https://play.google.com/store/apps/details?id=com.burrowsoft.moodbow";
 export const MOODBOW_APP_STORE_URL: string | null = null;
 
+/** Piggybow's site (a coming-soon page until the apps are out) and its "notify me" email. */
+export const PIGGYBOW_URL = "https://www.piggybow.com";
+export const PIGGYBOW_NOTIFY_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=Notify%20me%20about%20Piggybow`;
+
 /** Piggybow is listed as coming soon, except on these locales for now (a market decision is pending). */
 export const PIGGYBOW_HIDDEN_LOCALES: readonly string[] = ["ar", "id"];
 export const showPiggybow = (locale: string) => !PIGGYBOW_HIDDEN_LOCALES.includes(locale);

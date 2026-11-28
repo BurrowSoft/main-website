@@ -8,6 +8,8 @@ import {
   MOODBOW_APP_STORE_URL,
   MOODBOW_PLAY_URL,
   MOODBOW_URL,
+  PIGGYBOW_NOTIFY_MAILTO,
+  PIGGYBOW_URL,
   SITE_NAME,
   SOLVYMED_PLAY_URL,
   SOLVYMED_URL,
@@ -50,6 +52,13 @@ const MOODBOW_FEATURES = [
   { key: "habits", color: "#E27D9A" },
 ] as const;
 const MOODBOW_HIGHLIGHTS = ["charts", "reports", "timeline", "private"] as const;
+/** Piggybow's three features take the rainbow's three colours, outside in. */
+const PIGGYBOW_FEATURES = [
+  { key: "spending", color: "#E27D9A" },
+  { key: "savings", color: "#F2A07B" },
+  { key: "goals", color: "#F3C24F" },
+] as const;
+const PIGGYBOW_HIGHLIGHTS = ["glance", "reminder", "lock", "noAds"] as const;
 
 function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -183,7 +192,7 @@ export default async function HomePage() {
               <ul className="space-y-2">
                 {/* Each row: the product's name is its link, stretched over the row; the store chips sit above it. */}
                 <li>
-                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08] has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-[#116E99]">
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08]">
                   <Image src="/brand/solvymed/solvymed-app-icon-blue-192.png" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
                   <div className="min-w-0 flex-1">
                     <p className="font-bold text-slate-900">
@@ -191,7 +200,7 @@ export default async function HomePage() {
                         href={SOLVYMED_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#116E99]"
                       >
                         SolvyMed
                       </a>
@@ -208,7 +217,7 @@ export default async function HomePage() {
                   </div>
                 </li>
                 <li>
-                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6] has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-[#A8456A]">
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6]">
                   <Image src="/brand/moodbow/moodbow-app-icon-light.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#EADFD6]" />
                   <div className="min-w-0 flex-1">
                     <p className="font-bold text-[#2B2438]">
@@ -216,7 +225,7 @@ export default async function HomePage() {
                         href={MOODBOW_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#A8456A]"
                       >
                         Moodbow
                       </a>
@@ -237,11 +246,19 @@ export default async function HomePage() {
                 </li>
                 {showPiggybow(locale) && (
                 <li>
-                  {/* Piggybow: not a link until www.piggybow.com is live. */}
-                  <div className="flex items-center gap-4 rounded-2xl border border-[#F2A07B]/25 bg-[#FFF6F0] p-3">
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#F2A07B]/25 bg-[#FFF6F0] p-3 transition-colors hover:border-[#F2A07B]/50 hover:bg-[#FCEDE3]">
                   <Image src="/brand/piggybow/piggybow-app-icon.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#F3DDD0]" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-[#2B2438]">Piggybow</p>
+                    <p className="font-bold text-[#2B2438]">
+                      <a
+                        href={PIGGYBOW_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[#A8456A]"
+                      >
+                        Piggybow
+                      </a>
+                    </p>
                     <p className="text-sm text-[#5B5068]">{t("piggybow.tagline")}</p>
                   </div>
                   <span className="shrink-0 rounded-full bg-[#A8456A]/10 px-2.5 py-1 text-xs font-semibold text-[#A8456A]">
@@ -423,6 +440,89 @@ export default async function HomePage() {
                 </a>
               </div>
             </article>
+
+            {/* Piggybow — coming soon: a full-width row under the two live systems */}
+            {showPiggybow(locale) && (
+            <article className="relative overflow-hidden rounded-3xl border border-[#F3DDD0] bg-[#FFF6F0] p-8 text-[#2B2438] sm:p-10 lg:col-span-5">
+              <div aria-hidden="true" className="pointer-events-none absolute -top-20 -end-16 h-56 w-56 rounded-full bg-[#F2A07B]/25 blur-3xl" />
+              <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 end-1/3 h-48 w-48 rounded-full bg-[#F3C24F]/20 blur-3xl" />
+              <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -start-10 h-44 w-44 rounded-full bg-[#E27D9A]/15 blur-3xl" />
+
+              <div className="relative grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-14">
+                <div>
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="/brand/piggybow/piggybow-app-icon.svg"
+                        alt=""
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 rounded-xl ring-1 ring-[#F3DDD0]"
+                      />
+                      <span className="text-2xl font-semibold tracking-tight">Piggybow</span>
+                    </div>
+                    <span className="rounded-full border border-[#A8456A]/25 bg-white/70 px-3 py-1 text-xs font-semibold text-[#A8456A]">
+                      {t("systems.comingSoon")}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-8 text-2xl font-semibold tracking-tight sm:text-3xl">{t("piggybow.tagline")}</h3>
+                  <p className="mt-3 max-w-xl leading-relaxed text-[#4A4257]">{t("piggybow.description")}</p>
+
+                  <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                    <a
+                      href={PIGGYBOW_NOTIFY_MAILTO}
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#2B2438] px-5 py-3 text-sm font-semibold text-[#FFF6F0] transition-colors hover:bg-[#3D344D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFF6F0]"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2a2 2 0 01-.6 1.4L4 17h5m6 0a3 3 0 11-6 0" />
+                      </svg>
+                      {t("piggybow.cta")}
+                    </a>
+                    <a
+                      href={PIGGYBOW_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-[#A8456A] transition-colors hover:text-[#2B2438] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
+                    >
+                      {t("piggybow.visit")}
+                      <ExternalIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-6 sm:flex-row-reverse sm:items-center">
+                  <Image
+                    src="/brand/piggybow/piggybow-pig-happy.svg"
+                    alt=""
+                    width={200}
+                    height={200}
+                    className="h-32 w-32 shrink-0 self-center sm:h-40 sm:w-40"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <ul className="flex flex-wrap gap-2">
+                      {PIGGYBOW_FEATURES.map((f) => (
+                        <li key={f.key} className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-[#2B2438] ring-1 ring-[#F3DDD0]">
+                          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: f.color }} aria-hidden="true" />
+                          {t(`piggybow.features.${f.key}`)}
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="mt-6 space-y-2.5">
+                      {PIGGYBOW_HIGHLIGHTS.map((h) => (
+                        <li key={h} className="flex items-start gap-3 text-sm text-[#2B2438]">
+                          <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#A8456A]/10 text-[#A8456A]">
+                            <CheckIcon className="h-3 w-3" />
+                          </span>
+                          {t(`piggybow.highlights.${h}`)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+            )}
           </div>
         </div>
       </section>
