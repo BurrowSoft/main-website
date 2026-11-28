@@ -66,6 +66,9 @@
       "panelTitle": "Những gì chúng tôi xây dựng"
     },
     "logoAlt": "Logo {name}",
+    "badges": {
+      "googlePlay": "Tải trên Google Play"
+    },
     "systems": {
       "title": "Hệ thống của chúng tôi",
       "subtitle": "Phần mềm tập trung cho phòng khám và cuộc sống hằng ngày.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Cuốn nhật ký hiểu câu chuyện của bạn.",
       "description": "Moodbow là cuốn nhật ký AI riêng tư hiểu câu chuyện của bạn và giúp bạn nhận ra các khuôn mẫu trong tâm trạng, giấc ngủ và thói quen theo thời gian.",
-      "cta": "Nhận thông báo",
       "visit": "Truy cập Moodbow",
       "features": {
         "mood": "Tâm trạng",
@@ -171,7 +173,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

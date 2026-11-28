@@ -66,6 +66,9 @@
       "panelTitle": "Yang kami bangun"
     },
     "logoAlt": "Logo {name}",
+    "badges": {
+      "googlePlay": "Dapatkan di Google Play"
+    },
     "systems": {
       "title": "Sistem kami",
       "subtitle": "Perangkat lunak yang fokus untuk klinik dan kehidupan sehari-hari.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "Jurnal yang mempelajari kisahmu.",
       "description": "Moodbow adalah jurnal AI pribadi yang mempelajari kisahmu dan membantumu melihat pola suasana hati, tidur, dan kebiasaanmu dari waktu ke waktu.",
-      "cta": "Beri tahu saya",
       "visit": "Kunjungi Moodbow",
       "features": {
         "mood": "Suasana hati",
@@ -171,7 +173,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

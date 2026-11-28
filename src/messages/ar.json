@@ -66,6 +66,9 @@
       "panelTitle": "ما نبنيه"
     },
     "logoAlt": "شعار {name}",
+    "badges": {
+      "googlePlay": "احصل عليه من Google Play"
+    },
     "systems": {
       "title": "أنظمتنا",
       "subtitle": "برمجيات مركّزة للعيادات وللحياة اليومية.",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "مذكرات تتعلّم قصتك.",
       "description": "Moodbow مذكرات خاصة بالذكاء الاصطناعي تتعلّم قصتك وتساعدك على رؤية الأنماط في مزاجك ونومك وعاداتك مع مرور الوقت.",
-      "cta": "أبلغني عند الإطلاق",
       "visit": "زيارة Moodbow",
       "features": {
         "mood": "المزاج",
@@ -171,7 +173,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

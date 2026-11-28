@@ -6,7 +6,11 @@ export const SUPPORT_EMAIL = "support@burrowsoft.com";
 
 export const SOLVYMED_URL = "https://www.solvymed.com";
 export const MOODBOW_URL = "https://www.moodbow.com";
-export const MOODBOW_NOTIFY_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=Notify%20me%20about%20Moodbow`;
+
+/** Store pages. Moodbow's App Store page: null until it is known; its badge and chip show only once set. */
+export const SOLVYMED_PLAY_URL = "https://play.google.com/store/apps/details?id=com.burrowsoft.solvymed";
+export const MOODBOW_PLAY_URL = "https://play.google.com/store/apps/details?id=com.burrowsoft.moodbow";
+export const MOODBOW_APP_STORE_URL: string | null = null;
 
 /** Absolute URL for a path in a given locale, matching the `as-needed` prefix scheme. */
 export function localeUrl(locale: string, path = "/") {

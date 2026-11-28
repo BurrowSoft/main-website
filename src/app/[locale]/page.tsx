@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { BurrowSoftIcon } from "@burrowsoft/shared";
 import { Link } from "@/i18n/navigation";
 import {
   MOLE_SITES,
-  MOODBOW_NOTIFY_MAILTO,
+  MOODBOW_APP_STORE_URL,
+  MOODBOW_PLAY_URL,
   MOODBOW_URL,
   SITE_NAME,
+  SOLVYMED_PLAY_URL,
   SOLVYMED_URL,
   SUPPORT_EMAIL,
   alternatesFor,
   localeUrl,
 } from "@/lib/site";
+import { APP_STORE_BADGE, googlePlayBadge } from "@/lib/stores";
 
 export async function generateMetadata({
   params,
@@ -71,7 +74,62 @@ function CheckIcon({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
+/** A small text link to a store page, sitting above a stretched row link. */
+function StoreChip({ href, label, children }: { href: string; label: string; children: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="inline-flex items-center rounded-full border border-slate-300/80 bg-white px-2 py-0.5 text-[0.6875rem] font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+    >
+      {children}
+    </a>
+  );
+}
+
+/**
+ * Google Play's official badge, linking to a store page. Its PNG carries built-in
+ * padding (more in the older en/ar artwork), so it is drawn larger with negative
+ * margins until the visible badge is 40px tall, the height of Apple's.
+ */
+function GooglePlayBadge({ href, locale, alt, focusClass }: { href: string; locale: string; alt: string; focusClass: string }) {
+  const badge = googlePlayBadge(locale);
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${focusClass}`}
+    >
+      <Image
+        src={badge.src}
+        alt={alt}
+        width={646}
+        height={250}
+        className={badge.oldArtwork ? "-mx-[10px] -my-[10.5px] h-[61px] w-auto max-w-none" : "-my-[6.5px] h-[53px] w-auto max-w-none"}
+      />
+    </a>
+  );
+}
+
+/** Apple's official badge (40px tall, its minimum), linking to a store page. */
+function AppStoreBadge({ href, focusClass }: { href: string; focusClass: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${focusClass}`}
+    >
+      <Image src={APP_STORE_BADGE.src} alt={APP_STORE_BADGE.alt} width={120} height={40} className="h-10 w-auto" />
+    </a>
+  );
+}
+
 export default async function HomePage() {
+  const locale = await getLocale();
   const t = await getTranslations("home");
   const tNav = await getTranslations("nav");
 
@@ -122,40 +180,59 @@ export default async function HomePage() {
 
               <p className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{tNav("systems")}</p>
               <ul className="space-y-2">
+                {/* Each row: the product's name is its link, stretched over the row; the store chips sit above it. */}
                 <li>
-                  <a
-                    href={SOLVYMED_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#116E99]"
-                  >
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#116E99]/15 bg-[#116E99]/[0.04] p-3 transition-colors hover:border-[#116E99]/40 hover:bg-[#116E99]/[0.08] has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-[#116E99]">
                   <Image src="/brand/solvymed/solvymed-app-icon-blue-192.png" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-slate-900">SolvyMed</p>
+                    <p className="font-bold text-slate-900">
+                      <a
+                        href={SOLVYMED_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none"
+                      >
+                        SolvyMed
+                      </a>
+                    </p>
                     <p className="text-sm text-slate-600">{t("solvymed.tagline")}</p>
+                    <div className="relative z-10 mt-1.5 flex flex-wrap gap-1.5">
+                      <StoreChip href={SOLVYMED_PLAY_URL} label="SolvyMed: Google Play">Google Play</StoreChip>
+                    </div>
                   </div>
                   <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
                     {t("systems.live")}
                   </span>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a
-                    href={MOODBOW_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A]"
-                  >
+                  <div className="relative flex items-center gap-4 rounded-2xl border border-[#E27D9A]/20 bg-[#FBF6F1] p-3 transition-colors hover:border-[#E27D9A]/50 hover:bg-[#F8EEE6] has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-[#A8456A]">
                   <Image src="/brand/moodbow/moodbow-app-icon-light.svg" alt="" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl ring-1 ring-[#EADFD6]" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-[#2B2438]">Moodbow</p>
+                    <p className="font-bold text-[#2B2438]">
+                      <a
+                        href={MOODBOW_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none"
+                      >
+                        Moodbow
+                      </a>
+                    </p>
                     <p className="text-sm text-[#5B5068]">{t("moodbow.tagline")}</p>
+                    <div className="relative z-10 mt-1.5 flex flex-wrap gap-1.5">
+                      {MOODBOW_APP_STORE_URL && (
+                        <StoreChip href={MOODBOW_APP_STORE_URL} label="Moodbow: App Store">App Store</StoreChip>
+                      )}
+                      <StoreChip href={MOODBOW_PLAY_URL} label="Moodbow: Google Play">Google Play</StoreChip>
+                    </div>
                   </div>
-                  <span className="shrink-0 rounded-full bg-[#A8456A]/10 px-2.5 py-1 text-xs font-semibold text-[#A8456A]">
-                    {t("systems.comingSoon")}
+                  <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                    {t("systems.live")}
                   </span>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
@@ -247,7 +324,7 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <div className="relative mt-auto pt-9">
+              <div className="relative mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-9">
                 <a
                   href={SOLVYMED_URL}
                   target="_blank"
@@ -257,16 +334,22 @@ export default async function HomePage() {
                   {t("solvymed.cta")}
                   <ExternalIcon />
                 </a>
+                <GooglePlayBadge
+                  href={SOLVYMED_PLAY_URL}
+                  locale={locale}
+                  alt={t("badges.googlePlay")}
+                  focusClass="focus-visible:ring-[#A9D6EC] focus-visible:ring-offset-[#0C2230]"
+                />
               </div>
             </article>
 
-            {/* Moodbow — coming soon */}
+            {/* Moodbow — live */}
             <article className="relative flex flex-col overflow-hidden rounded-3xl border border-[#EADFD6] bg-[#FBF6F1] p-8 text-[#2B2438] sm:p-10 lg:col-span-2">
               <div aria-hidden="true" className="pointer-events-none absolute -top-16 -end-10 h-40 w-40 rounded-full bg-[#F2A07B]/30 blur-2xl" />
               <div aria-hidden="true" className="pointer-events-none absolute -top-6 end-20 h-32 w-32 rounded-full bg-[#9B84D6]/25 blur-2xl" />
               <div aria-hidden="true" className="pointer-events-none absolute top-10 -end-4 h-24 w-24 rounded-full bg-[#E27D9A]/25 blur-2xl" />
 
-              <div className="relative flex flex-wrap items-center justify-between gap-4">
+              <div className="relative flex flex-wrap items-center justify-between gap-3">
                 <Image
                   src="/brand/moodbow/moodbow-logo-horizontal-light.svg"
                   alt={t("logoAlt", { name: "Moodbow" })}
@@ -274,8 +357,9 @@ export default async function HomePage() {
                   height={140}
                   className="h-10 w-auto sm:h-11"
                 />
-                <span className="rounded-full border border-[#A8456A]/25 bg-white/70 px-3 py-1 text-xs font-semibold text-[#A8456A]">
-                  {t("systems.comingSoon")}
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-800">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                  {t("systems.live")}
                 </span>
               </div>
 
@@ -302,16 +386,16 @@ export default async function HomePage() {
                 ))}
               </ul>
 
-              <div className="relative mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 pt-9">
-                <a
-                  href={MOODBOW_NOTIFY_MAILTO}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#2B2438] px-5 py-3 text-sm font-semibold text-[#FBF6F1] transition-colors hover:bg-[#3D344D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8456A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF6F1]"
-                >
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2a2 2 0 01-.6 1.4L4 17h5m6 0a3 3 0 11-6 0" />
-                  </svg>
-                  {t("moodbow.cta")}
-                </a>
+              <div className="relative mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-9">
+                {MOODBOW_APP_STORE_URL && (
+                  <AppStoreBadge href={MOODBOW_APP_STORE_URL} focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FBF6F1]" />
+                )}
+                <GooglePlayBadge
+                  href={MOODBOW_PLAY_URL}
+                  locale={locale}
+                  alt={t("badges.googlePlay")}
+                  focusClass="focus-visible:ring-[#A8456A] focus-visible:ring-offset-[#FBF6F1]"
+                />
                 <a
                   href={MOODBOW_URL}
                   target="_blank"

@@ -66,6 +66,9 @@
       "panelTitle": "私たちがつくるもの"
     },
     "logoAlt": "{name}のロゴ",
+    "badges": {
+      "googlePlay": "Google Play で手に入れよう"
+    },
     "systems": {
       "title": "私たちのシステム",
       "subtitle": "クリニックと日々の暮らしのための、目的に特化したソフトウェア。",
@@ -89,7 +92,6 @@
     "moodbow": {
       "tagline": "あなたのストーリーを学ぶジャーナル。",
       "description": "Moodbowは、あなたのストーリーを学び、気分・睡眠・習慣のパターンを時間とともに見えるようにするプライベートなAIジャーナルです。",
-      "cta": "公開時に通知を受け取る",
       "visit": "Moodbowへ",
       "features": {
         "mood": "気分",
@@ -171,7 +173,6 @@
     "home.solvymed.features.payments",
     "home.moodbow.tagline",
     "home.moodbow.description",
-    "home.moodbow.cta",
     "home.moodbow.visit",
     "home.moodbow.features.mood",
     "home.moodbow.features.sleep",

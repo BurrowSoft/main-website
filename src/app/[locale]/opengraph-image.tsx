@@ -73,7 +73,7 @@ export default async function OGImage() {
             <img src={moodbowSrc} width={64} height={64} alt="" />
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span style={{ fontSize: 30, fontWeight: 700, color: "white" }}>Moodbow</span>
-              <span style={{ fontSize: 18, color: "#F7C3D3" }}>Coming soon</span>
+              <span style={{ fontSize: 18, color: "#F7C3D3" }}>A journal that learns your story.</span>
             </div>
           </div>
         </div>
